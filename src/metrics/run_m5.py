@@ -48,7 +48,9 @@ def main() -> None:
             cal = m["calibration"]
             print(f"  {metric_name} (gt={m['gt']}, phase={m['phase']}, var={m['var']}, n={m['n_scenarios']}, "
                   f"fallback_used={m['n_fallback_used']}, skipped={m['n_skipped']})")
-            print(f"    MAPE = {m['mape']:.2f}%  (median_robust={m['mape_median_robust']:.2f}%)")
+            print(f"    MAPE(per-scenario) = {m['mape']:.2f}%  (median_robust={m['mape_median_robust']:.2f}%)")
+            print(f"    MAPE(aggregate, 논문 Eq.7) = {m['mape_aggregate']:.2f}%  "
+                  f"[mean_est={m['mean_estimate']:.2f}, bias={m['bias']:+.2f} ({m['bias_pct']:+.1f}%)]")
             print(f"    calibration: p10={cal['p10']:.2f} p90={cal['p90']:.2f} "
                   f"coverage(gt in [p10,p90])={cal['coverage_gt_in_p10_p90']} "
                   f"sharpness={cal['sharpness_p90_minus_p10']:.2f}")

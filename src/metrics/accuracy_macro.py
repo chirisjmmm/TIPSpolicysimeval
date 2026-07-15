@@ -1,5 +1,15 @@
 """§7.3 Accuracy/macro: MAPE + Calibration. GT 있는 지표만 계산한다(§5, §6 — GT 임의 생성/이상치
 제거 금지). 입력은 IR(scenarios.jsonl) + policies.yaml gt_map만 받는다(§12).
+
+두 가지 MAPE를 함께 보고한다(둘은 다른 질문에 답한다):
+  1) mape_per_scenario  = mean_s( |ŷ(s) - gt| / |gt| ) * 100
+     → 시나리오별 예측이 개별적으로 얼마나 정확한가(퍼짐에 민감).
+  2) mape_aggregate     = |mean_s( ŷ(s) ) - gt| / |gt| * 100    ← TIPS 논문 Eq.(7) 정의
+     → 시나리오 앙상블을 평균낸 정책수준 점추정 ŷ_p 가 GT에 얼마나 가까운가(논문 Table 1과 대응).
+싱가포르 100E에서 두 값의 괴리가 모델별로 크게 갈린다: Gemini는 추정치가 GT 주변에 폭넓게
+흩어져(분산↑) 평균이 GT에 수렴 → aggregate MAPE는 작지만 per-scenario MAPE는 큼. DeepSeek은
+체계적 편향(bias)으로 평균 자체가 GT에서 벗어나 → 두 MAPE가 모두 크고 서로 비슷.
+mean_estimate/bias/bias_pct를 같이 저장해 이 차이(분산 vs 편향)를 드러낸다.
 """
 from __future__ import annotations
 
@@ -73,8 +83,14 @@ def compute_mape_and_calibration(
 
             estimates_arr = np.array(estimates)
             ape = np.abs(estimates_arr - gt) / abs(gt) * 100
-            mape = float(np.mean(ape))
+            mape = float(np.mean(ape))            # per-scenario 평균(퍼짐 민감)
             mape_median = float(np.median(ape))
+
+            # TIPS Eq.(7): 시나리오 앙상블 평균낸 점추정 ŷ_p 후 MAPE(논문 Table 1과 대응)
+            mean_estimate = float(np.mean(estimates_arr))
+            mape_aggregate = float(abs(mean_estimate - gt) / abs(gt) * 100)
+            bias = float(mean_estimate - gt)                 # 부호 있는 평균 오차(양수=과대추정)
+            bias_pct = float(bias / abs(gt) * 100)
 
             p10, p90 = float(np.percentile(estimates_arr, 10)), float(np.percentile(estimates_arr, 90))
             coverage = bool(p10 <= gt <= p90)
@@ -89,8 +105,14 @@ def compute_mape_and_calibration(
                 "n_scenarios": len(estimates),
                 "n_fallback_used": n_fallback,
                 "n_skipped": n_skipped,
+                # 하위호환: "mape" == per-scenario 평균. 명시적 alias도 함께 저장.
                 "mape": mape,
+                "mape_per_scenario": mape,
                 "mape_median_robust": mape_median,
+                "mape_aggregate": mape_aggregate,   # ← 논문 Eq.(7)/Table 1 대응
+                "mean_estimate": mean_estimate,
+                "bias": bias,
+                "bias_pct": bias_pct,
                 "calibration": {
                     "p10": p10, "p90": p90, "coverage_gt_in_p10_p90": coverage, "sharpness_p90_minus_p10": sharpness,
                 },
