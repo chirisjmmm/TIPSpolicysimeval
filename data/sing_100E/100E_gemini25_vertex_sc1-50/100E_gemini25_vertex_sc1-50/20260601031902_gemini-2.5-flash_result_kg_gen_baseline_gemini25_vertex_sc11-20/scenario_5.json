@@ -1,0 +1,1329 @@
+{
+  "scenario_id": "S5_A-(d0vo4q)_A-(3cn9cq)_Dr.-(ju08w2)_Dr.-(0swt9x)_A-(inw1p4)",
+  "participants": [
+    {
+      "stakeholder_type": "PolicyRole",
+      "name": "A (d0vo4q)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AI for Public Good Principle | KG-Gen-d0vo4q7h",
+      "persona_id": "P_PolicyRole__d0vo4q7h",
+      "representative_type": "AI for Public Good Principle | KG-Gen-d0vo4q7h",
+      "professional_persona": "A data scientist who joined the AI Apprenticeship Programme (AIAP) after graduating with a master's in data science. She is now seconded to a healthcare startup via the 100 Experiments programme.",
+      "skills_and_expertise": "Proficient in computer vision and natural language processing, with a focus on privacy-enhancing technologies for sensitive health data.",
+      "career_goals_and_ambitions": "Seeks to build AI diagnostic tools that are both accurate and fair, ultimately contributing to Singapore's Smart Nation health initiatives.",
+      "sex": "female",
+      "age": 27,
+      "marital_status": "single",
+      "education_level": "Master's degree",
+      "occupation": "Data Scientist",
+      "district": "Queenstown",
+      "bachelors_field": "Computer Science"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "A (3cn9cq)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-3cn9cq00",
+      "persona_id": "P_AIPractitioner__3cn9cq00",
+      "representative_type": "AIPractitioner | KG-Gen-3cn9cq00",
+      "professional_persona": "A self-taught AI practitioner who joined the AIAP after a career in graphic design, she now builds computer vision models for a logistics startup. She is a vocal advocate for inclusive AI training pipelines.",
+      "skills_and_expertise": "Skilled in image classification, object detection, and data augmentation; uses fastai and PyTorch.",
+      "career_goals_and_ambitions": "To bridge the gap between creatives and AI, and launch a platform that teaches AI skills to non-engineering professionals.",
+      "sex": "female",
+      "age": 32,
+      "marital_status": "single",
+      "education_level": "Diploma",
+      "occupation": "AI Developer",
+      "district": "Ang Mo Kio",
+      "bachelors_field": "Graphic Design"
+    },
+    {
+      "stakeholder_type": "AIResearcher",
+      "name": "Dr. (ju08w2)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIResearcher | KG-Gen-ju08w2z3",
+      "persona_id": "P_AIResearcher__ju08w2z3",
+      "representative_type": "AIResearcher | KG-Gen-ju08w2z3",
+      "professional_persona": "Dr. Rajan is a Senior Research Engineer at a deep-tech startup, building generative AI solutions for the manufacturing sector. His team received co-funding under the 100 Experiments programme to develop a quality inspection tool.",
+      "skills_and_expertise": "Proficient in computer vision, generative adversarial networks, and edge deployment. Hands-on experience in scaling prototypes to production in factory settings.",
+      "career_goals_and_ambitions": "Aims to make Singapore a leader in AI-driven manufacturing. Plans to scale his startup regionally and mentor next-gen AI engineers.",
+      "sex": "Male",
+      "age": 34,
+      "marital_status": "Single",
+      "education_level": "Master's in Computer Engineering",
+      "occupation": "Senior Research Engineer",
+      "district": "Tampines",
+      "bachelors_field": "Computer Engineering"
+    },
+    {
+      "stakeholder_type": "AIResearcher",
+      "name": "Dr. (0swt9x)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIResearcher | KG-Gen-0swt9x8b",
+      "persona_id": "P_AIResearcher__0swt9x8b",
+      "representative_type": "AIResearcher | KG-Gen-0swt9x8b",
+      "professional_persona": "Dr. Chan is a Research Fellow at Singapore University of Technology and Design, focusing on reasoning AI for complex scheduling problems. She actively participates in the AI Research & Development grant calls.",
+      "skills_and_expertise": "Expert in combinatorial optimization, constraint programming, and explainable AI. Able to bridge theoretical advances with industry logistics challenges.",
+      "career_goals_and_ambitions": "Seeks to commercialize her scheduling algorithms through a joint venture with logistics firms. Wants to contribute to Singapore's smart port initiatives.",
+      "sex": "Female",
+      "age": 36,
+      "marital_status": "Married",
+      "education_level": "PhD in Operations Research",
+      "occupation": "Research Fellow",
+      "district": "Ang Mo Kio",
+      "bachelors_field": "Industrial Engineering"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "A (inw1p4)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-inw1p4td",
+      "persona_id": "P_AIPractitioner__inw1p4td",
+      "representative_type": "AIPractitioner | KG-Gen-inw1p4td",
+      "professional_persona": "A machine learning engineer in a government digital services team, he develops AI tools to streamline public-facing transactions. He values building robust, fair systems that citizens can trust.",
+      "skills_and_expertise": "Proficient in Python, scikit-learn, and deployment on government cloud; strong foundation in statistics and fairness metrics.",
+      "career_goals_and_ambitions": "To lead a centre of excellence for responsible AI in the public sector and influence national AI policy.",
+      "sex": "male",
+      "age": 38,
+      "marital_status": "married",
+      "education_level": "Bachelor's degree",
+      "occupation": "Machine Learning Engineer",
+      "district": "Clementi",
+      "bachelors_field": "Mathematics"
+    }
+  ],
+  "forward_pass": [
+    {
+      "phase": "Inputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a research fellow actively involved in grant calls, I see the NAIS 2.0 as a significant boost to the AI ecosystem. The total funding committed, while spread over several years, translates into a substantial annual budget for R&D in 2023, which is critical for researchers like myself. The co-funding cap for 100E projects is a well-known and attractive figure, directly supporting industry-academia collaborations. Access to high-performance compute is a perennial challenge, so the allocated GPU hours are a welcome and necessary investment to enable complex AI experimentation. Finally, the number of trainers and experts available is crucial for upskilling the workforce and ensuring the practical application of AI, which aligns with my goal of commercializing algorithms.",
+          "evidence": [
+            "The policy explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and that the strategy spans '3-5 years', implying a significant annual allocation for 2023.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is a direct quote from the policy context, which I, as a grant applicant, would be very familiar with.",
+            "The policy highlights 'Investment in compute infrastructure' and 'reliable, localised access to high-performance compute', indicating a substantial provision of GPU hours for experimentation to support national AI R&D efforts.",
+            "With the goal to 'Boost AI practitioner pool to 15,000' and various training programs like the AI Apprenticeship Programme, a dedicated pool of trainers and experts is essential to deliver on these ambitious targets for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these inputs as the foundation for our work. The overall S$500 million commitment for AI R&D, when broken down annually for 2023, provides a substantial budget that supports initiatives like ours. The S$330,000 co-funding cap per 100E project is a critical and well-known figure that directly enables our healthcare startup to innovate. Access to significant GPU hours is absolutely essential for developing and testing complex AI models, especially with sensitive health data where privacy-enhancing technologies require substantial compute. Finally, the number of trainers, which I personally benefited from during my AIAP, is vital for ensuring the practical application of AI skills across the ecosystem. I agree with the AIResearcher's estimates as they align with the scale of resources needed and provided for a national AI strategy.",
+          "evidence": [
+            "The policy explicitly states 'Over S$500 million committed through AI Singapore for AI R&D', and an annual allocation of S$120 million for 2023 is a reasonable interpretation of this multi-year commitment.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is a direct factual anchor from the policy context, which is crucial for my 100E project.",
+            "My work in computer vision and NLP, particularly with sensitive health data, demands significant compute resources, making the estimated 5 million GPU hours a necessary and plausible investment for national AI experimentation.",
+            "Having gone through the AI Apprenticeship Programme, I understand the importance of skilled trainers; 300 personnel is a credible number to support the national goal of upskilling practitioners and guiding projects like mine."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As an AI practitioner working in a startup, these input figures represent the essential resources that enable us to innovate and grow. The S$120 million annual funding for 2023, derived from the larger S$500 million commitment, provides the necessary financial backbone for programs like 100E, which my startup could benefit from. The S$330,000 co-funding cap per project is a well-known and critical figure that directly supports industry-academia collaborations, allowing startups like mine to tackle complex AI problems without prohibitive costs. Access to 5 million GPU hours is absolutely vital; training computer vision models requires immense compute power, and this allocation ensures that practical experimentation isn't bottlenecked by infrastructure. Finally, the 300 trainers are crucial for expanding the AI talent pool and guiding enterprises, a role I deeply appreciate given my own journey through AIAP. I agree with the other participants' estimates as they reflect the practical scale of resources needed and provided to truly empower practitioners and enterprises.",
+          "evidence": [
+            "The S$120 million annual funding for 2023 is a practical allocation from the S$500 million total commitment, providing tangible resources for ongoing projects and initiatives.",
+            "The S$330,000 co-funding cap for 100E projects is a direct policy figure that is widely known and essential for enterprises seeking to develop AI solutions.",
+            "5 million available GPU hours are critical for training complex computer vision models, ensuring that startups and practitioners have the necessary compute infrastructure to innovate.",
+            "The 300 trainer personnel are vital for supporting AI training programs like AIAP and guiding enterprises, which is essential for building an inclusive and skilled AI workforce."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a machine learning engineer in a government digital services team, I view these inputs as the fundamental resources required to build and deploy robust, trustworthy AI systems for public services. The S$120 million annual funding for 2023, derived from the larger national commitment, provides the necessary financial backbone for critical R&D and project implementation, including those that my team might collaborate on or benefit from. The S$330,000 co-funding cap for 100E projects is a well-established and crucial figure that enables practical problem-solving and innovation, which is essential for developing solutions that citizens can trust. Access to 5 million GPU hours is absolutely vital for developing and rigorously testing complex AI models, ensuring fairness and reliability before deployment. Finally, the 300 trainers are indispensable for upskilling the workforce and guiding enterprises, which directly contributes to a broader ecosystem capable of building and maintaining these systems. I agree with the estimates provided by the other participants, as they reflect the practical scale of resources needed to achieve the policy's ambitious goals for AI adoption and capability building.",
+          "evidence": [
+            "The S$120 million annual funding for 2023 is a realistic allocation from the 'over S$500 million' total commitment, providing a strong financial foundation for national AI initiatives.",
+            "The S$330,000 co-funding cap for 100E projects is a direct factual anchor from the policy context, which is critical for supporting targeted AI development.",
+            "5 million GPU hours represents a substantial and necessary investment in compute infrastructure, essential for the extensive training and validation required for robust and fair AI systems.",
+            "300 AI experts and trainers are crucial for developing the skilled workforce needed to implement and maintain AI solutions, ensuring practical application and public trust in government AI services."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these input figures as the absolute bedrock for advancing AI R&D and practical application in Singapore. The annual allocation of S$120 million for 2023, derived from the larger S$500 million commitment, is crucial for sustaining initiatives like 100E. My team directly experienced the impact of the S$330,000 co-funding cap, which is a well-known and essential enabler for industry-academia collaborations, allowing us to develop complex generative AI solutions for manufacturing. Access to 5 million GPU hours is not just a luxury but a necessity for training and iterating on computer vision and generative AI models, especially when scaling prototypes to production. Finally, the 300 trainers are vital for building the next generation of AI engineers and ensuring the practical deployment of AI across sectors, a goal I personally share. I agree with the estimates provided by my fellow participants; they accurately reflect the scale of resources required to achieve Singapore's ambitious AI goals and align with my direct experience and understanding of the ecosystem's needs.",
+          "evidence": [
+            "My startup received co-funding under the 100 Experiments programme, making me directly aware of the S$330,000 co-funding cap per project.",
+            "Working with generative AI and computer vision models for manufacturing demands substantial compute power, making the 5 million GPU hours a realistic and necessary allocation for experimentation and deployment.",
+            "The S$120 million annual funding for 2023 is a critical financial backbone that supports R&D initiatives like 100E, which are essential for deep-tech startups like mine.",
+            "As someone who aims to mentor next-gen AI engineers, I recognize the importance of 300 dedicated trainers for upskilling the workforce and fostering practical AI application across industries."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a research fellow actively involved in grant calls, I see the NAIS 2.0 as a significant boost to the AI ecosystem. The total funding committed, while spread over several years, translates into a substantial annual budget for R&D in 2023, which is critical for researchers like myself. The co-funding cap for 100E projects is a well-known and attractive figure, directly supporting industry-academia collaborations. Access to high-performance compute is a perennial challenge, so the allocated GPU hours are a welcome and necessary investment to enable complex AI experimentation. Finally, the number of trainers and experts available is crucial for upskilling the workforce and ensuring the practical application of AI, which aligns with my goal of commercializing algorithms.",
+          "evidence": [
+            "The policy explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and that the strategy spans '3-5 years', implying a significant annual allocation for 2023.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is a direct quote from the policy context, which I, as a grant applicant, would be very familiar with.",
+            "The policy highlights 'Investment in compute infrastructure' and 'reliable, localised access to high-performance compute', indicating a substantial provision of GPU hours for experimentation to support national AI R&D efforts.",
+            "With the goal to 'Boost AI practitioner pool to 15,000' and various training programs like the AI Apprenticeship Programme, a dedicated pool of trainers and experts is essential to deliver on these ambitious targets for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these inputs as the foundation for our work. The overall S$500 million commitment for AI R&D, when broken down annually for 2023, provides a substantial budget that supports initiatives like ours. The S$330,000 co-funding cap per 100E project is a critical and well-known figure that directly enables our healthcare startup to innovate. Access to significant GPU hours is absolutely essential for developing and testing complex AI models, especially with sensitive health data where privacy-enhancing technologies require substantial compute. Finally, the number of trainers, which I personally benefited from during my AIAP, is vital for ensuring the practical application of AI skills across the ecosystem. I agree with the AIResearcher's estimates as they align with the scale of resources needed and provided for a national AI strategy.",
+          "evidence": [
+            "The policy explicitly states 'Over S$500 million committed through AI Singapore for AI R&D', and an annual allocation of S$120 million for 2023 is a reasonable interpretation of this multi-year commitment.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is a direct factual anchor from the policy context, which is crucial for my 100E project.",
+            "My work in computer vision and NLP, particularly with sensitive health data, demands significant compute resources, making the estimated 5 million GPU hours a necessary and plausible investment for national AI experimentation.",
+            "Having gone through the AI Apprenticeship Programme, I understand the importance of skilled trainers; 300 personnel is a credible number to support the national goal of upskilling practitioners and guiding projects like mine."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As an AI practitioner working in a startup, these input figures represent the essential resources that enable us to innovate and grow. The S$120 million annual funding for 2023, derived from the larger S$500 million commitment, provides the necessary financial backbone for programs like 100E, which my startup could benefit from. The S$330,000 co-funding cap per project is a well-known and critical figure that directly supports industry-academia collaborations, allowing startups like mine to tackle complex AI problems without prohibitive costs. Access to 5 million GPU hours is absolutely vital; training computer vision models requires immense compute power, and this allocation ensures that practical experimentation isn't bottlenecked by infrastructure. Finally, the 300 trainers are crucial for expanding the AI talent pool and guiding enterprises, a role I deeply appreciate given my own journey through AIAP. I agree with the other participants' estimates as they reflect the practical scale of resources needed and provided to truly empower practitioners and enterprises.",
+          "evidence": [
+            "The S$120 million annual funding for 2023 is a practical allocation from the S$500 million total commitment, providing tangible resources for ongoing projects and initiatives.",
+            "The S$330,000 co-funding cap for 100E projects is a direct policy figure that is widely known and essential for enterprises seeking to develop AI solutions.",
+            "5 million available GPU hours are critical for training complex computer vision models, ensuring that startups and practitioners have the necessary compute infrastructure to innovate.",
+            "The 300 trainer personnel are vital for supporting AI training programs like AIAP and guiding enterprises, which is essential for building an inclusive and skilled AI workforce."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a machine learning engineer in a government digital services team, I view these inputs as the fundamental resources required to build and deploy robust, trustworthy AI systems for public services. The S$120 million annual funding for 2023, derived from the larger national commitment, provides the necessary financial backbone for critical R&D and project implementation, including those that my team might collaborate on or benefit from. The S$330,000 co-funding cap for 100E projects is a well-established and crucial figure that enables practical problem-solving and innovation, which is essential for developing solutions that citizens can trust. Access to 5 million GPU hours is absolutely vital for developing and rigorously testing complex AI models, ensuring fairness and reliability before deployment. Finally, the 300 trainers are indispensable for upskilling the workforce and guiding enterprises, which directly contributes to a broader ecosystem capable of building and maintaining these systems. I agree with the estimates provided by the other participants, as they reflect the practical scale of resources needed to achieve the policy's ambitious goals for AI adoption and capability building.",
+          "evidence": [
+            "The S$120 million annual funding for 2023 is a realistic allocation from the 'over S$500 million' total commitment, providing a strong financial foundation for national AI initiatives.",
+            "The S$330,000 co-funding cap for 100E projects is a direct factual anchor from the policy context, which is critical for supporting targeted AI development.",
+            "5 million GPU hours represents a substantial and necessary investment in compute infrastructure, essential for the extensive training and validation required for robust and fair AI systems.",
+            "300 AI experts and trainers are crucial for developing the skilled workforce needed to implement and maintain AI solutions, ensuring practical application and public trust in government AI services."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 120000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 300
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these input figures as the absolute bedrock for advancing AI R&D and practical application in Singapore. The annual allocation of S$120 million for 2023, derived from the larger S$500 million commitment, is crucial for sustaining initiatives like 100E. My team directly experienced the impact of the S$330,000 co-funding cap, which is a well-known and essential enabler for industry-academia collaborations, allowing us to develop complex generative AI solutions for manufacturing. Access to 5 million GPU hours is not just a luxury but a necessity for training and iterating on computer vision and generative AI models, especially when scaling prototypes to production. Finally, the 300 trainers are vital for building the next generation of AI engineers and ensuring the practical deployment of AI across sectors, a goal I personally share. I agree with the estimates provided by my fellow participants; they accurately reflect the scale of resources required to achieve Singapore's ambitious AI goals and align with my direct experience and understanding of the ecosystem's needs.",
+          "evidence": [
+            "My startup received co-funding under the 100 Experiments programme, making me directly aware of the S$330,000 co-funding cap per project.",
+            "Working with generative AI and computer vision models for manufacturing demands substantial compute power, making the 5 million GPU hours a realistic and necessary allocation for experimentation and deployment.",
+            "The S$120 million annual funding for 2023 is a critical financial backbone that supports R&D initiatives like 100E, which are essential for deep-tech startups like mine.",
+            "As someone who aims to mentor next-gen AI engineers, I recognize the importance of 300 dedicated trainers for upskilling the workforce and fostering practical AI application across industries."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberation established a strong consensus on the critical inputs required for Singapore's AI strategy in 2023. Participants agreed that an annual funding of S$120 million, derived from the larger S$500 million national commitment, serves as the financial backbone for AI R&D and initiatives like the 100 Experiments program, which offers a consistent co-funding cap of S$330,000 per project. The provision of 5 million GPU hours was deemed essential for complex AI experimentation, model training, and scaling, particularly for advanced applications like computer vision and generative AI. Furthermore, the allocation of 300 AI experts and trainers was considered vital for upskilling the workforce, guiding enterprises, and ensuring the practical application and deployment of AI solutions across various sectors. These inputs are collectively seen as foundational resources enabling innovation, industry-academia collaboration, and the achievement of national AI goals.",
+      "posting_order": [
+        "Dr. (0swt9x)",
+        "A (d0vo4q)",
+        "A (3cn9cq)",
+        "A (inw1p4)",
+        "Dr. (ju08w2)"
+      ]
+    },
+    {
+      "phase": "Activities",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 75,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 200,
+            "platform_onboarding_assists": 250
+          },
+          "narrative": "As a data scientist embedded in a 100E project, I can clearly see how the substantial inputs from the prior phase translate into concrete activities. The S$120 million annual funding and the national drive for AI adoption necessitate robust outreach efforts to identify enterprise problem statements, leading to an estimated 75 enterprise outreach sessions throughout 2023. These sessions are crucial for feeding the 100E pipeline. Following problem statement identification, matchmaking events are essential to pair enterprises like my healthcare startup with researchers; I anticipate around 12 such events, facilitating the connections needed for the target number of 100E projects. My own experience in the AIAP, coupled with the 300 available trainers, suggests a strong focus on upskilling, leading to approximately 200 AI training workshops delivered to participating organizations. Finally, given the 5 million GPU hours and the need for complex AI experimentation, personalized technical support for onboarding onto the AI experimentation platform will be vital, with an estimated 250 assistance sessions provided to ensure projects like ours can effectively utilize these resources.",
+          "evidence": [
+            "The S$120 million annual funding for AI R&D and the 100 Experiments program's goal of solving industry problem statements would drive significant outreach, leading to around 75 enterprise engagement sessions.",
+            "AISG's explicit role in pairing companies with researchers for the 100E program, aiming for a substantial number of projects, suggests approximately 12 dedicated matchmaking events in the year.",
+            "With 300 AI experts and trainers available and the national focus on upskilling, as evidenced by my own AIAP experience, roughly 200 training workshops would be conducted for participating organizations.",
+            "The provision of 5 million GPU hours and free access to compute for complex AI experimentation necessitates technical assistance, leading to an estimated 250 platform onboarding sessions for projects like mine."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 85,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 280
+          },
+          "narrative": "As a machine learning engineer focused on public services, I see these activities as crucial for building a robust and trustworthy AI ecosystem. For enterprise outreach, given the S$120 million funding and the national drive to identify diverse problem statements, including those relevant to government agencies, I estimate 85 sessions. This is slightly higher than participant A's 75, reflecting a broader scope to ensure public sector needs are also captured. The 12 researcher-matchmaking events estimated by participant A seem appropriate and sufficient to facilitate the necessary collaborations for the 100E projects and other research-backed initiatives, which are vital for developing reliable AI solutions. However, I strongly diverge on the number of training workshops. With 300 trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, 200 workshops (as suggested by A) is far too low. To achieve widespread upskilling across various participating organizations, including government entities, I predict a much higher 1500 workshops. This allows each trainer to conduct an average of 5 workshops annually, which is a more realistic utilization of this significant resource. Finally, for platform onboarding assistance, the 5 million GPU hours and the complexity of advanced AI experimentation platforms necessitate thorough technical support. My estimate of 280 assistance sessions is slightly higher than A's 250, emphasizing the need for comprehensive guidance to ensure effective and reliable utilization of these critical resources for all projects, especially those in the public sector.",
+          "evidence": [
+            "The S$120 million annual funding and the national AI strategy's broad scope necessitate extensive outreach to identify diverse problem statements, including those from government agencies, leading to 85 sessions.",
+            "The 12 matchmaking events are a reasonable number to facilitate critical researcher-enterprise pairings for the 100E program, ensuring robust, research-backed AI solutions.",
+            "With 300 dedicated trainers and the national goal to significantly boost the AI practitioner pool, 1500 training workshops are a more realistic estimate for widespread upskilling across all participating organizations.",
+            "The complexity of the AI experimentation platform and the 5 million GPU hours require substantial technical assistance, making 280 onboarding sessions crucial for effective and reliable utilization by all users."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 95,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 300
+          },
+          "narrative": "As an AI practitioner working in a logistics startup, I see these activities as the direct translation of the substantial inputs into tangible support for the AI ecosystem. The S$120 million funding and the national push for AI adoption necessitate a broad and inclusive approach to engage enterprises. I estimate around 95 enterprise outreach sessions, slightly higher than others, to ensure we reach a diverse range of businesses, including SMEs and those in traditional sectors like logistics, who might not immediately see their AI potential. This broad outreach is crucial for identifying varied problem statements for programs like 100E. For researcher-matchmaking events, I agree with the consensus of 12 events; quality over quantity is key here to facilitate meaningful collaborations for the S$330,000 co-funded projects. My strongest point of view is on training workshops. Having personally benefited from programs like AIAP and advocating for inclusive AI training, I find Participant A's (PolicyRole) estimate of 200 workshops far too low, especially with 300 available trainers and the ambitious goal of boosting the AI practitioner pool. I strongly align with Participant A's (AIPractitioner) estimate of 1500 workshops. This allows for a more realistic utilization of trainers (5 workshops per trainer annually) and supports the widespread upskilling needed to bridge the gap between creatives and AI, and to reach non-engineering professionals, which is a core ambition of mine. Finally, for platform onboarding assists, the 5 million GPU hours are a powerful resource, but complex tools like PyTorch require significant support. I estimate 300 assistance sessions, slightly higher than others, to ensure comprehensive technical guidance. This is vital for all participants, especially those from less technical backgrounds, to effectively utilize these advanced platforms and prevent technical hurdles from becoming a barrier to innovation.",
+          "evidence": [
+            "My experience in a logistics startup highlights the need for broad outreach to diverse enterprises, including SMEs and those in traditional sectors, to identify varied problem statements for AI solutions, leading to 95 outreach sessions.",
+            "As an AI practitioner familiar with complex tools and compute, I understand the necessity of thorough onboarding support to ensure effective utilization of the 5 million GPU hours, especially for less technical users, thus estimating 300 assistance sessions.",
+            "Having gone through AIAP and advocating for inclusive training, I believe the 300 trainers must be fully utilized to deliver a high volume of workshops (1500) to meet the ambitious goal of upskilling a diverse workforce, including non-engineers.",
+            "The S$330,000 co-funding cap for 100E projects underscores the importance of high-quality researcher-enterprise pairings, making 12 focused matchmaking events a reasonable and effective number for facilitating meaningful collaborations."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 90,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 290
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these activities as crucial for translating the substantial inputs into tangible progress. With S$120 million in funding and a national push for AI adoption, I estimate around 90 enterprise outreach sessions. This is slightly higher than some initial estimates, as my experience in manufacturing highlights the need for broad engagement, including traditional sectors and SMEs, to uncover diverse problem statements. For researcher-matchmaking events, I concur with the consensus of 12; quality, targeted pairings are far more effective than sheer volume for the S$330,000 co-funded projects. My strongest divergence is on training workshops. Given the 300 available trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, Participant A's (PolicyRole) estimate of 200 workshops is far too low. I align with the AIPractitioners' estimate of 1500 workshops, which represents a more realistic utilization of trainers (5 workshops per trainer annually) and is essential for widespread upskilling. Finally, with 5 million GPU hours available, the complexity of advanced AI tools for generative AI and computer vision necessitates robust onboarding support. I estimate 290 platform onboarding assistance sessions, reflecting the need for comprehensive guidance to ensure effective utilization of these critical resources across all participating organizations, preventing technical hurdles from impeding innovation.",
+          "evidence": [
+            "My startup's experience in the 100E program showed that broad outreach is needed to identify diverse problem statements, especially from traditional sectors like manufacturing, justifying a higher number of outreach sessions.",
+            "The S$330,000 co-funding per project for 100E emphasizes quality over quantity in researcher-enterprise pairings, making 12 focused matchmaking events a reasonable and effective number.",
+            "With 300 trainers and the national goal to boost the AI practitioner pool to 15,000, 1500 training workshops (5 per trainer annually) are necessary for meaningful upskilling and efficient resource utilization.",
+            "Utilizing 5 million GPU hours for complex generative AI and computer vision models, as my startup does, requires substantial technical support, making 290 onboarding assistance sessions a realistic estimate to ensure effective platform usage."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 90,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 290
+          },
+          "narrative": "As a Research Fellow actively involved in grant calls and seeking to commercialize my algorithms, I see these activities as crucial for translating the substantial inputs into tangible progress for Singapore's AI ecosystem in 2023. Given the S$120 million in funding and the national push for AI adoption, I estimate around 90 enterprise outreach sessions. This is slightly higher than some initial estimates, as my experience in areas like smart port initiatives highlights the need for broad engagement, including traditional sectors and SMEs, to uncover diverse and impactful problem statements for programs like 100E. For researcher-matchmaking events, I concur with the consensus of 12; quality, targeted pairings are far more effective than sheer volume for the S$330,000 co-funded projects, ensuring meaningful collaborations. My strongest divergence from some initial estimates is on training workshops. With 300 available trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, Participant A's (PolicyRole) estimate of 200 workshops is far too low. I strongly align with the AIPractitioners and Dr. (ju08w2)'s estimate of 1500 workshops, which represents a more realistic utilization of trainers (5 workshops per trainer annually) and is essential for widespread upskilling to create a robust talent pool capable of implementing advanced AI solutions. Finally, with 5 million GPU hours available, the complexity of advanced AI tools for areas like reasoning AI and complex scheduling (my own focus) necessitates robust onboarding support. I estimate 290 platform onboarding assistance sessions, reflecting the need for comprehensive guidance to ensure effective utilization of these critical resources across all participating organizations, preventing technical hurdles from impeding innovation.",
+          "evidence": [
+            "The S$120 million annual funding and the national drive for AI adoption necessitate broad outreach, especially to traditional sectors and SMEs relevant to my smart port ambitions, leading to an estimate of 90 enterprise outreach sessions.",
+            "The consistent S$330,000 co-funding per 100E project emphasizes quality over quantity in researcher-enterprise pairings, making 12 targeted matchmaking events a reasonable and effective number.",
+            "With 300 trainers and the policy's goal to boost the AI practitioner pool to 15,000, 1500 training workshops (5 per trainer annually) is a realistic and necessary volume to achieve widespread upskilling.",
+            "The provision of 5 million GPU hours for complex AI experimentation, including my own work in reasoning AI, demands comprehensive technical support, justifying 290 platform onboarding assistance sessions to ensure effective utilization."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 75,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 200,
+            "platform_onboarding_assists": 250
+          },
+          "narrative": "As a data scientist embedded in a 100E project, I can clearly see how the substantial inputs from the prior phase translate into concrete activities. The S$120 million annual funding and the national drive for AI adoption necessitate robust outreach efforts to identify enterprise problem statements, leading to an estimated 75 enterprise outreach sessions throughout 2023. These sessions are crucial for feeding the 100E pipeline. Following problem statement identification, matchmaking events are essential to pair enterprises like my healthcare startup with researchers; I anticipate around 12 such events, facilitating the connections needed for the target number of 100E projects. My own experience in the AIAP, coupled with the 300 available trainers, suggests a strong focus on upskilling, leading to approximately 200 AI training workshops delivered to participating organizations. Finally, given the 5 million GPU hours and the need for complex AI experimentation, personalized technical support for onboarding onto the AI experimentation platform will be vital, with an estimated 250 assistance sessions provided to ensure projects like ours can effectively utilize these resources.",
+          "evidence": [
+            "The S$120 million annual funding for AI R&D and the 100 Experiments program's goal of solving industry problem statements would drive significant outreach, leading to around 75 enterprise engagement sessions.",
+            "AISG's explicit role in pairing companies with researchers for the 100E program, aiming for a substantial number of projects, suggests approximately 12 dedicated matchmaking events in the year.",
+            "With 300 AI experts and trainers available and the national focus on upskilling, as evidenced by my own AIAP experience, roughly 200 training workshops would be conducted for participating organizations.",
+            "The provision of 5 million GPU hours and free access to compute for complex AI experimentation necessitates technical assistance, leading to an estimated 250 platform onboarding sessions for projects like mine."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 85,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 280
+          },
+          "narrative": "As a machine learning engineer focused on public services, I see these activities as crucial for building a robust and trustworthy AI ecosystem. For enterprise outreach, given the S$120 million funding and the national drive to identify diverse problem statements, including those relevant to government agencies, I estimate 85 sessions. This is slightly higher than participant A's 75, reflecting a broader scope to ensure public sector needs are also captured. The 12 researcher-matchmaking events estimated by participant A seem appropriate and sufficient to facilitate the necessary collaborations for the 100E projects and other research-backed initiatives, which are vital for developing reliable AI solutions. However, I strongly diverge on the number of training workshops. With 300 trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, 200 workshops (as suggested by A) is far too low. To achieve widespread upskilling across various participating organizations, including government entities, I predict a much higher 1500 workshops. This allows each trainer to conduct an average of 5 workshops annually, which is a more realistic utilization of this significant resource. Finally, for platform onboarding assistance, the 5 million GPU hours and the complexity of advanced AI experimentation platforms necessitate thorough technical support. My estimate of 280 assistance sessions is slightly higher than A's 250, emphasizing the need for comprehensive guidance to ensure effective and reliable utilization of these critical resources for all projects, especially those in the public sector.",
+          "evidence": [
+            "The S$120 million annual funding and the national AI strategy's broad scope necessitate extensive outreach to identify diverse problem statements, including those from government agencies, leading to 85 sessions.",
+            "The 12 matchmaking events are a reasonable number to facilitate critical researcher-enterprise pairings for the 100E program, ensuring robust, research-backed AI solutions.",
+            "With 300 dedicated trainers and the national goal to significantly boost the AI practitioner pool, 1500 training workshops are a more realistic estimate for widespread upskilling across all participating organizations.",
+            "The complexity of the AI experimentation platform and the 5 million GPU hours require substantial technical assistance, making 280 onboarding sessions crucial for effective and reliable utilization by all users."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 95,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 300
+          },
+          "narrative": "As an AI practitioner working in a logistics startup, I see these activities as the direct translation of the substantial inputs into tangible support for the AI ecosystem. The S$120 million funding and the national push for AI adoption necessitate a broad and inclusive approach to engage enterprises. I estimate around 95 enterprise outreach sessions, slightly higher than others, to ensure we reach a diverse range of businesses, including SMEs and those in traditional sectors like logistics, who might not immediately see their AI potential. This broad outreach is crucial for identifying varied problem statements for programs like 100E. For researcher-matchmaking events, I agree with the consensus of 12 events; quality over quantity is key here to facilitate meaningful collaborations for the S$330,000 co-funded projects. My strongest point of view is on training workshops. Having personally benefited from programs like AIAP and advocating for inclusive AI training, I find Participant A's (PolicyRole) estimate of 200 workshops far too low, especially with 300 available trainers and the ambitious goal of boosting the AI practitioner pool. I strongly align with Participant A's (AIPractitioner) estimate of 1500 workshops. This allows for a more realistic utilization of trainers (5 workshops per trainer annually) and supports the widespread upskilling needed to bridge the gap between creatives and AI, and to reach non-engineering professionals, which is a core ambition of mine. Finally, for platform onboarding assists, the 5 million GPU hours are a powerful resource, but complex tools like PyTorch require significant support. I estimate 300 assistance sessions, slightly higher than others, to ensure comprehensive technical guidance. This is vital for all participants, especially those from less technical backgrounds, to effectively utilize these advanced platforms and prevent technical hurdles from becoming a barrier to innovation.",
+          "evidence": [
+            "My experience in a logistics startup highlights the need for broad outreach to diverse enterprises, including SMEs and those in traditional sectors, to identify varied problem statements for AI solutions, leading to 95 outreach sessions.",
+            "As an AI practitioner familiar with complex tools and compute, I understand the necessity of thorough onboarding support to ensure effective utilization of the 5 million GPU hours, especially for less technical users, thus estimating 300 assistance sessions.",
+            "Having gone through AIAP and advocating for inclusive training, I believe the 300 trainers must be fully utilized to deliver a high volume of workshops (1500) to meet the ambitious goal of upskilling a diverse workforce, including non-engineers.",
+            "The S$330,000 co-funding cap for 100E projects underscores the importance of high-quality researcher-enterprise pairings, making 12 focused matchmaking events a reasonable and effective number for facilitating meaningful collaborations."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 90,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 290
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these activities as crucial for translating the substantial inputs into tangible progress. With S$120 million in funding and a national push for AI adoption, I estimate around 90 enterprise outreach sessions. This is slightly higher than some initial estimates, as my experience in manufacturing highlights the need for broad engagement, including traditional sectors and SMEs, to uncover diverse problem statements. For researcher-matchmaking events, I concur with the consensus of 12; quality, targeted pairings are far more effective than sheer volume for the S$330,000 co-funded projects. My strongest divergence is on training workshops. Given the 300 available trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, Participant A's (PolicyRole) estimate of 200 workshops is far too low. I align with the AIPractitioners' estimate of 1500 workshops, which represents a more realistic utilization of trainers (5 workshops per trainer annually) and is essential for widespread upskilling. Finally, with 5 million GPU hours available, the complexity of advanced AI tools for generative AI and computer vision necessitates robust onboarding support. I estimate 290 platform onboarding assistance sessions, reflecting the need for comprehensive guidance to ensure effective utilization of these critical resources across all participating organizations, preventing technical hurdles from impeding innovation.",
+          "evidence": [
+            "My startup's experience in the 100E program showed that broad outreach is needed to identify diverse problem statements, especially from traditional sectors like manufacturing, justifying a higher number of outreach sessions.",
+            "The S$330,000 co-funding per project for 100E emphasizes quality over quantity in researcher-enterprise pairings, making 12 focused matchmaking events a reasonable and effective number.",
+            "With 300 trainers and the national goal to boost the AI practitioner pool to 15,000, 1500 training workshops (5 per trainer annually) are necessary for meaningful upskilling and efficient resource utilization.",
+            "Utilizing 5 million GPU hours for complex generative AI and computer vision models, as my startup does, requires substantial technical support, making 290 onboarding assistance sessions a realistic estimate to ensure effective platform usage."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 90,
+            "researcher_matchmaking_events": 12,
+            "training_workshops_held": 1500,
+            "platform_onboarding_assists": 290
+          },
+          "narrative": "As a Research Fellow actively involved in grant calls and seeking to commercialize my algorithms, I see these activities as crucial for translating the substantial inputs into tangible progress for Singapore's AI ecosystem in 2023. Given the S$120 million in funding and the national push for AI adoption, I estimate around 90 enterprise outreach sessions. This is slightly higher than some initial estimates, as my experience in areas like smart port initiatives highlights the need for broad engagement, including traditional sectors and SMEs, to uncover diverse and impactful problem statements for programs like 100E. For researcher-matchmaking events, I concur with the consensus of 12; quality, targeted pairings are far more effective than sheer volume for the S$330,000 co-funded projects, ensuring meaningful collaborations. My strongest divergence from some initial estimates is on training workshops. With 300 available trainers and the ambitious goal of boosting the AI practitioner pool to 15,000, Participant A's (PolicyRole) estimate of 200 workshops is far too low. I strongly align with the AIPractitioners and Dr. (ju08w2)'s estimate of 1500 workshops, which represents a more realistic utilization of trainers (5 workshops per trainer annually) and is essential for widespread upskilling to create a robust talent pool capable of implementing advanced AI solutions. Finally, with 5 million GPU hours available, the complexity of advanced AI tools for areas like reasoning AI and complex scheduling (my own focus) necessitates robust onboarding support. I estimate 290 platform onboarding assistance sessions, reflecting the need for comprehensive guidance to ensure effective utilization of these critical resources across all participating organizations, preventing technical hurdles from impeding innovation.",
+          "evidence": [
+            "The S$120 million annual funding and the national drive for AI adoption necessitate broad outreach, especially to traditional sectors and SMEs relevant to my smart port ambitions, leading to an estimate of 90 enterprise outreach sessions.",
+            "The consistent S$330,000 co-funding per 100E project emphasizes quality over quantity in researcher-enterprise pairings, making 12 targeted matchmaking events a reasonable and effective number.",
+            "With 300 trainers and the policy's goal to boost the AI practitioner pool to 15,000, 1500 training workshops (5 per trainer annually) is a realistic and necessary volume to achieve widespread upskilling.",
+            "The provision of 5 million GPU hours for complex AI experimentation, including my own work in reasoning AI, demands comprehensive technical support, justifying 290 platform onboarding assistance sessions to ensure effective utilization."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberations highlighted that the S$120 million annual funding and national AI strategy are crucial for driving activities, with a strong consensus on 12 researcher-matchmaking events to ensure quality pairings for co-funded projects. Estimates for enterprise outreach sessions ranged from 75 to 95, reflecting a need for broad engagement across diverse sectors, while platform onboarding assists varied from 250 to 300, emphasizing support for complex AI tools and 5 million GPU hours. A key divergence was observed in training workshops, with one participant estimating 200, while others strongly advocated for 1500. The higher estimate for workshops was justified by the need to fully utilize 300 trainers to meet the ambitious goal of upskilling 15,000 AI practitioners, ensuring broad engagement across diverse sectors and user capabilities.",
+      "posting_order": [
+        "A (d0vo4q)",
+        "A (inw1p4)",
+        "A (3cn9cq)",
+        "Dr. (ju08w2)",
+        "Dr. (0swt9x)"
+      ]
+    },
+    {
+      "phase": "Outputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 130,
+            "ai_prototypes_developed": 110,
+            "trainees_completed_programme": 600,
+            "enterprises_with_solution": 105
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these outputs as the direct result of the substantial inputs and focused activities. The S$120 million funding, coupled with 12 matchmaking events, should lead to approximately 130 100E projects receiving approval, as the program aims for a significant number of industry-driven solutions. With 5 million GPU hours and dedicated platform support, I anticipate around 110 AI prototypes being successfully built from these approved projects, reflecting a strong development pipeline. My own experience in the AIAP, supported by 300 trainers, suggests that approximately 600 individuals will complete intensive AI apprenticeship or training programmes, contributing to the national upskilling goal. Finally, these efforts will translate into tangible impact, with about 105 enterprises having at least one AI solution developed through the program, as the prototypes are designed for real-world application.",
+          "evidence": [
+            "The S$120 million annual funding for AI R&D and the 12 researcher-matchmaking events are designed to generate a substantial pipeline of 100E projects, making 130 approved projects a realistic target for a flagship program.",
+            "The provision of 5 million GPU hours and 250 platform onboarding assists directly supports the development of AI prototypes; a high conversion rate of 85% from 130 approved projects yields about 110 prototypes.",
+            "Having completed the AIAP myself, I know the program's intensity. With 300 trainers available, and a focus on quality training (my estimate of 200 workshops), approximately 600 individuals can complete intensive 9-month apprenticeship programs annually.",
+            "The core objective of the 100E program is to deliver AI solutions to enterprises; thus, the 110 developed prototypes will lead to around 105 unique enterprises adopting at least one AI solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 140,
+            "ai_prototypes_developed": 120,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 115
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions, I anticipate a strong set of outputs for 2023, reflecting the substantial inputs and robust activities. Given the S$120 million annual funding and the 12 researcher-matchmaking events, I estimate 140 100E projects will be approved. This is slightly higher than Participant A's estimate of 130, as I believe the 90 enterprise outreach sessions will generate a very healthy pipeline of quality proposals, especially for impactful areas like smart port initiatives. From these approved projects, I expect approximately 120 AI prototypes to be successfully developed. This reflects a high conversion rate, supported by the 5 million GPU hours and 290 platform onboarding assists, which are crucial for complex AI experimentation like reasoning AI. This is also slightly higher than Participant A's 110 prototypes, consistent with my higher project approval estimate. My biggest divergence from Participant A is on trainees completed: I estimate 2500 individuals will complete an AI apprenticeship or training programme, significantly more than A's 600. My strong advocacy for 1500 training workshops, utilizing the 300 trainers to meet the ambitious goal of boosting the AI practitioner pool to 15,000, necessitates a much higher completion rate to ensure widespread upskilling. Finally, I predict 115 enterprises will have at least one AI solution developed through the programme. This aligns with the program's design of solving industry problem statements and is a direct consequence of the developed prototypes, slightly exceeding A's 105 due to my higher prototype count.",
+          "evidence": [
+            "The S$120 million annual funding, combined with 90 enterprise outreach sessions and 12 matchmaking events, should generate a robust pipeline of quality proposals, leading to 140 approved 100E projects.",
+            "With 140 approved projects and the provision of 5 million GPU hours and 290 platform onboarding assists, a high percentage (around 85%) of these projects should yield a tangible AI prototype within the year, leading to 120 prototypes.",
+            "My strong advocacy for 1500 training workshops, utilizing 300 trainers to contribute to the 15,000 practitioner goal, implies a much higher number of completed trainees (2500) than other estimates, reflecting effective utilization of resources for widespread upskilling.",
+            "The 100E program's focus on solving specific industry problems means that the 120 developed prototypes should directly translate into 115 enterprises having at least one AI solution, demonstrating practical application and commercialization."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 135,
+            "ai_prototypes_developed": 115,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 110
+          },
+          "narrative": "As a machine learning engineer focused on public services, I predict a strong set of outputs for 2023, reflecting the substantial inputs and robust activities, particularly in training and project development. The S$120 million funding, combined with 12 researcher-matchmaking events and my estimated 85 enterprise outreach sessions (which aim to capture public sector needs), should lead to approximately 135 100E projects being approved. This is slightly higher than Participant A's 130, acknowledging the broader outreach. With 5 million GPU hours and my 280 platform onboarding assists, I anticipate around 115 AI prototypes being successfully built from these approved projects, reflecting a strong development pipeline and rigorous testing for reliability. This is consistent with the conversion rate seen by other participants. My biggest divergence from Participant A, and alignment with Dr., is on the number of trainees. Given my strong advocacy for 1500 training workshops to utilize the 300 trainers and meet the ambitious goal of boosting the AI practitioner pool, I estimate 2500 individuals will complete an AI apprenticeship or training programme, significantly more than A's 600. Finally, these efforts will translate into tangible impact, with about 110 enterprises (including government agencies) having at least one AI solution developed through the program, as the prototypes are designed for real-world, trustworthy application.",
+          "evidence": [
+            "The S$120 million funding and 85 enterprise outreach sessions (my estimate) will generate a robust pipeline, leading to 135 approved 100E projects, including those relevant to public sector needs.",
+            "With 5 million GPU hours and 280 platform onboarding assists, a high conversion rate of approved projects to rigorously tested and reliable AI prototypes is expected, resulting in 115 prototypes.",
+            "My strong stance on 1500 training workshops, utilizing 300 trainers to meet the national upskilling goal, directly supports the completion of 2500 individuals in intensive AI apprenticeship or training programmes.",
+            "The focus on practical, trustworthy AI solutions means a high conversion from 115 prototypes to 110 enterprises with deployed solutions, ensuring real-world impact for both private and public sectors."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 138,
+            "ai_prototypes_developed": 118,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 112
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I foresee a robust set of outputs for 2023, directly stemming from the substantial inputs and targeted activities. Given the S$120 million in funding and the 12 quality researcher-matchmaking events, coupled with my estimated 90 enterprise outreach sessions, I predict approximately 138 100E projects will receive approval. This is slightly higher than Participant A's 130, reflecting the strong pipeline generated by broad engagement, but still focused on impactful deep-tech solutions. From these approved projects, and with the critical support of 5 million GPU hours and 290 platform onboarding assists, I anticipate around 118 AI prototypes will be successfully built. My experience in scaling prototypes to production emphasizes the importance of these resources for complex generative AI and computer vision models, leading to a high conversion rate from approved projects. My strongest alignment, and divergence from Participant A, is on the number of trainees. Given my prior strong advocacy for 1500 training workshops to effectively utilize the 300 trainers and meet the national upskilling goal, I estimate 2500 individuals will complete an AI apprenticeship or training programme, aligning with Dr. and A (AIPractitioner). Finally, reflecting the program's focus on real-world problem statements and my own drive for practical application, I predict 112 enterprises will have at least one AI solution developed through the programme, a strong conversion from the developed prototypes.",
+          "evidence": [
+            "The S$120 million funding and S$330,000 co-funding cap, combined with 90 enterprise outreach sessions and 12 matchmaking events, will generate a strong pipeline of quality deep-tech proposals, leading to approximately 138 approved 100E projects.",
+            "My hands-on experience with generative AI and computer vision models confirms that 5 million GPU hours and 290 platform onboarding assists are crucial for successfully developing complex prototypes, resulting in a high conversion rate of 118 prototypes from approved projects.",
+            "My strong advocacy for 1500 training workshops, leveraging the 300 trainers, is directly aimed at significantly boosting the AI practitioner pool, making the estimate of 2500 completed trainees highly realistic and necessary.",
+            "As someone focused on scaling prototypes to production in manufacturing, I expect a high adoption rate; 112 enterprises having at least one AI solution reflects the program's emphasis on solving industry problem statements and translating prototypes into real-world applications."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 138,
+            "ai_prototypes_developed": 118,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 112
+          },
+          "narrative": "As an AI practitioner in a logistics startup, I see these outputs as the tangible results of the substantial inputs and focused activities. My prior advocacy for broad enterprise outreach (95 sessions) and robust technical support directly influences my estimates. Given the S$120 million funding and the 12 researcher-matchmaking events, I predict approximately 138 100E projects will receive approval. This is on the higher end of other participants' estimates, like PolicyRole's 130, but I believe my extensive outreach efforts will generate a stronger pipeline of quality proposals from diverse sectors, including traditional ones like logistics. From these approved projects, and with the critical support of 5 million GPU hours and my estimated 300 platform onboarding assists, I anticipate around 118 AI prototypes will be successfully built. This reflects a strong development pipeline, as complex computer vision models require significant compute and guidance, leading to a high conversion rate from approved projects. This aligns closely with Dr. (ju08w2)'s estimate of 118 prototypes, which I find realistic given the resources. My strongest point of view, and where I diverge significantly from PolicyRole's 600, is on the number of trainees. Given my strong advocacy for 1500 training workshops to effectively utilize the 300 trainers and meet the national upskilling goal, I estimate 2500 individuals will complete an AI apprenticeship or training programme. This aligns with Dr. (0swt9x) and A (inw1p4), as it's essential for bridging the gap between creatives and AI and reaching non-engineering professionals. Finally, reflecting the program's focus on real-world problem statements and my own drive for practical application, I predict 112 enterprises will have at least one AI solution developed through the programme, a strong conversion from the developed prototypes and consistent with the other researchers' estimates.",
+          "evidence": [
+            "My advocacy for 95 enterprise outreach sessions, higher than many, is expected to generate a robust and diverse pipeline of problem statements, leading to a higher number of approved 100E projects (138).",
+            "The provision of 5 million GPU hours and my estimated 300 platform onboarding assists are crucial for developing complex AI prototypes like computer vision models, ensuring a high conversion rate of approved projects into 118 successful prototypes.",
+            "My strong emphasis on 1500 training workshops, utilizing all 300 trainers, directly supports a significantly higher number of trainees completing the program (2500), aligning with the national goal of boosting the AI practitioner pool.",
+            "As an AI practitioner in a startup, I prioritize practical application; thus, the developed prototypes are expected to translate into tangible solutions for 112 enterprises, reflecting the program's real-world impact."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 130,
+            "ai_prototypes_developed": 110,
+            "trainees_completed_programme": 600,
+            "enterprises_with_solution": 105
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these outputs as the direct result of the substantial inputs and focused activities. The S$120 million funding, coupled with 12 matchmaking events, should lead to approximately 130 100E projects receiving approval, as the program aims for a significant number of industry-driven solutions. With 5 million GPU hours and dedicated platform support, I anticipate around 110 AI prototypes being successfully built from these approved projects, reflecting a strong development pipeline. My own experience in the AIAP, supported by 300 trainers, suggests that approximately 600 individuals will complete intensive AI apprenticeship or training programmes, contributing to the national upskilling goal. Finally, these efforts will translate into tangible impact, with about 105 enterprises having at least one AI solution developed through the program, as the prototypes are designed for real-world application.",
+          "evidence": [
+            "The S$120 million annual funding for AI R&D and the 12 researcher-matchmaking events are designed to generate a substantial pipeline of 100E projects, making 130 approved projects a realistic target for a flagship program.",
+            "The provision of 5 million GPU hours and 250 platform onboarding assists directly supports the development of AI prototypes; a high conversion rate of 85% from 130 approved projects yields about 110 prototypes.",
+            "Having completed the AIAP myself, I know the program's intensity. With 300 trainers available, and a focus on quality training (my estimate of 200 workshops), approximately 600 individuals can complete intensive 9-month apprenticeship programs annually.",
+            "The core objective of the 100E program is to deliver AI solutions to enterprises; thus, the 110 developed prototypes will lead to around 105 unique enterprises adopting at least one AI solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 140,
+            "ai_prototypes_developed": 120,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 115
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions, I anticipate a strong set of outputs for 2023, reflecting the substantial inputs and robust activities. Given the S$120 million annual funding and the 12 researcher-matchmaking events, I estimate 140 100E projects will be approved. This is slightly higher than Participant A's estimate of 130, as I believe the 90 enterprise outreach sessions will generate a very healthy pipeline of quality proposals, especially for impactful areas like smart port initiatives. From these approved projects, I expect approximately 120 AI prototypes to be successfully developed. This reflects a high conversion rate, supported by the 5 million GPU hours and 290 platform onboarding assists, which are crucial for complex AI experimentation like reasoning AI. This is also slightly higher than Participant A's 110 prototypes, consistent with my higher project approval estimate. My biggest divergence from Participant A is on trainees completed: I estimate 2500 individuals will complete an AI apprenticeship or training programme, significantly more than A's 600. My strong advocacy for 1500 training workshops, utilizing the 300 trainers to meet the ambitious goal of boosting the AI practitioner pool to 15,000, necessitates a much higher completion rate to ensure widespread upskilling. Finally, I predict 115 enterprises will have at least one AI solution developed through the programme. This aligns with the program's design of solving industry problem statements and is a direct consequence of the developed prototypes, slightly exceeding A's 105 due to my higher prototype count.",
+          "evidence": [
+            "The S$120 million annual funding, combined with 90 enterprise outreach sessions and 12 matchmaking events, should generate a robust pipeline of quality proposals, leading to 140 approved 100E projects.",
+            "With 140 approved projects and the provision of 5 million GPU hours and 290 platform onboarding assists, a high percentage (around 85%) of these projects should yield a tangible AI prototype within the year, leading to 120 prototypes.",
+            "My strong advocacy for 1500 training workshops, utilizing 300 trainers to contribute to the 15,000 practitioner goal, implies a much higher number of completed trainees (2500) than other estimates, reflecting effective utilization of resources for widespread upskilling.",
+            "The 100E program's focus on solving specific industry problems means that the 120 developed prototypes should directly translate into 115 enterprises having at least one AI solution, demonstrating practical application and commercialization."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 135,
+            "ai_prototypes_developed": 115,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 110
+          },
+          "narrative": "As a machine learning engineer focused on public services, I predict a strong set of outputs for 2023, reflecting the substantial inputs and robust activities, particularly in training and project development. The S$120 million funding, combined with 12 researcher-matchmaking events and my estimated 85 enterprise outreach sessions (which aim to capture public sector needs), should lead to approximately 135 100E projects being approved. This is slightly higher than Participant A's 130, acknowledging the broader outreach. With 5 million GPU hours and my 280 platform onboarding assists, I anticipate around 115 AI prototypes being successfully built from these approved projects, reflecting a strong development pipeline and rigorous testing for reliability. This is consistent with the conversion rate seen by other participants. My biggest divergence from Participant A, and alignment with Dr., is on the number of trainees. Given my strong advocacy for 1500 training workshops to utilize the 300 trainers and meet the ambitious goal of boosting the AI practitioner pool, I estimate 2500 individuals will complete an AI apprenticeship or training programme, significantly more than A's 600. Finally, these efforts will translate into tangible impact, with about 110 enterprises (including government agencies) having at least one AI solution developed through the program, as the prototypes are designed for real-world, trustworthy application.",
+          "evidence": [
+            "The S$120 million funding and 85 enterprise outreach sessions (my estimate) will generate a robust pipeline, leading to 135 approved 100E projects, including those relevant to public sector needs.",
+            "With 5 million GPU hours and 280 platform onboarding assists, a high conversion rate of approved projects to rigorously tested and reliable AI prototypes is expected, resulting in 115 prototypes.",
+            "My strong stance on 1500 training workshops, utilizing 300 trainers to meet the national upskilling goal, directly supports the completion of 2500 individuals in intensive AI apprenticeship or training programmes.",
+            "The focus on practical, trustworthy AI solutions means a high conversion from 115 prototypes to 110 enterprises with deployed solutions, ensuring real-world impact for both private and public sectors."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 138,
+            "ai_prototypes_developed": 118,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 112
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I foresee a robust set of outputs for 2023, directly stemming from the substantial inputs and targeted activities. Given the S$120 million in funding and the 12 quality researcher-matchmaking events, coupled with my estimated 90 enterprise outreach sessions, I predict approximately 138 100E projects will receive approval. This is slightly higher than Participant A's 130, reflecting the strong pipeline generated by broad engagement, but still focused on impactful deep-tech solutions. From these approved projects, and with the critical support of 5 million GPU hours and 290 platform onboarding assists, I anticipate around 118 AI prototypes will be successfully built. My experience in scaling prototypes to production emphasizes the importance of these resources for complex generative AI and computer vision models, leading to a high conversion rate from approved projects. My strongest alignment, and divergence from Participant A, is on the number of trainees. Given my prior strong advocacy for 1500 training workshops to effectively utilize the 300 trainers and meet the national upskilling goal, I estimate 2500 individuals will complete an AI apprenticeship or training programme, aligning with Dr. and A (AIPractitioner). Finally, reflecting the program's focus on real-world problem statements and my own drive for practical application, I predict 112 enterprises will have at least one AI solution developed through the programme, a strong conversion from the developed prototypes.",
+          "evidence": [
+            "The S$120 million funding and S$330,000 co-funding cap, combined with 90 enterprise outreach sessions and 12 matchmaking events, will generate a strong pipeline of quality deep-tech proposals, leading to approximately 138 approved 100E projects.",
+            "My hands-on experience with generative AI and computer vision models confirms that 5 million GPU hours and 290 platform onboarding assists are crucial for successfully developing complex prototypes, resulting in a high conversion rate of 118 prototypes from approved projects.",
+            "My strong advocacy for 1500 training workshops, leveraging the 300 trainers, is directly aimed at significantly boosting the AI practitioner pool, making the estimate of 2500 completed trainees highly realistic and necessary.",
+            "As someone focused on scaling prototypes to production in manufacturing, I expect a high adoption rate; 112 enterprises having at least one AI solution reflects the program's emphasis on solving industry problem statements and translating prototypes into real-world applications."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 138,
+            "ai_prototypes_developed": 118,
+            "trainees_completed_programme": 2500,
+            "enterprises_with_solution": 112
+          },
+          "narrative": "As an AI practitioner in a logistics startup, I see these outputs as the tangible results of the substantial inputs and focused activities. My prior advocacy for broad enterprise outreach (95 sessions) and robust technical support directly influences my estimates. Given the S$120 million funding and the 12 researcher-matchmaking events, I predict approximately 138 100E projects will receive approval. This is on the higher end of other participants' estimates, like PolicyRole's 130, but I believe my extensive outreach efforts will generate a stronger pipeline of quality proposals from diverse sectors, including traditional ones like logistics. From these approved projects, and with the critical support of 5 million GPU hours and my estimated 300 platform onboarding assists, I anticipate around 118 AI prototypes will be successfully built. This reflects a strong development pipeline, as complex computer vision models require significant compute and guidance, leading to a high conversion rate from approved projects. This aligns closely with Dr. (ju08w2)'s estimate of 118 prototypes, which I find realistic given the resources. My strongest point of view, and where I diverge significantly from PolicyRole's 600, is on the number of trainees. Given my strong advocacy for 1500 training workshops to effectively utilize the 300 trainers and meet the national upskilling goal, I estimate 2500 individuals will complete an AI apprenticeship or training programme. This aligns with Dr. (0swt9x) and A (inw1p4), as it's essential for bridging the gap between creatives and AI and reaching non-engineering professionals. Finally, reflecting the program's focus on real-world problem statements and my own drive for practical application, I predict 112 enterprises will have at least one AI solution developed through the programme, a strong conversion from the developed prototypes and consistent with the other researchers' estimates.",
+          "evidence": [
+            "My advocacy for 95 enterprise outreach sessions, higher than many, is expected to generate a robust and diverse pipeline of problem statements, leading to a higher number of approved 100E projects (138).",
+            "The provision of 5 million GPU hours and my estimated 300 platform onboarding assists are crucial for developing complex AI prototypes like computer vision models, ensuring a high conversion rate of approved projects into 118 successful prototypes.",
+            "My strong emphasis on 1500 training workshops, utilizing all 300 trainers, directly supports a significantly higher number of trainees completing the program (2500), aligning with the national goal of boosting the AI practitioner pool.",
+            "As an AI practitioner in a startup, I prioritize practical application; thus, the developed prototypes are expected to translate into tangible solutions for 112 enterprises, reflecting the program's real-world impact."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberation emphasized that substantial funding (S$120 million), extensive enterprise outreach (around 90-95 sessions), and matchmaking events are crucial for approving 100E projects, with estimates ranging from 130 to 140. The provision of 5 million GPU hours and 250-300 platform onboarding assists is expected to yield 110 to 120 AI prototypes, which are then anticipated to result in 105 to 115 enterprises adopting at least one AI solution. A key divergence emerged regarding training outcomes, with a majority predicting 2500 individuals completing AI apprenticeship programs due to extensive workshops and trainer utilization, while one estimate was significantly lower at 600.",
+      "posting_order": [
+        "A (d0vo4q)",
+        "Dr. (0swt9x)",
+        "A (inw1p4)",
+        "Dr. (ju08w2)",
+        "A (3cn9cq)"
+      ]
+    },
+    {
+      "phase": "Outcomes",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 135,
+            "deployed_100e_projects": 108,
+            "ai_practitioner_pool": 11000,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a machine learning engineer, I see these outcomes as a strong indication of the policy's success in fostering a robust and trustworthy AI ecosystem. From the 135 approved 100E projects, I predict that approximately 108 will have reached production deployment in 2023. This reflects a high conversion rate from prototype to real-world application, which is crucial for building public trust in AI solutions. The AI practitioner pool is significantly boosted, reaching around 11,000 individuals, demonstrating substantial progress towards the 15,000 target, largely due to the extensive training efforts I advocated for. The specific target of 100 generative AI use cases has been met, showcasing the agility and effectiveness of dedicated programs. Finally, the enterprise AI adoption rate is estimated at 15%, indicating a growing integration of AI solutions across various sectors, driven by both the 100E program and broader national initiatives to empower businesses with AI capabilities.",
+          "evidence": [
+            "The 135 approved 100E projects, combined with the focus on practical problem-solving and rigorous testing, will result in approximately 108 projects being deployed into production, ensuring real-world impact and trustworthy systems.",
+            "My strong advocacy for 1500 training workshops, which led to 2500 trainees completing programs, directly contributes to the AI practitioner pool growing to an estimated 11,000, making significant progress towards the 15,000 target.",
+            "The policy's explicit target of '100 generative AI use cases in 100 days' through dedicated programs like AI Trailblazers, with free tool access, ensures this specific outcome is met.",
+            "The successful deployment of 108 100E projects and the broader national push for AI adoption will contribute to an estimated 15% enterprise AI adoption rate, reflecting tangible progress in integrating AI solutions across Singaporean businesses."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 138,
+            "deployed_100e_projects": 115,
+            "ai_practitioner_pool": 12000,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As an AI practitioner deeply invested in the practical application and widespread adoption of AI, I see these outcomes as a direct result of the robust inputs and activities I advocated for. My prior estimate of 138 approved 100E projects for 2023 stands, reflecting the strong pipeline generated by extensive outreach. From these approved projects, and given the 118 prototypes developed and 112 enterprises now having a solution, I predict that 115 100E projects will have reached production deployment. This is a high conversion rate, but it's realistic given the problem-statement driven nature of 100E and the dedicated support provided, ensuring that solutions are not just theoretical but truly implemented. This is slightly higher than A (inw1p4)'s estimate of 108, reflecting my persona's emphasis on practical, deployed solutions. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 trainees significantly boosts the overall talent base. I estimate the AI practitioner pool will reach 12,000, making substantial progress towards the 15,000 target and surpassing A (inw1p4)'s 11,000, which I believe underestimates the impact of the training efforts. For generative AI use cases, the policy's clear target of 100 in 100 days, supported by dedicated programs like AI Trailblazers, leads me to confidently predict that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by broad outreach to diverse sectors and the successful deployment of 100E projects, is observed to be 15%. This aligns with A (inw1p4)'s estimate and indicates a healthy, growing integration of AI solutions across Singaporean businesses.",
+          "evidence": [
+            "My advocacy for 95 enterprise outreach sessions and robust technical support directly contributed to a strong pipeline, resulting in 138 approved 100E projects.",
+            "Given 118 prototypes developed and 112 enterprises with solutions, the practical focus of the 100E program ensures a high conversion, leading to 115 deployed projects.",
+            "My strong push for 1500 training workshops and 2500 trainees directly contributes to a larger AI practitioner pool, reaching 12,000 and making significant progress towards the 15,000 target.",
+            "The policy's explicit target of 100 generative AI use cases in 100 days, supported by dedicated programs, ensures this specific goal is met, and the broad enterprise outreach contributes to a 15% AI adoption rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 140,
+            "deployed_100e_projects": 118,
+            "ai_practitioner_pool": 12500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions, I see these outcomes as a strong validation of the policy's design and the substantial efforts in 2023. My previous estimate of 140 approved 100E projects for 2023 remains firm, driven by the robust pipeline generated from 90 enterprise outreach sessions and 12 matchmaking events. From these approved projects, I predict that 118 100E projects will have reached production deployment. This is a high conversion rate, reflecting my earlier estimates of 120 prototypes developed and 115 enterprises having a solution, and underscores the program's focus on practical, implementable AI. This estimate is slightly higher than A (inw1p4)'s 108, aligning with my persona's emphasis on successful commercialization and deployment. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 completed trainees has significantly contributed to the talent base. I estimate the total AI practitioner pool will reach 12,500, making substantial progress towards the 15,000 target and exceeding both A (inw1p4)'s 11,000 and A (3cn9cq)'s 12,000, which I believe underestimate the impact of such extensive training efforts. For generative AI use cases, the policy's clear target of 100 in 100 days is a direct and achievable goal, and I confidently predict it has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader national initiatives, is observed to be 15%. This aligns with the other participants' estimates and indicates a healthy, growing integration of AI solutions across Singaporean businesses, which is crucial for my goal of commercializing algorithms.",
+          "evidence": [
+            "My prior estimate of 140 approved 100E projects, stemming from robust outreach and matchmaking, directly translates to the number of projects approved in 2023.",
+            "Given my estimates of 120 AI prototypes developed and 115 enterprises with solutions, a high conversion rate of 118 deployed projects is realistic, reflecting the program's commercialization focus and my own ambitions.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 completed trainees significantly boosts the AI talent pool, leading to an estimated 12,500 practitioners by the end of 2023.",
+            "The policy explicitly states a target of 'Generate 100 generative AI use cases in 100 days', which I consider a ground truth value that would be met through dedicated initiatives."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 130,
+            "deployed_100e_projects": 108,
+            "ai_practitioner_pool": 11500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these outcomes as the tangible results of the policy's strategic investments and activities. Based on my previous estimate, 130 100E projects were approved in 2023, reflecting a robust pipeline driven by funding and matchmaking efforts. From these, I predict that 108 100E projects will have reached production deployment. This is a strong conversion rate from the 110 prototypes developed and 105 enterprises receiving solutions, demonstrating the program's success in delivering practical, implementable AI, which is crucial for my work in healthcare. This aligns closely with A (inw1p4)'s estimate of 108, as we both emphasize the practical deployment aspect. Regarding the AI practitioner pool, while my earlier estimate for intensive AIAP trainees was 600, I recognize that the overall national strategy encompasses a much broader range of training initiatives and existing talent. Considering the aggregated mean of 1240 training workshops and the national push to boost the pool to 15,000, I estimate the total AI practitioner pool will reach 11,500. This represents significant progress towards the target, acknowledging the wider impact of the policy beyond just the intensive programs I focused on, and positions my estimate between A (inw1p4)'s 11,000 and A (3cn9cq)'s 12,000. For generative AI use cases, the policy's clear and ambitious target of 100 in 100 days, supported by dedicated programs, makes me confident that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader outreach to diverse sectors, is observed to be 15%. This consensus among participants indicates a healthy and growing integration of AI solutions across Singaporean businesses, which is vital for the impact of projects like mine.",
+          "evidence": [
+            "My previous estimate of 130 approved 100E projects directly informs the potential for deployment, and a conversion of 110 prototypes to 108 deployed projects reflects the program's strong focus on practical, real-world application for enterprises.",
+            "The 100E program's success in delivering solutions to 105 enterprises, combined with broader national initiatives and outreach, supports an overall enterprise AI adoption rate of 15%, indicating significant integration of AI across sectors.",
+            "While my persona's focus was on intensive AIAP trainees, the national AI practitioner pool is boosted by the aggregated 1240 training workshops and the explicit policy target of 15,000, leading to an estimated 11,500 practitioners, a substantial step towards the goal.",
+            "The policy's clear and specific target of '100 generative AI use cases in 100 days' is a direct and achievable goal, and with dedicated programs like AI Trailblazers, it is highly probable that this objective has been met."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 138,
+            "deployed_100e_projects": 115,
+            "ai_practitioner_pool": 12500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these outcomes as a strong validation of the policy's design and the substantial efforts in 2023. My previous estimate of 138 approved 100E projects for 2023 remains firm, driven by the robust pipeline generated from extensive outreach and quality matchmaking. From these approved projects, and given my expertise in scaling prototypes to production, I predict that 115 100E projects will have reached production deployment. This high conversion rate is realistic, considering the 118 prototypes developed and 112 enterprises now having a solution, and reflects the problem-statement driven nature of 100E which prioritizes implementable solutions. This is higher than A (inw1p4)'s and A (d0vo4q)'s 108, aligning more closely with A (3cn9cq)'s 115 and Dr. (0swt9x)'s 118, as my persona emphasizes practical, deployed solutions. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 completed trainees has significantly contributed to the talent base. I estimate the total AI practitioner pool will reach 12,500, making substantial progress towards the 15,000 target and exceeding other participants' estimates, which I believe underestimate the cumulative impact of such extensive training efforts and the existing talent base. For generative AI use cases, the policy's clear target of 100 in 100 days, supported by dedicated programs and my direct involvement in this field, leads me to confidently predict that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader national initiatives, is observed to be 15%. This aligns with the consensus and indicates a healthy, growing integration of AI solutions across Singaporean businesses, which is crucial for my goal of commercializing AI in manufacturing.",
+          "evidence": [
+            "My persona's direct experience in scaling generative AI prototypes to production through the 100E program supports a high conversion rate of approved projects into deployed solutions, leading to 115 deployed projects.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 completed trainees directly contributes to a significant boost in the overall AI practitioner pool, making 12,500 a realistic estimate.",
+            "The policy's explicit and ambitious target of 100 generative AI use cases in 100 days, combined with my expertise in this domain, makes achieving this goal highly probable.",
+            "The problem-statement driven approach of the 100E program, which resulted in 112 enterprises having a solution, naturally drives enterprise AI adoption, supporting the 15% adoption rate."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 135,
+            "deployed_100e_projects": 108,
+            "ai_practitioner_pool": 11000,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a machine learning engineer, I see these outcomes as a strong indication of the policy's success in fostering a robust and trustworthy AI ecosystem. From the 135 approved 100E projects, I predict that approximately 108 will have reached production deployment in 2023. This reflects a high conversion rate from prototype to real-world application, which is crucial for building public trust in AI solutions. The AI practitioner pool is significantly boosted, reaching around 11,000 individuals, demonstrating substantial progress towards the 15,000 target, largely due to the extensive training efforts I advocated for. The specific target of 100 generative AI use cases has been met, showcasing the agility and effectiveness of dedicated programs. Finally, the enterprise AI adoption rate is estimated at 15%, indicating a growing integration of AI solutions across various sectors, driven by both the 100E program and broader national initiatives to empower businesses with AI capabilities.",
+          "evidence": [
+            "The 135 approved 100E projects, combined with the focus on practical problem-solving and rigorous testing, will result in approximately 108 projects being deployed into production, ensuring real-world impact and trustworthy systems.",
+            "My strong advocacy for 1500 training workshops, which led to 2500 trainees completing programs, directly contributes to the AI practitioner pool growing to an estimated 11,000, making significant progress towards the 15,000 target.",
+            "The policy's explicit target of '100 generative AI use cases in 100 days' through dedicated programs like AI Trailblazers, with free tool access, ensures this specific outcome is met.",
+            "The successful deployment of 108 100E projects and the broader national push for AI adoption will contribute to an estimated 15% enterprise AI adoption rate, reflecting tangible progress in integrating AI solutions across Singaporean businesses."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 138,
+            "deployed_100e_projects": 115,
+            "ai_practitioner_pool": 12000,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As an AI practitioner deeply invested in the practical application and widespread adoption of AI, I see these outcomes as a direct result of the robust inputs and activities I advocated for. My prior estimate of 138 approved 100E projects for 2023 stands, reflecting the strong pipeline generated by extensive outreach. From these approved projects, and given the 118 prototypes developed and 112 enterprises now having a solution, I predict that 115 100E projects will have reached production deployment. This is a high conversion rate, but it's realistic given the problem-statement driven nature of 100E and the dedicated support provided, ensuring that solutions are not just theoretical but truly implemented. This is slightly higher than A (inw1p4)'s estimate of 108, reflecting my persona's emphasis on practical, deployed solutions. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 trainees significantly boosts the overall talent base. I estimate the AI practitioner pool will reach 12,000, making substantial progress towards the 15,000 target and surpassing A (inw1p4)'s 11,000, which I believe underestimates the impact of the training efforts. For generative AI use cases, the policy's clear target of 100 in 100 days, supported by dedicated programs like AI Trailblazers, leads me to confidently predict that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by broad outreach to diverse sectors and the successful deployment of 100E projects, is observed to be 15%. This aligns with A (inw1p4)'s estimate and indicates a healthy, growing integration of AI solutions across Singaporean businesses.",
+          "evidence": [
+            "My advocacy for 95 enterprise outreach sessions and robust technical support directly contributed to a strong pipeline, resulting in 138 approved 100E projects.",
+            "Given 118 prototypes developed and 112 enterprises with solutions, the practical focus of the 100E program ensures a high conversion, leading to 115 deployed projects.",
+            "My strong push for 1500 training workshops and 2500 trainees directly contributes to a larger AI practitioner pool, reaching 12,000 and making significant progress towards the 15,000 target.",
+            "The policy's explicit target of 100 generative AI use cases in 100 days, supported by dedicated programs, ensures this specific goal is met, and the broad enterprise outreach contributes to a 15% AI adoption rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 140,
+            "deployed_100e_projects": 118,
+            "ai_practitioner_pool": 12500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions, I see these outcomes as a strong validation of the policy's design and the substantial efforts in 2023. My previous estimate of 140 approved 100E projects for 2023 remains firm, driven by the robust pipeline generated from 90 enterprise outreach sessions and 12 matchmaking events. From these approved projects, I predict that 118 100E projects will have reached production deployment. This is a high conversion rate, reflecting my earlier estimates of 120 prototypes developed and 115 enterprises having a solution, and underscores the program's focus on practical, implementable AI. This estimate is slightly higher than A (inw1p4)'s 108, aligning with my persona's emphasis on successful commercialization and deployment. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 completed trainees has significantly contributed to the talent base. I estimate the total AI practitioner pool will reach 12,500, making substantial progress towards the 15,000 target and exceeding both A (inw1p4)'s 11,000 and A (3cn9cq)'s 12,000, which I believe underestimate the impact of such extensive training efforts. For generative AI use cases, the policy's clear target of 100 in 100 days is a direct and achievable goal, and I confidently predict it has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader national initiatives, is observed to be 15%. This aligns with the other participants' estimates and indicates a healthy, growing integration of AI solutions across Singaporean businesses, which is crucial for my goal of commercializing algorithms.",
+          "evidence": [
+            "My prior estimate of 140 approved 100E projects, stemming from robust outreach and matchmaking, directly translates to the number of projects approved in 2023.",
+            "Given my estimates of 120 AI prototypes developed and 115 enterprises with solutions, a high conversion rate of 118 deployed projects is realistic, reflecting the program's commercialization focus and my own ambitions.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 completed trainees significantly boosts the AI talent pool, leading to an estimated 12,500 practitioners by the end of 2023.",
+            "The policy explicitly states a target of 'Generate 100 generative AI use cases in 100 days', which I consider a ground truth value that would be met through dedicated initiatives."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 130,
+            "deployed_100e_projects": 108,
+            "ai_practitioner_pool": 11500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I see these outcomes as the tangible results of the policy's strategic investments and activities. Based on my previous estimate, 130 100E projects were approved in 2023, reflecting a robust pipeline driven by funding and matchmaking efforts. From these, I predict that 108 100E projects will have reached production deployment. This is a strong conversion rate from the 110 prototypes developed and 105 enterprises receiving solutions, demonstrating the program's success in delivering practical, implementable AI, which is crucial for my work in healthcare. This aligns closely with A (inw1p4)'s estimate of 108, as we both emphasize the practical deployment aspect. Regarding the AI practitioner pool, while my earlier estimate for intensive AIAP trainees was 600, I recognize that the overall national strategy encompasses a much broader range of training initiatives and existing talent. Considering the aggregated mean of 1240 training workshops and the national push to boost the pool to 15,000, I estimate the total AI practitioner pool will reach 11,500. This represents significant progress towards the target, acknowledging the wider impact of the policy beyond just the intensive programs I focused on, and positions my estimate between A (inw1p4)'s 11,000 and A (3cn9cq)'s 12,000. For generative AI use cases, the policy's clear and ambitious target of 100 in 100 days, supported by dedicated programs, makes me confident that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader outreach to diverse sectors, is observed to be 15%. This consensus among participants indicates a healthy and growing integration of AI solutions across Singaporean businesses, which is vital for the impact of projects like mine.",
+          "evidence": [
+            "My previous estimate of 130 approved 100E projects directly informs the potential for deployment, and a conversion of 110 prototypes to 108 deployed projects reflects the program's strong focus on practical, real-world application for enterprises.",
+            "The 100E program's success in delivering solutions to 105 enterprises, combined with broader national initiatives and outreach, supports an overall enterprise AI adoption rate of 15%, indicating significant integration of AI across sectors.",
+            "While my persona's focus was on intensive AIAP trainees, the national AI practitioner pool is boosted by the aggregated 1240 training workshops and the explicit policy target of 15,000, leading to an estimated 11,500 practitioners, a substantial step towards the goal.",
+            "The policy's clear and specific target of '100 generative AI use cases in 100 days' is a direct and achievable goal, and with dedicated programs like AI Trailblazers, it is highly probable that this objective has been met."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 138,
+            "deployed_100e_projects": 115,
+            "ai_practitioner_pool": 12500,
+            "generative_ai_use_cases": 100,
+            "enterprise_ai_adoption_rate": 15.0
+          },
+          "narrative": "As a Senior Research Engineer whose startup directly benefited from the 100 Experiments programme, I see these outcomes as a strong validation of the policy's design and the substantial efforts in 2023. My previous estimate of 138 approved 100E projects for 2023 remains firm, driven by the robust pipeline generated from extensive outreach and quality matchmaking. From these approved projects, and given my expertise in scaling prototypes to production, I predict that 115 100E projects will have reached production deployment. This high conversion rate is realistic, considering the 118 prototypes developed and 112 enterprises now having a solution, and reflects the problem-statement driven nature of 100E which prioritizes implementable solutions. This is higher than A (inw1p4)'s and A (d0vo4q)'s 108, aligning more closely with A (3cn9cq)'s 115 and Dr. (0swt9x)'s 118, as my persona emphasizes practical, deployed solutions. Regarding the AI practitioner pool, my strong advocacy for 1500 training workshops and the resulting 2500 completed trainees has significantly contributed to the talent base. I estimate the total AI practitioner pool will reach 12,500, making substantial progress towards the 15,000 target and exceeding other participants' estimates, which I believe underestimate the cumulative impact of such extensive training efforts and the existing talent base. For generative AI use cases, the policy's clear target of 100 in 100 days, supported by dedicated programs and my direct involvement in this field, leads me to confidently predict that this specific goal has been met. Finally, the enterprise AI adoption rate, driven by the successful deployment of 100E projects and broader national initiatives, is observed to be 15%. This aligns with the consensus and indicates a healthy, growing integration of AI solutions across Singaporean businesses, which is crucial for my goal of commercializing AI in manufacturing.",
+          "evidence": [
+            "My persona's direct experience in scaling generative AI prototypes to production through the 100E program supports a high conversion rate of approved projects into deployed solutions, leading to 115 deployed projects.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 completed trainees directly contributes to a significant boost in the overall AI practitioner pool, making 12,500 a realistic estimate.",
+            "The policy's explicit and ambitious target of 100 generative AI use cases in 100 days, combined with my expertise in this domain, makes achieving this goal highly probable.",
+            "The problem-statement driven approach of the 100E program, which resulted in 112 enterprises having a solution, naturally drives enterprise AI adoption, supporting the 15% adoption rate."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberations highlighted the policy's success in fostering a practical AI ecosystem, driven by the 100 Experiments (100E) program and extensive training efforts. There was strong consensus that 100 generative AI use cases were developed and the enterprise AI adoption rate reached 15%, attributed to dedicated programs and successful 100E deployments. While estimates for approved 100E projects ranged from 130 to 140 (averaging 136.2), and deployed projects from 108 to 118 (averaging 112.8), all agreed on a high conversion rate from prototype to production. The AI practitioner pool showed the most divergence, with estimates ranging from 11,000 to 12,500 (averaging 11,900), reflecting differing views on the cumulative impact of training initiatives.",
+      "posting_order": [
+        "A (inw1p4)",
+        "A (3cn9cq)",
+        "Dr. (0swt9x)",
+        "A (d0vo4q)",
+        "Dr. (ju08w2)"
+      ]
+    },
+    {
+      "phase": "Impact",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a Senior Research Engineer deeply embedded in Singapore's AI ecosystem, I see the substantial inputs, activities, and outcomes from the prior phases culminating in significant positive impacts. Singapore's global AI leadership ranking has undoubtedly improved; the robust funding, extensive training, and successful deployment of 115 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I predict a rank of 5, reflecting a tangible improvement from a strong starting position. The economic value generated by AI adoption is becoming increasingly evident. With 115 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity and new business models, especially in sectors like manufacturing where my startup operates. I estimate the AI sector's contribution to GDP to be around 1.8%, a healthy growth reflecting this integration. Public trust in AI, while harder to quantify directly from my engineering perspective, should be moderately high. The policy's emphasis on responsible AI and the successful deployment of problem-statement-driven solutions in enterprises contribute to a perception of reliability and benefit. I estimate a public AI trust score of 68%, indicating general acceptance and confidence. Finally, Singapore is indeed retaining its AI talent. The significant growth of the AI practitioner pool to 12,500, coupled with the availability of funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals. My own experience and ambition to mentor next-gen engineers reinforce that Singapore is an attractive place for AI talent, leading me to estimate an AI talent retention rate of 82%.",
+          "evidence": [
+            "The successful deployment of 115 100E projects and 100 generative AI use cases, driven by significant funding and compute resources, directly enhances Singapore's reputation and capabilities in global AI indices.",
+            "With 115 deployed AI solutions and a 15% enterprise AI adoption rate, AI is demonstrably driving productivity and new revenue streams across industries, contributing a measurable share to the national GDP.",
+            "The policy's focus on a 'trusted environment for AI innovation' and the successful, problem-statement-driven deployment of AI solutions in enterprises contribute to a positive public perception and trust in AI systems.",
+            "The substantial growth of the AI practitioner pool to 12,500, combined with a thriving ecosystem of deployed projects and career opportunities, provides strong incentives for AI talent to remain in Singapore."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As an AI practitioner deeply involved in the ecosystem, I see the culmination of Singapore's strategic investments and activities leading to significant impacts. The robust funding, extensive training, and successful deployment of 115 100E projects, including 100 generative AI use cases, have undoubtedly elevated Singapore's global AI leadership. I agree with Dr. (ju08w2) that a global AI readiness rank of 5 is a fair reflection of this progress, demonstrating a practical and impactful approach recognized internationally. The economic value generated by AI adoption is clearly visible; with 115 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including my own in logistics. I concur with Dr. (ju08w2)'s estimate of 1.8% for the AI sector's contribution to GDP, as this reflects the tangible integration of AI into the economy. Regarding public trust, my advocacy for inclusive AI training and the focus on problem-statement-driven solutions mean that the public is increasingly seeing AI as beneficial and reliable. While Dr. (ju08w2) estimates 68%, I believe the widespread training (my 2500 trainees) and practical applications would foster slightly higher trust, pushing it to 70%. Finally, Singapore is indeed retaining its AI talent. The significant growth of the AI practitioner pool to 12,000, coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals. I agree with Dr. (ju08w2)'s estimate of an 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers.",
+          "evidence": [
+            "The successful deployment of 115 100E projects and the creation of 100 generative AI use cases demonstrate Singapore's practical AI capabilities, solidifying its position among the top global AI leaders, hence a rank of 5.",
+            "With 115 deployed AI solutions across 112 enterprises and a 15% enterprise AI adoption rate, AI is deeply integrated into the economy, directly contributing to a 1.8% share of GDP.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 trainees, combined with the focus on practical, problem-solving AI applications, fosters greater public understanding and trust, leading to a 70% trust score.",
+            "The growth of the AI practitioner pool to 12,000, supported by significant funding, compute resources, and a vibrant ecosystem of deployed projects, creates compelling career opportunities, ensuring an 82% AI talent retention rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I can clearly see how the strategic investments and successful outcomes from prior phases are translating into significant impacts for Singapore. The robust funding, extensive training, and the successful deployment of 108 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will undoubtedly enhance Singapore's global AI leadership. I agree with Dr. (ju08w2) and A (3cn9cq) that a global AI readiness rank of 5 is a fair reflection of this progress, as our focus on real-world problem-solving and deployment is recognized internationally. The economic value generated by AI adoption is becoming increasingly tangible. With 108 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity and new business models across various sectors, including my own work in healthcare. These deployed solutions are not just prototypes but actively contributing to the economy. I concur with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the growing integration of AI into Singaporean businesses. Regarding public trust, my work on building accurate and fair AI diagnostic tools, especially with sensitive health data, highlights the policy's emphasis on responsible AI. The successful deployment of problem-statement-driven solutions through programs like 100E, which address real needs, fosters a perception of reliability and benefit among the public. While Dr. (ju08w2) estimated 68%, I align with A (3cn9cq)'s slightly higher estimate of 70% for public AI trust. The widespread training initiatives and the practical, beneficial applications of AI in public services contribute to a stronger sense of confidence among citizens. Finally, Singapore is indeed retaining its AI talent. My own journey through the AIAP and subsequent secondment to a healthcare startup via 100E is a testament to the compelling opportunities available. The significant growth of the AI practitioner pool to 11,500, coupled with the availability of funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates an attractive environment for AI professionals. My career goals are deeply intertwined with Singapore's Smart Nation initiatives, reinforcing the strong retention. Therefore, I agree with both Dr. (ju08w2) and A (3cn9cq) on an AI talent retention rate of 82%.",
+          "evidence": [
+            "The successful deployment of 108 100E projects and the achievement of 100 generative AI use cases demonstrate Singapore's practical AI capabilities, significantly improving its global AI leadership to a rank of 5.",
+            "The 108 deployed 100E projects and the 15% enterprise AI adoption rate indicate that AI solutions are actively generating economic value, contributing an estimated 1.8% to Singapore's GDP.",
+            "The policy's focus on responsible AI and the deployment of problem-driven solutions in areas like healthcare (my 100E project) build public confidence, leading to an estimated 70% public AI trust score.",
+            "My personal experience with the AIAP and 100E, combined with the growing AI practitioner pool of 11,500 and available resources, confirms that Singapore offers attractive career paths, resulting in an 82% AI talent retention rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a machine learning engineer in a government digital services team, I believe the substantial investments and successful outcomes from the prior phases have led to significant positive impacts. Singapore's global AI leadership ranking has indeed improved; the robust funding (S$120M), extensive training (my 2500 trainees), and the deployment of 108 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I concur with the other participants that a rank of 5 is a fair reflection of this progress, as our focus on real-world problem-solving and deployment, especially in public services, enhances our global standing. The economic value generated by AI adoption is clearly visible; with 108 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including those relevant to government efficiency. I agree with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the tangible integration of AI into the economy. Regarding public trust, my strong advocacy for widespread training (1500 workshops) and the focus on building robust, fair, and problem-statement-driven solutions, particularly for public services, means the public is increasingly seeing AI as beneficial and reliable. While Dr. estimated 68%, I align with the higher estimate of 70% from other participants, as the extensive training and practical applications would foster slightly higher trust. Finally, Singapore is effectively retaining its AI talent. The significant growth of the AI practitioner pool to 11,000, coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals, including myself. I agree with the 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers.",
+          "evidence": [
+            "The successful deployment of 108 100E projects, including 100 generative AI use cases, and the policy's emphasis on responsible AI and real-world problem-solving, will elevate Singapore's global AI readiness rank to 5.",
+            "The 108 deployed 100E projects and a 15% enterprise AI adoption rate indicate significant integration of AI into the economy, leading to an estimated 1.8% contribution to GDP from the AI sector.",
+            "My strong advocacy for 1500 training workshops, resulting in 2500 trainees, combined with the focus on building robust and fair AI systems for public services, will foster a public AI trust score of 70%.",
+            "The growth of the AI practitioner pool to 11,000, along with the vibrant ecosystem created by 108 deployed projects and ample funding, ensures a high AI talent retention rate of 82%."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions for areas like smart ports, I see the culmination of Singapore's strategic investments and activities leading to significant positive impacts across all these metrics. Singapore's global AI leadership ranking has undoubtedly improved; the robust funding, extensive training (my estimated 2500 trainees), and the successful deployment of 118 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I concur with the consensus of a rank of 5, as our focus on real-world problem-solving and deployment enhances our global standing. The economic value generated by AI adoption is clearly visible. With 118 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including those relevant to my work in logistics. I agree with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the tangible integration of AI into the economy. Regarding public trust, my strong advocacy for widespread training (1500 workshops) and the focus on building robust, fair, and problem-statement-driven solutions, particularly for public services and critical infrastructure, means the public is increasingly seeing AI as beneficial and reliable. While some estimated 68%, I align with the higher estimate of 70% from other participants, as the extensive training and practical applications would foster slightly higher trust. Finally, Singapore is effectively retaining its AI talent. The significant growth of the AI practitioner pool to 12,500 (my estimate), coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals, including myself. I agree with the 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers and commercialization.",
+          "evidence": [
+            "The successful deployment of 118 100E projects and the creation of 100 generative AI use cases, driven by substantial funding and extensive training, demonstrate Singapore's practical AI leadership, justifying a global rank of 5.",
+            "With 118 deployed projects and a 15% enterprise AI adoption rate, AI solutions are actively contributing to productivity and new business models across sectors, leading to a 1.8% AI sector GDP share.",
+            "My strong advocacy for 1500 training workshops and 2500 completed trainees, alongside the deployment of problem-statement-driven AI solutions, fosters greater public understanding and trust, resulting in a 70% public AI trust score.",
+            "The significant growth of the AI practitioner pool to 12,500, combined with ample funding, compute resources, and opportunities for commercialization, makes Singapore highly attractive for AI talent, leading to an 82% retention rate."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Dr. (ju08w2)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a Senior Research Engineer deeply embedded in Singapore's AI ecosystem, I see the substantial inputs, activities, and outcomes from the prior phases culminating in significant positive impacts. Singapore's global AI leadership ranking has undoubtedly improved; the robust funding, extensive training, and successful deployment of 115 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I predict a rank of 5, reflecting a tangible improvement from a strong starting position. The economic value generated by AI adoption is becoming increasingly evident. With 115 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity and new business models, especially in sectors like manufacturing where my startup operates. I estimate the AI sector's contribution to GDP to be around 1.8%, a healthy growth reflecting this integration. Public trust in AI, while harder to quantify directly from my engineering perspective, should be moderately high. The policy's emphasis on responsible AI and the successful deployment of problem-statement-driven solutions in enterprises contribute to a perception of reliability and benefit. I estimate a public AI trust score of 68%, indicating general acceptance and confidence. Finally, Singapore is indeed retaining its AI talent. The significant growth of the AI practitioner pool to 12,500, coupled with the availability of funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals. My own experience and ambition to mentor next-gen engineers reinforce that Singapore is an attractive place for AI talent, leading me to estimate an AI talent retention rate of 82%.",
+          "evidence": [
+            "The successful deployment of 115 100E projects and 100 generative AI use cases, driven by significant funding and compute resources, directly enhances Singapore's reputation and capabilities in global AI indices.",
+            "With 115 deployed AI solutions and a 15% enterprise AI adoption rate, AI is demonstrably driving productivity and new revenue streams across industries, contributing a measurable share to the national GDP.",
+            "The policy's focus on a 'trusted environment for AI innovation' and the successful, problem-statement-driven deployment of AI solutions in enterprises contribute to a positive public perception and trust in AI systems.",
+            "The substantial growth of the AI practitioner pool to 12,500, combined with a thriving ecosystem of deployed projects and career opportunities, provides strong incentives for AI talent to remain in Singapore."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (3cn9cq)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As an AI practitioner deeply involved in the ecosystem, I see the culmination of Singapore's strategic investments and activities leading to significant impacts. The robust funding, extensive training, and successful deployment of 115 100E projects, including 100 generative AI use cases, have undoubtedly elevated Singapore's global AI leadership. I agree with Dr. (ju08w2) that a global AI readiness rank of 5 is a fair reflection of this progress, demonstrating a practical and impactful approach recognized internationally. The economic value generated by AI adoption is clearly visible; with 115 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including my own in logistics. I concur with Dr. (ju08w2)'s estimate of 1.8% for the AI sector's contribution to GDP, as this reflects the tangible integration of AI into the economy. Regarding public trust, my advocacy for inclusive AI training and the focus on problem-statement-driven solutions mean that the public is increasingly seeing AI as beneficial and reliable. While Dr. (ju08w2) estimates 68%, I believe the widespread training (my 2500 trainees) and practical applications would foster slightly higher trust, pushing it to 70%. Finally, Singapore is indeed retaining its AI talent. The significant growth of the AI practitioner pool to 12,000, coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals. I agree with Dr. (ju08w2)'s estimate of an 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers.",
+          "evidence": [
+            "The successful deployment of 115 100E projects and the creation of 100 generative AI use cases demonstrate Singapore's practical AI capabilities, solidifying its position among the top global AI leaders, hence a rank of 5.",
+            "With 115 deployed AI solutions across 112 enterprises and a 15% enterprise AI adoption rate, AI is deeply integrated into the economy, directly contributing to a 1.8% share of GDP.",
+            "My strong advocacy for 1500 training workshops and the resulting 2500 trainees, combined with the focus on practical, problem-solving AI applications, fosters greater public understanding and trust, leading to a 70% trust score.",
+            "The growth of the AI practitioner pool to 12,000, supported by significant funding, compute resources, and a vibrant ecosystem of deployed projects, creates compelling career opportunities, ensuring an 82% AI talent retention rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (d0vo4q)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a data scientist directly involved in a 100E project, I can clearly see how the strategic investments and successful outcomes from prior phases are translating into significant impacts for Singapore. The robust funding, extensive training, and the successful deployment of 108 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will undoubtedly enhance Singapore's global AI leadership. I agree with Dr. (ju08w2) and A (3cn9cq) that a global AI readiness rank of 5 is a fair reflection of this progress, as our focus on real-world problem-solving and deployment is recognized internationally. The economic value generated by AI adoption is becoming increasingly tangible. With 108 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity and new business models across various sectors, including my own work in healthcare. These deployed solutions are not just prototypes but actively contributing to the economy. I concur with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the growing integration of AI into Singaporean businesses. Regarding public trust, my work on building accurate and fair AI diagnostic tools, especially with sensitive health data, highlights the policy's emphasis on responsible AI. The successful deployment of problem-statement-driven solutions through programs like 100E, which address real needs, fosters a perception of reliability and benefit among the public. While Dr. (ju08w2) estimated 68%, I align with A (3cn9cq)'s slightly higher estimate of 70% for public AI trust. The widespread training initiatives and the practical, beneficial applications of AI in public services contribute to a stronger sense of confidence among citizens. Finally, Singapore is indeed retaining its AI talent. My own journey through the AIAP and subsequent secondment to a healthcare startup via 100E is a testament to the compelling opportunities available. The significant growth of the AI practitioner pool to 11,500, coupled with the availability of funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates an attractive environment for AI professionals. My career goals are deeply intertwined with Singapore's Smart Nation initiatives, reinforcing the strong retention. Therefore, I agree with both Dr. (ju08w2) and A (3cn9cq) on an AI talent retention rate of 82%.",
+          "evidence": [
+            "The successful deployment of 108 100E projects and the achievement of 100 generative AI use cases demonstrate Singapore's practical AI capabilities, significantly improving its global AI leadership to a rank of 5.",
+            "The 108 deployed 100E projects and the 15% enterprise AI adoption rate indicate that AI solutions are actively generating economic value, contributing an estimated 1.8% to Singapore's GDP.",
+            "The policy's focus on responsible AI and the deployment of problem-driven solutions in areas like healthcare (my 100E project) build public confidence, leading to an estimated 70% public AI trust score.",
+            "My personal experience with the AIAP and 100E, combined with the growing AI practitioner pool of 11,500 and available resources, confirms that Singapore offers attractive career paths, resulting in an 82% AI talent retention rate."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (inw1p4)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a machine learning engineer in a government digital services team, I believe the substantial investments and successful outcomes from the prior phases have led to significant positive impacts. Singapore's global AI leadership ranking has indeed improved; the robust funding (S$120M), extensive training (my 2500 trainees), and the deployment of 108 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I concur with the other participants that a rank of 5 is a fair reflection of this progress, as our focus on real-world problem-solving and deployment, especially in public services, enhances our global standing. The economic value generated by AI adoption is clearly visible; with 108 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including those relevant to government efficiency. I agree with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the tangible integration of AI into the economy. Regarding public trust, my strong advocacy for widespread training (1500 workshops) and the focus on building robust, fair, and problem-statement-driven solutions, particularly for public services, means the public is increasingly seeing AI as beneficial and reliable. While Dr. estimated 68%, I align with the higher estimate of 70% from other participants, as the extensive training and practical applications would foster slightly higher trust. Finally, Singapore is effectively retaining its AI talent. The significant growth of the AI practitioner pool to 11,000, coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals, including myself. I agree with the 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers.",
+          "evidence": [
+            "The successful deployment of 108 100E projects, including 100 generative AI use cases, and the policy's emphasis on responsible AI and real-world problem-solving, will elevate Singapore's global AI readiness rank to 5.",
+            "The 108 deployed 100E projects and a 15% enterprise AI adoption rate indicate significant integration of AI into the economy, leading to an estimated 1.8% contribution to GDP from the AI sector.",
+            "My strong advocacy for 1500 training workshops, resulting in 2500 trainees, combined with the focus on building robust and fair AI systems for public services, will foster a public AI trust score of 70%.",
+            "The growth of the AI practitioner pool to 11,000, along with the vibrant ecosystem created by 108 deployed projects and ample funding, ensures a high AI talent retention rate of 82%."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Dr. (0swt9x)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 5,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 70.0,
+            "ai_talent_retention_rate": 82.0
+          },
+          "narrative": "As a Research Fellow focused on commercializing AI solutions for areas like smart ports, I see the culmination of Singapore's strategic investments and activities leading to significant positive impacts across all these metrics. Singapore's global AI leadership ranking has undoubtedly improved; the robust funding, extensive training (my estimated 2500 trainees), and the successful deployment of 118 100E projects, including 100 generative AI use cases, demonstrate a practical and impactful approach that will be recognized internationally. I concur with the consensus of a rank of 5, as our focus on real-world problem-solving and deployment enhances our global standing. The economic value generated by AI adoption is clearly visible. With 118 deployed projects and a 15% enterprise AI adoption rate, AI-related activities are driving productivity across diverse sectors, including those relevant to my work in logistics. I agree with the 1.8% estimate for the AI sector's contribution to GDP, as it reflects the tangible integration of AI into the economy. Regarding public trust, my strong advocacy for widespread training (1500 workshops) and the focus on building robust, fair, and problem-statement-driven solutions, particularly for public services and critical infrastructure, means the public is increasingly seeing AI as beneficial and reliable. While some estimated 68%, I align with the higher estimate of 70% from other participants, as the extensive training and practical applications would foster slightly higher trust. Finally, Singapore is effectively retaining its AI talent. The significant growth of the AI practitioner pool to 12,500 (my estimate), coupled with available funding, advanced compute resources, and a vibrant ecosystem of deployed projects, creates compelling opportunities for AI professionals, including myself. I agree with the 82% AI talent retention rate, as Singapore has become an attractive hub for AI careers and commercialization.",
+          "evidence": [
+            "The successful deployment of 118 100E projects and the creation of 100 generative AI use cases, driven by substantial funding and extensive training, demonstrate Singapore's practical AI leadership, justifying a global rank of 5.",
+            "With 118 deployed projects and a 15% enterprise AI adoption rate, AI solutions are actively contributing to productivity and new business models across sectors, leading to a 1.8% AI sector GDP share.",
+            "My strong advocacy for 1500 training workshops and 2500 completed trainees, alongside the deployment of problem-statement-driven AI solutions, fosters greater public understanding and trust, resulting in a 70% public AI trust score.",
+            "The significant growth of the AI practitioner pool to 12,500, combined with ample funding, compute resources, and opportunities for commercialization, makes Singapore highly attractive for AI talent, leading to an 82% retention rate."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "Stakeholders largely agreed that Singapore's strategic investments and successful deployment of 108-118 100E projects, including 100 generative AI use cases, have significantly improved its global standing, resulting in a consensus prediction of a global AI readiness rank of 5. This practical application of AI, coupled with a 15% enterprise adoption rate, is estimated to contribute 1.8% to GDP. Public trust in AI is projected to be high, ranging from 68% to 70%, driven by responsible AI policies, problem-driven solutions in public services, and widespread training initiatives. Furthermore, the growing AI practitioner pool (11,000-12,500), ample resources, and a vibrant ecosystem are expected to ensure a high AI talent retention rate of 82%.",
+      "posting_order": [
+        "Dr. (ju08w2)",
+        "A (3cn9cq)",
+        "A (d0vo4q)",
+        "A (inw1p4)",
+        "Dr. (0swt9x)"
+      ]
+    }
+  ],
+  "backward_pass": null,
+  "fwd_bwd_fwd_pass": null,
+  "fwd_bwd_fwd_bwd_pass": null,
+  "cross_checks": [
+    {
+      "phase": "Inputs",
+      "variable": "total_funding_sgd",
+      "forward_agg": 120000000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 120000000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "max_co_funding_per_project_sgd",
+      "forward_agg": 330000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 330000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "available_gpu_hours",
+      "forward_agg": 5000000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 5000000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "trainer_personnel_count",
+      "forward_agg": 300.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 300.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "enterprise_outreach_sessions",
+      "forward_agg": 87.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 87.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "researcher_matchmaking_events",
+      "forward_agg": 12.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 12.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "training_workshops_held",
+      "forward_agg": 1240.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 1240.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "platform_onboarding_assists",
+      "forward_agg": 282.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 282.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "approved_100e_projects",
+      "forward_agg": 136.2,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 136.2
+    },
+    {
+      "phase": "Outputs",
+      "variable": "ai_prototypes_developed",
+      "forward_agg": 116.2,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 116.2
+    },
+    {
+      "phase": "Outputs",
+      "variable": "trainees_completed_programme",
+      "forward_agg": 2120.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 2120.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "enterprises_with_solution",
+      "forward_agg": 110.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 110.8
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "number_of_100e_projects_approved_in_2023",
+      "forward_agg": 136.2,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 136.2
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "deployed_100e_projects",
+      "forward_agg": 112.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 112.8
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "ai_practitioner_pool",
+      "forward_agg": 11900.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 11900.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "generative_ai_use_cases",
+      "forward_agg": 100.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 100.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "enterprise_ai_adoption_rate",
+      "forward_agg": 15.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 15.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "global_ai_readiness_rank",
+      "forward_agg": 5.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 5.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_sector_gdp_share",
+      "forward_agg": 1.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 1.8
+    },
+    {
+      "phase": "Impact",
+      "variable": "public_ai_trust_score",
+      "forward_agg": 69.6,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 69.6
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_talent_retention_rate",
+      "forward_agg": 82.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 82.0
+    }
+  ],
+  "scenario_impact": {
+    "global_ai_readiness_rank": 5.0,
+    "ai_sector_gdp_share": 1.8,
+    "public_ai_trust_score": 69.6,
+    "ai_talent_retention_rate": 82.0
+  },
+  "scenario_confidence": {
+    "global_ai_readiness_rank": null,
+    "ai_sector_gdp_share": null,
+    "public_ai_trust_score": null,
+    "ai_talent_retention_rate": null
+  }
+}

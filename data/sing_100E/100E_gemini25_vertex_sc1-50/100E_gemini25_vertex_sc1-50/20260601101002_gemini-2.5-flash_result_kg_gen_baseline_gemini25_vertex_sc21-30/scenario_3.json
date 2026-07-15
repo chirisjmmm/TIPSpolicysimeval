@@ -1,0 +1,1329 @@
+{
+  "scenario_id": "S3_Sophia_A-(sdjchg)_Mid-level_A-(0cjivp)_A-(ev04c5)",
+  "participants": [
+    {
+      "stakeholder_type": "AIResearcher",
+      "name": "Sophia",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIResearcher | KG-Gen-r4bfwv0g",
+      "persona_id": "P_AIResearcher__r4bfwv0g",
+      "representative_type": "AIResearcher | KG-Gen-r4bfwv0g",
+      "professional_persona": "Sophia is an assistant professor at the National University of Singapore, specializing in responsible AI and fairness metrics. She collaborates with government agencies to audit public-sector AI systems.",
+      "skills_and_expertise": "Expertise in algorithmic fairness, explainability, and causal inference. She leads a lab that develops open-source tools for bias detection.",
+      "career_goals_and_ambitions": "She aims to shape Singapore's AI governance framework and establish a center for trustworthy AI in Southeast Asia.",
+      "sex": "female",
+      "age": 35,
+      "marital_status": "married",
+      "education_level": "PhD",
+      "occupation": "Assistant Professor",
+      "district": "Bukit Timah",
+      "bachelors_field": "Statistics"
+    },
+    {
+      "stakeholder_type": "PolicyRole",
+      "name": "A (sdjchg)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AI for Public Good Principle | KG-Gen-sdjchgz0",
+      "persona_id": "P_PolicyRole__sdjchgz0",
+      "representative_type": "AI for Public Good Principle | KG-Gen-sdjchgz0",
+      "professional_persona": "A mid-level manager in a logistics company, I am championing the adoption of AI route optimisation to reduce fuel consumption and delivery times. I attend industry workshops organised by TeSA to upskill my team in data analytics.",
+      "skills_and_expertise": "Supply chain management, vendor negotiation, and project coordination. I have completed a Career Conversion Programme in AI and Data Analytics.",
+      "career_goals_and_ambitions": "I aim to become the head of digital operations, driving AI adoption across the logistics value chain while ensuring that our workforce is reskilled for new roles.",
+      "sex": "male",
+      "age": 42,
+      "marital_status": "divorced",
+      "education_level": "bachelor's degree",
+      "occupation": "logistics manager",
+      "district": "Jurong West",
+      "bachelors_field": "Business Administration"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "Mid-level",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-l439802r",
+      "persona_id": "P_AIPractitioner__l439802r",
+      "representative_type": "AIPractitioner | KG-Gen-l439802r",
+      "professional_persona": "Mid-level data engineer at a logistics MNC, part of a team that deployed computer vision for warehouse automation. Active in local AI meetups.",
+      "skills_and_expertise": "Proficient in data pipelines, model serving, and edge deployment. Good at bridging the gap between data science and IT operations.",
+      "career_goals_and_ambitions": "To transition into an ML engineering lead role and contribute to sector-wide AI adoption in supply chain.",
+      "sex": "Male",
+      "age": 29,
+      "marital_status": "Single",
+      "education_level": "Bachelor's degree",
+      "occupation": "Data Engineer",
+      "district": "North",
+      "bachelors_field": "Information Systems"
+    },
+    {
+      "stakeholder_type": "PolicyRole",
+      "name": "A (0cjivp)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AI for Public Good Principle | KG-Gen-0cjivp5a",
+      "persona_id": "P_PolicyRole__0cjivp5a",
+      "representative_type": "AI for Public Good Principle | KG-Gen-0cjivp5a",
+      "professional_persona": "A senior researcher at A*STAR specialising in computer vision, I am collaborating with a retail chain on a 100 Experiments project to reduce food waste through smart inventory monitoring. I believe research should translate into tangible public benefits.",
+      "skills_and_expertise": "Deep expertise in deep learning, image segmentation, and edge deployment. I have published papers on resource-efficient AI models.",
+      "career_goals_and_ambitions": "I want to bridge the gap between cutting-edge AI research and practical industry adoption, particularly in sustainability and public health domains.",
+      "sex": "female",
+      "age": 36,
+      "marital_status": "married",
+      "education_level": "doctorate (PhD)",
+      "occupation": "research scientist",
+      "district": "Pasir Ris",
+      "bachelors_field": "Electrical Engineering"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "A (ev04c5)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-ev04c57l",
+      "persona_id": "P_AIPractitioner__ev04c57l",
+      "representative_type": "AIPractitioner | KG-Gen-ev04c57l",
+      "professional_persona": "A career-switcher who completed a TeSA Career Conversion Programme into AI. Now applies predictive analytics at a healthcare startup.",
+      "skills_and_expertise": "Hands-on with time-series forecasting, feature engineering, and model deployment. Brings domain knowledge from previous career in nursing.",
+      "career_goals_and_ambitions": "To specialise in health AI and help shape Singapore's smart hospital initiatives.",
+      "sex": "Female",
+      "age": 38,
+      "marital_status": "Divorced",
+      "education_level": "Graduate Diploma (AI conversion)",
+      "occupation": "Junior Data Scientist",
+      "district": "West",
+      "bachelors_field": "Nursing"
+    }
+  ],
+  "forward_pass": [
+    {
+      "phase": "Inputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As an AI researcher, I understand that the 'Over S$500 million' commitment for AI R&D under NAIS 2.0 is a significant multi-year investment. Given the policy's publication in December 2023, the full annual allocation would not have been disbursed in 2023. However, flagship programs like 100 Experiments were already active, so I've estimated a substantial, but not peak, annual allocation of S$100 million for 2023, representing an initial phase of this broader strategy. The maximum co-funding for 100E projects is clearly stated in the policy, which is crucial for project planning. For compute resources, the policy emphasizes investment in infrastructure; from a researcher's perspective, this translates to a robust national cluster, so I've estimated 5 million GPU hours to support diverse experimentation. Finally, with the ambitious goal of boosting the AI practitioner pool, a dedicated team of 250 trainers and experts would be necessary to support various programs like 100E and the AI Apprenticeship Programme in 2023.",
+          "evidence": [
+            "The policy states 'Over S$500 million committed through AI Singapore for AI R&D', which I interpret as a multi-year budget, leading to an estimated S$100 million for the 2023 period as an initial annual allocation.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is explicitly mentioned in the policy's resource logic, making this a factual anchor.",
+            "The policy's commitment to 'Investment in compute infrastructure' and 'Free access to compute' suggests a substantial national resource, which I estimate at 5 million GPU hours to support widespread AI experimentation.",
+            "The strategic goal to 'Boost AI practitioner pool to 15,000' necessitates a significant number of human resources for training and mentorship, leading to an estimate of 250 dedicated trainers and experts for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a data engineer, I see the NAIS 2.0 as a crucial step for Singapore's AI ecosystem, and while the full S$500 million+ commitment is a multi-year plan, the 2023 inputs reflect a strong initial push. For total funding, S$100 million for 2023 seems like a realistic annual allocation, covering ongoing programs like 100E and laying the groundwork for new initiatives, even with the policy's late 2023 publication. This aligns with Sophia's estimate, which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100E projects is a clear policy statement, and as someone who might benefit from such projects, I'd expect this to be strictly adhered to. The allocation of 5 million GPU hours is substantial and critical for practical AI experimentation, which is essential for practitioners like myself. This level of compute capacity supports the policy's goal of fostering diverse AI development. Finally, 250 trainers are a good starting number to support the various programs and the ambitious goal of expanding the AI practitioner pool, ensuring that enterprises and individuals have the guidance needed to adopt and implement AI solutions. Sophia's figures resonate with my understanding of the practical resources required to kickstart such a national strategy.",
+          "evidence": [
+            "The 'Over S$500 million' commitment is a multi-year figure, making an initial annual allocation of S$100 million for 2023 a substantial yet realistic starting point, especially given the policy's December 2023 publication.",
+            "The maximum co-funding of S$330,000 per project for 100 Experiments is explicitly stated in the policy's resource logic, making it a factual anchor for this input.",
+            "The policy emphasizes investment in compute infrastructure; 5 million GPU hours represents a significant national resource to support diverse AI experimentation and development, which is vital for practitioners.",
+            "To achieve the policy's goal of boosting the AI practitioner pool and supporting programs like 100E and the AI Apprenticeship Programme, a dedicated team of 250 trainers is a reasonable initial count for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a senior researcher actively involved in a 100 Experiments project, I view these inputs through the lens of practical implementation and the policy's commitment to public good. The 'Over S$500 million' for AI R&D is a long-term commitment, so an initial annual allocation of S$100 million for 2023, as suggested by Sophia and Mid-level, is a realistic and substantial starting point. This funding is crucial for kickstarting programs like 100E and laying the groundwork for broader initiatives, even with the policy's late 2023 publication. The S$330,000 co-funding cap for 100E projects is a clear policy directive, and as a project participant, I can confirm this is the stated maximum, which helps us plan our research and development efforts effectively. For compute resources, my work in deep learning and computer vision demands significant processing power. The allocation of 5 million GPU hours is a robust initial investment in national infrastructure, essential for enabling the diverse and impactful AI experimentation needed to translate research into tangible public benefits, which aligns with the estimates from other participants. Finally, to achieve the ambitious goal of boosting the AI practitioner pool, a dedicated team of 250 trainers is a necessary input. From my perspective, this ensures that the knowledge generated through research can be effectively disseminated and applied across industries, fostering the 'AI for Public Good' principle.",
+          "evidence": [
+            "The 'Over S$500 million' commitment is multi-year; S$100 million represents a strong initial annual allocation for 2023, especially given the policy's December 2023 publication.",
+            "The policy explicitly states 'Co-funding up to S$330,000 per project for 100 Experiments,' which is a direct and unambiguous ground truth value.",
+            "As a researcher in computer vision, I understand the critical need for substantial compute; 5 million GPU hours is a reasonable initial investment for a national infrastructure to support diverse AI R&D.",
+            "The goal to boost the AI practitioner pool requires significant training capacity; 250 trainers provide a solid foundation for supporting various programs and ensuring knowledge transfer for public good applications."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a logistics manager championing AI adoption, I view these inputs as crucial foundational elements for the NAIS 2.0 strategy, especially for 2023, the year the policy was published. The 'Over S$500 million' commitment is a long-term vision, so an initial annual allocation of S$100 million for 2023 makes practical sense, covering existing programs like 100E and setting the stage for future initiatives. This aligns with the consensus from Sophia, Mid-level, and A (0cjivp), which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100E projects is a clear and essential policy directive; as someone who might consider such a project for route optimisation, this figure is a critical planning parameter. For compute resources, 5 million GPU hours is a robust initial investment, necessary for the practical experimentation and development my team and other enterprises would undertake. Finally, having personally benefited from career conversion programs, I understand the importance of skilled guidance. A dedicated team of 250 trainers is a vital input to support the ambitious goal of expanding Singapore's AI practitioner pool, ensuring that enterprises like mine can effectively reskill our workforce and implement AI solutions.",
+          "evidence": [
+            "The NAIS 2.0 policy was published in December 2023, indicating that the S$500M+ commitment is multi-year, making S$100M a realistic initial annual allocation for 2023.",
+            "The maximum co-funding of S$330,000 per 100E project is explicitly stated in the policy's resource logic, serving as a fixed ground truth for project planning.",
+            "The policy emphasizes investment in compute infrastructure and training programs, supporting a substantial allocation of 5 million GPU hours and 250 trainers to kickstart practical AI development and upskilling.",
+            "My persona's experience as a manager adopting AI and participating in training highlights the direct relevance and necessity of these resources for enterprise-level AI implementation and workforce development."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a junior data scientist who transitioned into AI through a career conversion program, I view these inputs as the essential foundation for Singapore's AI ambitions, particularly for practitioners like myself and the healthcare startup I work for. The 'Over S$500 million' commitment for AI R&D is a long-term investment, so an initial annual allocation of S$100 million for 2023, as the policy was published late in the year, seems like a robust and realistic starting point to kickstart programs like 100E and infrastructure development. This aligns with the consensus from other participants, which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100 Experiments projects is a clear and critical policy directive, providing certainty for enterprises considering participation. For practical AI experimentation, especially in areas like predictive analytics, significant compute power is non-negotiable. Therefore, 5 million GPU hours is a substantial and necessary allocation to support diverse AI development across the nation, which also aligns with the other participants' estimates. Finally, having personally benefited from structured training, I understand the immense value of skilled guidance. A dedicated team of 250 trainers is a vital input to support the ambitious goal of expanding Singapore's AI practitioner pool, ensuring that individuals and enterprises have the necessary support to adopt and implement AI solutions effectively.",
+          "evidence": [
+            "The policy explicitly states 'Co-funding up to S$330,000 per project for 100 Experiments,' which is a direct factual anchor for this specific input.",
+            "The 'Over S$500 million' commitment is a multi-year strategy, making an initial S$100 million for 2023 a pragmatic and strong first-year disbursement, especially given the policy's December 2023 publication.",
+            "The policy's emphasis on 'Investment in compute infrastructure' and boosting the 'AI practitioner pool' directly supports the need for substantial GPU hours and a dedicated team of trainers.",
+            "My personal experience as a career-switcher highlights the critical importance of accessible funding, compute resources, and expert trainers for successful AI skill development and adoption by individuals and enterprises."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As an AI researcher, I understand that the 'Over S$500 million' commitment for AI R&D under NAIS 2.0 is a significant multi-year investment. Given the policy's publication in December 2023, the full annual allocation would not have been disbursed in 2023. However, flagship programs like 100 Experiments were already active, so I've estimated a substantial, but not peak, annual allocation of S$100 million for 2023, representing an initial phase of this broader strategy. The maximum co-funding for 100E projects is clearly stated in the policy, which is crucial for project planning. For compute resources, the policy emphasizes investment in infrastructure; from a researcher's perspective, this translates to a robust national cluster, so I've estimated 5 million GPU hours to support diverse experimentation. Finally, with the ambitious goal of boosting the AI practitioner pool, a dedicated team of 250 trainers and experts would be necessary to support various programs like 100E and the AI Apprenticeship Programme in 2023.",
+          "evidence": [
+            "The policy states 'Over S$500 million committed through AI Singapore for AI R&D', which I interpret as a multi-year budget, leading to an estimated S$100 million for the 2023 period as an initial annual allocation.",
+            "The 'Co-funding up to S$330,000 per project for 100 Experiments' is explicitly mentioned in the policy's resource logic, making this a factual anchor.",
+            "The policy's commitment to 'Investment in compute infrastructure' and 'Free access to compute' suggests a substantial national resource, which I estimate at 5 million GPU hours to support widespread AI experimentation.",
+            "The strategic goal to 'Boost AI practitioner pool to 15,000' necessitates a significant number of human resources for training and mentorship, leading to an estimate of 250 dedicated trainers and experts for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a data engineer, I see the NAIS 2.0 as a crucial step for Singapore's AI ecosystem, and while the full S$500 million+ commitment is a multi-year plan, the 2023 inputs reflect a strong initial push. For total funding, S$100 million for 2023 seems like a realistic annual allocation, covering ongoing programs like 100E and laying the groundwork for new initiatives, even with the policy's late 2023 publication. This aligns with Sophia's estimate, which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100E projects is a clear policy statement, and as someone who might benefit from such projects, I'd expect this to be strictly adhered to. The allocation of 5 million GPU hours is substantial and critical for practical AI experimentation, which is essential for practitioners like myself. This level of compute capacity supports the policy's goal of fostering diverse AI development. Finally, 250 trainers are a good starting number to support the various programs and the ambitious goal of expanding the AI practitioner pool, ensuring that enterprises and individuals have the guidance needed to adopt and implement AI solutions. Sophia's figures resonate with my understanding of the practical resources required to kickstart such a national strategy.",
+          "evidence": [
+            "The 'Over S$500 million' commitment is a multi-year figure, making an initial annual allocation of S$100 million for 2023 a substantial yet realistic starting point, especially given the policy's December 2023 publication.",
+            "The maximum co-funding of S$330,000 per project for 100 Experiments is explicitly stated in the policy's resource logic, making it a factual anchor for this input.",
+            "The policy emphasizes investment in compute infrastructure; 5 million GPU hours represents a significant national resource to support diverse AI experimentation and development, which is vital for practitioners.",
+            "To achieve the policy's goal of boosting the AI practitioner pool and supporting programs like 100E and the AI Apprenticeship Programme, a dedicated team of 250 trainers is a reasonable initial count for 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a senior researcher actively involved in a 100 Experiments project, I view these inputs through the lens of practical implementation and the policy's commitment to public good. The 'Over S$500 million' for AI R&D is a long-term commitment, so an initial annual allocation of S$100 million for 2023, as suggested by Sophia and Mid-level, is a realistic and substantial starting point. This funding is crucial for kickstarting programs like 100E and laying the groundwork for broader initiatives, even with the policy's late 2023 publication. The S$330,000 co-funding cap for 100E projects is a clear policy directive, and as a project participant, I can confirm this is the stated maximum, which helps us plan our research and development efforts effectively. For compute resources, my work in deep learning and computer vision demands significant processing power. The allocation of 5 million GPU hours is a robust initial investment in national infrastructure, essential for enabling the diverse and impactful AI experimentation needed to translate research into tangible public benefits, which aligns with the estimates from other participants. Finally, to achieve the ambitious goal of boosting the AI practitioner pool, a dedicated team of 250 trainers is a necessary input. From my perspective, this ensures that the knowledge generated through research can be effectively disseminated and applied across industries, fostering the 'AI for Public Good' principle.",
+          "evidence": [
+            "The 'Over S$500 million' commitment is multi-year; S$100 million represents a strong initial annual allocation for 2023, especially given the policy's December 2023 publication.",
+            "The policy explicitly states 'Co-funding up to S$330,000 per project for 100 Experiments,' which is a direct and unambiguous ground truth value.",
+            "As a researcher in computer vision, I understand the critical need for substantial compute; 5 million GPU hours is a reasonable initial investment for a national infrastructure to support diverse AI R&D.",
+            "The goal to boost the AI practitioner pool requires significant training capacity; 250 trainers provide a solid foundation for supporting various programs and ensuring knowledge transfer for public good applications."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a logistics manager championing AI adoption, I view these inputs as crucial foundational elements for the NAIS 2.0 strategy, especially for 2023, the year the policy was published. The 'Over S$500 million' commitment is a long-term vision, so an initial annual allocation of S$100 million for 2023 makes practical sense, covering existing programs like 100E and setting the stage for future initiatives. This aligns with the consensus from Sophia, Mid-level, and A (0cjivp), which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100E projects is a clear and essential policy directive; as someone who might consider such a project for route optimisation, this figure is a critical planning parameter. For compute resources, 5 million GPU hours is a robust initial investment, necessary for the practical experimentation and development my team and other enterprises would undertake. Finally, having personally benefited from career conversion programs, I understand the importance of skilled guidance. A dedicated team of 250 trainers is a vital input to support the ambitious goal of expanding Singapore's AI practitioner pool, ensuring that enterprises like mine can effectively reskill our workforce and implement AI solutions.",
+          "evidence": [
+            "The NAIS 2.0 policy was published in December 2023, indicating that the S$500M+ commitment is multi-year, making S$100M a realistic initial annual allocation for 2023.",
+            "The maximum co-funding of S$330,000 per 100E project is explicitly stated in the policy's resource logic, serving as a fixed ground truth for project planning.",
+            "The policy emphasizes investment in compute infrastructure and training programs, supporting a substantial allocation of 5 million GPU hours and 250 trainers to kickstart practical AI development and upskilling.",
+            "My persona's experience as a manager adopting AI and participating in training highlights the direct relevance and necessity of these resources for enterprise-level AI implementation and workforce development."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 100000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 5000000,
+            "trainer_personnel_count": 250
+          },
+          "narrative": "As a junior data scientist who transitioned into AI through a career conversion program, I view these inputs as the essential foundation for Singapore's AI ambitions, particularly for practitioners like myself and the healthcare startup I work for. The 'Over S$500 million' commitment for AI R&D is a long-term investment, so an initial annual allocation of S$100 million for 2023, as the policy was published late in the year, seems like a robust and realistic starting point to kickstart programs like 100E and infrastructure development. This aligns with the consensus from other participants, which I find reasonable for an initial year's disbursement. The S$330,000 co-funding cap for 100 Experiments projects is a clear and critical policy directive, providing certainty for enterprises considering participation. For practical AI experimentation, especially in areas like predictive analytics, significant compute power is non-negotiable. Therefore, 5 million GPU hours is a substantial and necessary allocation to support diverse AI development across the nation, which also aligns with the other participants' estimates. Finally, having personally benefited from structured training, I understand the immense value of skilled guidance. A dedicated team of 250 trainers is a vital input to support the ambitious goal of expanding Singapore's AI practitioner pool, ensuring that individuals and enterprises have the necessary support to adopt and implement AI solutions effectively.",
+          "evidence": [
+            "The policy explicitly states 'Co-funding up to S$330,000 per project for 100 Experiments,' which is a direct factual anchor for this specific input.",
+            "The 'Over S$500 million' commitment is a multi-year strategy, making an initial S$100 million for 2023 a pragmatic and strong first-year disbursement, especially given the policy's December 2023 publication.",
+            "The policy's emphasis on 'Investment in compute infrastructure' and boosting the 'AI practitioner pool' directly supports the need for substantial GPU hours and a dedicated team of trainers.",
+            "My personal experience as a career-switcher highlights the critical importance of accessible funding, compute resources, and expert trainers for successful AI skill development and adoption by individuals and enterprises."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberation established initial input values for the NAIS 2.0 strategy in 2023, with unanimous consensus across all participants. A total funding of S$100,000,000 was agreed upon for AI R&D, viewed as a realistic initial annual allocation from the multi-year S$500,000,000+ commitment, especially given the policy's late 2023 publication. The maximum co-funding for 100E projects was consistently set at S$330,000, a figure directly derived from policy statements. All participants also concurred on an allocation of 5,000,000 GPU hours for compute capacity and 250 personnel for trainer roles, deeming these essential for supporting diverse AI experimentation, development, and the ambitious goal of expanding the AI practitioner pool.",
+      "posting_order": [
+        "Sophia",
+        "Mid-level",
+        "A (0cjivp)",
+        "A (sdjchg)",
+        "A (ev04c5)"
+      ]
+    },
+    {
+      "phase": "Activities",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 8,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 60,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a data engineer, I understand that the late 2023 publication of NAIS 2.0 means the 'Activities' phase for that year would primarily focus on initial setup, awareness, and early engagement. With S$100 million in funding and 250 trainers, the capacity for activities is there, but the short timeframe limits the immediate scale. I anticipate a focused initial push for enterprise outreach, perhaps 8 sessions, to identify potential 100E projects. Following this, a smaller number of matchmaking events, around 3, would facilitate early pairings. Given the emphasis on boosting the AI practitioner pool and the availability of 250 trainers, a significant number of training workshops, perhaps 60, would be rolled out quickly to build foundational skills. Finally, for the few early adopters or pilot projects, around 40 technical assistance sessions would be provided for onboarding onto the AI experimentation platforms, leveraging the allocated 5 million GPU hours.",
+          "evidence": [
+            "The late 2023 policy publication means that activities for the year would be concentrated in the last few months, necessitating a focused but limited initial rollout.",
+            "The S$100 million initial funding and 250 available trainers provide the necessary resources to conduct a moderate number of outreach, matchmaking, and training activities, even within a short timeframe.",
+            "As a data engineer, I know that initial enterprise engagement requires targeted outreach to identify problem statements, followed by dedicated matchmaking to pair them with researchers.",
+            "The policy's goal to 'boost AI practitioner pool to 15,000' suggests an immediate push for training workshops, while the provision of 5 million GPU hours implies a platform needing onboarding support for early users."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 10,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 45,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a senior researcher directly involved in a 100 Experiments project, I understand that the late 2023 publication of NAIS 2.0 means the initial 'Activities' for that year would be focused on laying groundwork and initiating key programs. With S$100 million in funding and 250 trainers, the capacity is there, but the short timeframe necessitates a strategic, rather than exhaustive, rollout. For enterprise outreach, I anticipate around 10 focused sessions to identify high-potential problem statements for 100E, ensuring quality over sheer volume in this initial phase. Following this, approximately 3 researcher-enterprise matchmaking events would be facilitated, as successful pairings require careful consideration and cannot be rushed. While the policy emphasizes boosting the AI practitioner pool, the 45 training workshops I estimate for 2023 would likely be foundational or pilot programs, leveraging the available trainers to kickstart skill development without overstretching resources in a limited window. Finally, for the early adopters and approved 100E projects, about 40 technical assistance sessions would be provided for onboarding onto the AI experimentation platforms, ensuring they can effectively utilize the allocated GPU hours. I largely agree with the Mid-level persona's assessment of a focused initial push, though I've adjusted the outreach and training numbers slightly to reflect a more robust, yet still realistic, ramp-up given the policy's ambition and the time constraints.",
+          "evidence": [
+            "The late 2023 policy publication necessitates a focused, initial ramp-up of activities rather than a full-scale program rollout, impacting the number of events and workshops.",
+            "As a 100E participant, I know that quality enterprise problem statements and researcher-enterprise pairings are crucial, leading to a moderate number of targeted outreach (10) and matchmaking (3) events in the initial phase.",
+            "With 250 trainers and a goal to boost the AI practitioner pool, a significant number of training workshops (45) would be initiated, even if foundational, to leverage available resources and begin skill development.",
+            "The 40 platform onboarding assists reflect personalized support for the initial cohort of projects that successfully navigate the early stages and begin utilizing the allocated compute resources."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 12,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 40,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a logistics manager focused on practical AI adoption, I view the activities for late 2023 as critical for laying groundwork and building momentum, despite the very short timeframe following the NAIS 2.0 publication in December. My estimates reflect a pragmatic approach to initiating engagement and training. For enterprise outreach, I anticipate a focused push of about 12 sessions. These would be crucial initial awareness events to identify potential 100E projects and inform businesses like mine about the opportunities. Facilitating researcher-enterprise pairings is a more involved process, so 3 matchmaking events seem realistic for initial, carefully considered collaborations. While the policy emphasizes expanding the AI practitioner pool and 250 trainers are available, actually conducting and completing a large number of training workshops in just a few weeks of 2023 would be logistically challenging. Therefore, I estimate 40 foundational workshops, focusing on piloting content and reaching early adopters, rather than a full-scale rollout. Finally, for the initial cohort of projects, around 40 technical assistance sessions for platform onboarding would ensure they can effectively utilize the allocated GPU hours. I largely agree with the other participants on the matchmaking and onboarding numbers, as these are more constrained by project readiness. However, I've slightly increased outreach to ensure broad initial awareness and adjusted training workshops downwards to reflect a more realistic delivery capacity within the very limited 2023 window, prioritizing quality and setup over sheer volume.",
+          "evidence": [
+            "The NAIS 2.0 policy was published in December 2023, severely limiting the time window for activities in 2023 to only a few weeks, necessitating a focused and pragmatic approach to initial rollout.",
+            "As a logistics manager, I prioritize practical engagement; 12 enterprise outreach sessions represent a strong, targeted initial push to inform businesses and generate interest for 100E projects, building a pipeline for 2024.",
+            "The complexity of researcher-enterprise matchmaking means that 3 events are a realistic number for carefully facilitated initial pairings within a short timeframe, aligning with other stakeholders' views.",
+            "While 250 trainers are available, the logistical challenges of organizing and completing a high volume of training workshops in a few weeks lead me to estimate 40 workshops, focusing on foundational content and piloting, rather than an immediate full-scale deployment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 12,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 50,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a junior data scientist who transitioned into AI through a career conversion program, I understand the immense value of accessible programs and practical support. Given the late 2023 publication of NAIS 2.0, the 'Activities' phase for this period would be focused on laying critical groundwork and initiating engagement. With S$100 million in initial funding and 250 trainers, there's a strong foundation, but the short timeframe necessitates a pragmatic approach. I estimate 12 enterprise outreach sessions, aligning with the higher end of other participants' estimates (8-12). This reflects a strong initial push to cast a wide net and identify diverse problem statements for 100E, which is crucial for startups like the healthcare one I work for. For researcher-enterprise matchmaking, I agree with the consensus of 3 events. This process requires careful curation and cannot be rushed, so quality over quantity is key in this initial phase. Regarding training workshops, I estimate 50. While this is higher than some policy-focused estimates (40-45), it's lower than the most optimistic (60). My personal experience highlights the critical need for skill development, and with 250 trainers available, a solid initial rollout of foundational workshops is achievable and necessary to kickstart the expansion of the AI practitioner pool. Finally, for platform onboarding assistance, I concur with the consensus of 40 sessions. This is a practical number for supporting the initial cohort of enterprises and researchers in utilizing the allocated 5 million GPU hours, ensuring they can effectively begin their AI experimentation.",
+          "evidence": [
+            "The late 2023 policy publication means activities for this period are primarily initial setup and awareness, limiting the overall scale but emphasizing focused efforts.",
+            "With S$100 million in initial funding and 250 trainers, there is sufficient capacity to support a robust, though not full-scale, set of foundational activities.",
+            "As a career-switcher, I recognize the critical importance of outreach to identify enterprise problems and accessible training programs to build the AI practitioner pool, justifying a strong initial push in these areas.",
+            "The consensus on matchmaking events (3) and platform onboarding assists (40) reflects the complex, curated nature of these activities and the practical support needed for early adopters, which aligns with my experience in a startup environment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 15,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 55,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As an AI researcher specializing in responsible AI, I understand that the late 2023 publication of NAIS 2.0 means the initial 'Activities' phase would be focused on laying critical groundwork and initiating engagement, rather than a full-scale rollout. With S$100 million in initial funding and 250 trainers, there's a strong foundation, but the short timeframe necessitates a pragmatic yet ambitious approach. For enterprise outreach, I estimate 15 sessions. My perspective emphasizes the need to cast a wide net to identify diverse and impactful problem statements, especially those that could benefit from responsible AI considerations, which is crucial for a researcher seeking meaningful collaborations. This is slightly higher than other participants (ranging from 8-12), as I believe a more robust initial push is necessary to engage a broad spectrum of enterprises. For researcher-enterprise matchmaking events, I concur with the consensus of 3. As a researcher, I know that successful pairings require careful curation and alignment of research interests with genuine enterprise needs, a process that cannot be rushed for quality outcomes. Regarding training workshops, I estimate 55. While acknowledging the logistical challenges of a late-year launch, my academic background and focus on skill development lead me to believe that a substantial initial offering of foundational workshops is both achievable with 250 trainers and essential for kickstarting the expansion of the AI practitioner pool. This is on the higher end of other estimates (40-60), reflecting the academic emphasis on knowledge dissemination. Finally, for platform onboarding assistance, I agree with the consensus of 40 sessions. This is a practical number for supporting the initial cohort of enterprises and researchers in effectively utilizing the allocated 5 million GPU hours for their AI experimentation.",
+          "evidence": [
+            "My estimate of 15 enterprise outreach sessions reflects the need for broad initial engagement to identify diverse problem statements, crucial for a researcher seeking impactful projects, especially those aligning with responsible AI.",
+            "I agree with the consensus of 3 researcher-matchmaking events, as successful research-enterprise pairings require careful, quality-focused curation rather than high volume, particularly in a limited timeframe.",
+            "I estimate 55 training workshops, slightly higher than some, as my academic perspective prioritizes robust initial skill development, which is achievable with 250 trainers despite the late 2023 start.",
+            "I concur with 40 platform onboarding assists, as this number is realistic for supporting the initial cohort of projects in effectively leveraging the 5 million allocated GPU hours for their experiments."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 8,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 60,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a data engineer, I understand that the late 2023 publication of NAIS 2.0 means the 'Activities' phase for that year would primarily focus on initial setup, awareness, and early engagement. With S$100 million in funding and 250 trainers, the capacity for activities is there, but the short timeframe limits the immediate scale. I anticipate a focused initial push for enterprise outreach, perhaps 8 sessions, to identify potential 100E projects. Following this, a smaller number of matchmaking events, around 3, would facilitate early pairings. Given the emphasis on boosting the AI practitioner pool and the availability of 250 trainers, a significant number of training workshops, perhaps 60, would be rolled out quickly to build foundational skills. Finally, for the few early adopters or pilot projects, around 40 technical assistance sessions would be provided for onboarding onto the AI experimentation platforms, leveraging the allocated 5 million GPU hours.",
+          "evidence": [
+            "The late 2023 policy publication means that activities for the year would be concentrated in the last few months, necessitating a focused but limited initial rollout.",
+            "The S$100 million initial funding and 250 available trainers provide the necessary resources to conduct a moderate number of outreach, matchmaking, and training activities, even within a short timeframe.",
+            "As a data engineer, I know that initial enterprise engagement requires targeted outreach to identify problem statements, followed by dedicated matchmaking to pair them with researchers.",
+            "The policy's goal to 'boost AI practitioner pool to 15,000' suggests an immediate push for training workshops, while the provision of 5 million GPU hours implies a platform needing onboarding support for early users."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 10,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 45,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a senior researcher directly involved in a 100 Experiments project, I understand that the late 2023 publication of NAIS 2.0 means the initial 'Activities' for that year would be focused on laying groundwork and initiating key programs. With S$100 million in funding and 250 trainers, the capacity is there, but the short timeframe necessitates a strategic, rather than exhaustive, rollout. For enterprise outreach, I anticipate around 10 focused sessions to identify high-potential problem statements for 100E, ensuring quality over sheer volume in this initial phase. Following this, approximately 3 researcher-enterprise matchmaking events would be facilitated, as successful pairings require careful consideration and cannot be rushed. While the policy emphasizes boosting the AI practitioner pool, the 45 training workshops I estimate for 2023 would likely be foundational or pilot programs, leveraging the available trainers to kickstart skill development without overstretching resources in a limited window. Finally, for the early adopters and approved 100E projects, about 40 technical assistance sessions would be provided for onboarding onto the AI experimentation platforms, ensuring they can effectively utilize the allocated GPU hours. I largely agree with the Mid-level persona's assessment of a focused initial push, though I've adjusted the outreach and training numbers slightly to reflect a more robust, yet still realistic, ramp-up given the policy's ambition and the time constraints.",
+          "evidence": [
+            "The late 2023 policy publication necessitates a focused, initial ramp-up of activities rather than a full-scale program rollout, impacting the number of events and workshops.",
+            "As a 100E participant, I know that quality enterprise problem statements and researcher-enterprise pairings are crucial, leading to a moderate number of targeted outreach (10) and matchmaking (3) events in the initial phase.",
+            "With 250 trainers and a goal to boost the AI practitioner pool, a significant number of training workshops (45) would be initiated, even if foundational, to leverage available resources and begin skill development.",
+            "The 40 platform onboarding assists reflect personalized support for the initial cohort of projects that successfully navigate the early stages and begin utilizing the allocated compute resources."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 12,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 40,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a logistics manager focused on practical AI adoption, I view the activities for late 2023 as critical for laying groundwork and building momentum, despite the very short timeframe following the NAIS 2.0 publication in December. My estimates reflect a pragmatic approach to initiating engagement and training. For enterprise outreach, I anticipate a focused push of about 12 sessions. These would be crucial initial awareness events to identify potential 100E projects and inform businesses like mine about the opportunities. Facilitating researcher-enterprise pairings is a more involved process, so 3 matchmaking events seem realistic for initial, carefully considered collaborations. While the policy emphasizes expanding the AI practitioner pool and 250 trainers are available, actually conducting and completing a large number of training workshops in just a few weeks of 2023 would be logistically challenging. Therefore, I estimate 40 foundational workshops, focusing on piloting content and reaching early adopters, rather than a full-scale rollout. Finally, for the initial cohort of projects, around 40 technical assistance sessions for platform onboarding would ensure they can effectively utilize the allocated GPU hours. I largely agree with the other participants on the matchmaking and onboarding numbers, as these are more constrained by project readiness. However, I've slightly increased outreach to ensure broad initial awareness and adjusted training workshops downwards to reflect a more realistic delivery capacity within the very limited 2023 window, prioritizing quality and setup over sheer volume.",
+          "evidence": [
+            "The NAIS 2.0 policy was published in December 2023, severely limiting the time window for activities in 2023 to only a few weeks, necessitating a focused and pragmatic approach to initial rollout.",
+            "As a logistics manager, I prioritize practical engagement; 12 enterprise outreach sessions represent a strong, targeted initial push to inform businesses and generate interest for 100E projects, building a pipeline for 2024.",
+            "The complexity of researcher-enterprise matchmaking means that 3 events are a realistic number for carefully facilitated initial pairings within a short timeframe, aligning with other stakeholders' views.",
+            "While 250 trainers are available, the logistical challenges of organizing and completing a high volume of training workshops in a few weeks lead me to estimate 40 workshops, focusing on foundational content and piloting, rather than an immediate full-scale deployment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 12,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 50,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As a junior data scientist who transitioned into AI through a career conversion program, I understand the immense value of accessible programs and practical support. Given the late 2023 publication of NAIS 2.0, the 'Activities' phase for this period would be focused on laying critical groundwork and initiating engagement. With S$100 million in initial funding and 250 trainers, there's a strong foundation, but the short timeframe necessitates a pragmatic approach. I estimate 12 enterprise outreach sessions, aligning with the higher end of other participants' estimates (8-12). This reflects a strong initial push to cast a wide net and identify diverse problem statements for 100E, which is crucial for startups like the healthcare one I work for. For researcher-enterprise matchmaking, I agree with the consensus of 3 events. This process requires careful curation and cannot be rushed, so quality over quantity is key in this initial phase. Regarding training workshops, I estimate 50. While this is higher than some policy-focused estimates (40-45), it's lower than the most optimistic (60). My personal experience highlights the critical need for skill development, and with 250 trainers available, a solid initial rollout of foundational workshops is achievable and necessary to kickstart the expansion of the AI practitioner pool. Finally, for platform onboarding assistance, I concur with the consensus of 40 sessions. This is a practical number for supporting the initial cohort of enterprises and researchers in utilizing the allocated 5 million GPU hours, ensuring they can effectively begin their AI experimentation.",
+          "evidence": [
+            "The late 2023 policy publication means activities for this period are primarily initial setup and awareness, limiting the overall scale but emphasizing focused efforts.",
+            "With S$100 million in initial funding and 250 trainers, there is sufficient capacity to support a robust, though not full-scale, set of foundational activities.",
+            "As a career-switcher, I recognize the critical importance of outreach to identify enterprise problems and accessible training programs to build the AI practitioner pool, justifying a strong initial push in these areas.",
+            "The consensus on matchmaking events (3) and platform onboarding assists (40) reflects the complex, curated nature of these activities and the practical support needed for early adopters, which aligns with my experience in a startup environment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 15,
+            "researcher_matchmaking_events": 3,
+            "training_workshops_held": 55,
+            "platform_onboarding_assists": 40
+          },
+          "narrative": "As an AI researcher specializing in responsible AI, I understand that the late 2023 publication of NAIS 2.0 means the initial 'Activities' phase would be focused on laying critical groundwork and initiating engagement, rather than a full-scale rollout. With S$100 million in initial funding and 250 trainers, there's a strong foundation, but the short timeframe necessitates a pragmatic yet ambitious approach. For enterprise outreach, I estimate 15 sessions. My perspective emphasizes the need to cast a wide net to identify diverse and impactful problem statements, especially those that could benefit from responsible AI considerations, which is crucial for a researcher seeking meaningful collaborations. This is slightly higher than other participants (ranging from 8-12), as I believe a more robust initial push is necessary to engage a broad spectrum of enterprises. For researcher-enterprise matchmaking events, I concur with the consensus of 3. As a researcher, I know that successful pairings require careful curation and alignment of research interests with genuine enterprise needs, a process that cannot be rushed for quality outcomes. Regarding training workshops, I estimate 55. While acknowledging the logistical challenges of a late-year launch, my academic background and focus on skill development lead me to believe that a substantial initial offering of foundational workshops is both achievable with 250 trainers and essential for kickstarting the expansion of the AI practitioner pool. This is on the higher end of other estimates (40-60), reflecting the academic emphasis on knowledge dissemination. Finally, for platform onboarding assistance, I agree with the consensus of 40 sessions. This is a practical number for supporting the initial cohort of enterprises and researchers in effectively utilizing the allocated 5 million GPU hours for their AI experimentation.",
+          "evidence": [
+            "My estimate of 15 enterprise outreach sessions reflects the need for broad initial engagement to identify diverse problem statements, crucial for a researcher seeking impactful projects, especially those aligning with responsible AI.",
+            "I agree with the consensus of 3 researcher-matchmaking events, as successful research-enterprise pairings require careful, quality-focused curation rather than high volume, particularly in a limited timeframe.",
+            "I estimate 55 training workshops, slightly higher than some, as my academic perspective prioritizes robust initial skill development, which is achievable with 250 trainers despite the late 2023 start.",
+            "I concur with 40 platform onboarding assists, as this number is realistic for supporting the initial cohort of projects in effectively leveraging the 5 million allocated GPU hours for their experiments."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "Stakeholders agreed that the late 2023 policy publication mandated a focused, initial rollout of activities, leveraging available funding and trainers for groundwork and early engagement. There was universal consensus on 3 researcher matchmaking events, prioritizing careful curation, and 40 platform onboarding assists for early adopters. However, estimates for enterprise outreach sessions varied from 8 to 15, reflecting different approaches to initial engagement breadth, and training workshops ranged from 40 to 60, influenced by logistical challenges versus the imperative for skill development. The collective predictions suggest an average of 11 enterprise outreach sessions, 3 matchmaking events, 50 training workshops, and 40 platform onboarding assists for the limited 2023 timeframe.",
+      "posting_order": [
+        "Mid-level",
+        "A (0cjivp)",
+        "A (sdjchg)",
+        "A (ev04c5)",
+        "Sophia"
+      ]
+    },
+    {
+      "phase": "Outputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 8,
+            "ai_prototypes_developed": 1,
+            "trainees_completed_programme": 720,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a data engineer, I'm focused on the practical outputs given the late 2023 policy publication. For 100E projects, the 8 enterprise outreach sessions and 3 matchmaking events would have generated a pipeline, leading to a modest 8 projects being approved for funding in 2023. However, actual AI prototype development takes time; even with approvals, it's highly unlikely more than one project, perhaps a very fast-tracked or pre-existing one, would have a prototype ready by year-end. On the training front, the 60 workshops my persona anticipated would be crucial for quickly building foundational skills. Assuming these are shorter, intensive programs, and with a good completion rate, around 720 individuals could have completed these specific training modules. Finally, for enterprises to have a full AI solution developed through the program, it requires more than just a prototype; it needs integration and deployment. Given the very short timeframe and limited prototype development, I don't foresee any enterprises having a fully developed solution from these new projects in 2023.",
+          "evidence": [
+            "The 8 enterprise outreach sessions and 3 researcher matchmaking events in 2023 would realistically lead to a limited number of well-scoped 100E projects, resulting in approximately 8 approvals within the short timeframe.",
+            "As a data engineer, I know that even after project approval, the development of an AI prototype is a multi-month process, making it highly improbable for more than one to be completed in late 2023.",
+            "The 60 training workshops conducted in 2023, as per the activities phase, are likely short-duration programs, allowing approximately 720 participants (60 workshops * 15 participants * 80% completion) to complete them within the year.",
+            "Given the minimal prototype development and the late start of the program, it is not feasible for any enterprises to have a fully developed and integrated AI solution from these new projects by the end of 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 12,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As an AI researcher, my estimates for the 'Outputs' phase in 2023 reflect a realistic understanding of project lifecycles and the initial rollout of a major policy. Given the S$100 million initial funding and the 15 enterprise outreach sessions I anticipated, I believe 12 100E projects would have received approval. This number represents a strong initial cohort of quality projects, carefully selected after the 3 matchmaking events, aligning with my focus on impactful research. While the AIPractitioner persona estimated 8 approvals, my slightly higher outreach estimate and emphasis on identifying diverse problem statements lead me to believe a few more high-quality projects would be greenlit. However, developing a meaningful AI prototype takes significant time, even with allocated compute resources. Therefore, I estimate only 2 AI prototypes would have been successfully built by the end of 2023, likely from projects that were already well-defined or had a very short development cycle. This aligns with the AIPractitioner's conservative estimate, as rushing development compromises quality and responsible AI principles. For training, with 55 workshops held and 250 trainers, I estimate 800 individuals would have completed shorter, intensive training programmes. This is slightly higher than the AIPractitioner's 720, reflecting my academic emphasis on robust knowledge dissemination and a belief in effective initial uptake. Finally, for enterprises to have a fully developed AI solution from projects initiated in late 2023, it's simply not feasible within such a short timeframe. A solution implies deployment and integration, which requires extensive testing and refinement beyond just a prototype. Therefore, I agree with the AIPractitioner that 0 enterprises would have a fully developed AI solution by year-end 2023.",
+          "evidence": [
+            "My estimate of 12 approved 100E projects reflects a strong initial pipeline generated by 15 outreach sessions and 3 matchmaking events, prioritizing quality and impact for a researcher.",
+            "I estimate only 2 AI prototypes developed, as meaningful AI development, especially with responsible AI considerations, requires several months of R&D and iteration, making rapid completion unlikely for projects approved late in 2023.",
+            "With 55 training workshops and 250 trainers, 800 individuals completing shorter, intensive training programmes is a realistic initial achievement, aligning with the goal of boosting the AI practitioner pool.",
+            "Zero enterprises will have a fully developed AI solution, as the short 2023 timeframe for new projects does not allow for the complete cycle of prototyping, testing, refinement, and deployment required for a functional solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 12,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a junior data scientist, I believe the initial outputs for 2023, given the late policy publication, would be focused on foundational steps and early-stage development. With 12 enterprise outreach sessions and 3 curated researcher-enterprise matchmaking events, a strong pipeline of problem statements would have been identified. This would lead to 12 100E projects receiving approval for funding by year-end, aligning with the AIResearcher's estimate and reflecting a robust initial selection process. However, actual AI prototype development takes significant time. Even with approvals and allocated compute, it's highly improbable that more than 2 prototypes, likely from projects with pre-existing ideation or very short development cycles, would be completed by the end of 2023. This aligns with the conservative estimates from both the AIPractitioner and AIResearcher, as rushing development compromises quality. On the training front, my persona's emphasis on skill development, coupled with 50 workshops and 250 trainers, would result in approximately 800 individuals completing shorter, intensive training modules. This is slightly higher than the AIPractitioner's estimate but aligns with the AIResearcher, reflecting the critical need for expanding the AI practitioner pool. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies integration and deployment, which requires extensive testing and refinement beyond just a prototype. Therefore, I concur with both other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The late 2023 policy publication significantly constrains the timeframe for project development and deployment, making rapid completion of prototypes and full solutions highly unlikely.",
+            "My persona's emphasis on a strong initial push for outreach (12 sessions) and the curated matchmaking events would effectively identify and approve a solid cohort of 12 100E projects.",
+            "With 50 training workshops and 250 trainers, a substantial number of individuals (800) would complete foundational AI training, reflecting the policy's goal of expanding the AI practitioner pool.",
+            "Developing and deploying a full AI solution requires extensive time for testing, integration, and refinement, making it unrealistic for any projects approved in late 2023 to reach this stage by year-end."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 10,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 780,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a senior researcher actively involved in a 100 Experiments project, my estimates for the 2023 outputs are grounded in the practical realities of project initiation and development, especially given the late 2023 policy publication. From the 10 enterprise outreach sessions and 3 researcher-enterprise matchmaking events I anticipated, I believe 10 100E projects would have received approval for funding. This number reflects a strong initial cohort, carefully selected for quality and impact rather than sheer volume, aligning with my persona's focus on 'AI for Public Good' and the need for robust problem statements. While some other personas estimated slightly higher approvals, my experience suggests a more deliberate vetting process for such significant projects. However, developing a meaningful AI prototype takes considerable time, even with dedicated compute resources. Therefore, I concur with the consensus that only 2 AI prototypes would have been successfully built by the end of 2023, likely from projects with very short development cycles or pre-existing foundational work. Rushing development compromises the quality and responsible AI principles I advocate for. For training, with 45 workshops held and 250 trainers, I estimate 780 individuals would have completed various foundational or pilot training programmes. This is a robust initial step towards boosting the AI practitioner pool, leveraging available resources effectively, and is in line with the higher end of other participants' estimates, reflecting the importance of knowledge dissemination. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies deployment, integration, and extensive testing, which extends far beyond the prototype stage. Therefore, I strongly agree with all other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The late 2023 policy publication and my persona's emphasis on quality over quantity for 100E projects suggest a moderate number of carefully vetted approvals (10) rather than a large initial batch.",
+            "As a researcher, I understand that AI prototype development is an iterative and time-intensive process, making it highly unlikely for more than 1-2 projects to reach completion within a few months.",
+            "The 45 training workshops and 250 available trainers provide sufficient capacity for a substantial initial cohort of 780 trainees to complete foundational programs, kickstarting skill development.",
+            "A fully deployed AI solution requires significant integration, testing, and refinement beyond prototyping, making it impossible for projects initiated in late 2023 to achieve this output by year-end."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 10,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a logistics manager focused on practical outcomes, my estimates for the 2023 outputs are heavily influenced by the extremely limited timeframe following the NAIS 2.0 policy publication in December. Based on the 12 enterprise outreach sessions and 3 matchmaking events I anticipated, I believe 10 100E projects would have received approval. This reflects a strong initial selection of well-defined projects ready for immediate funding, leveraging the S$100 million allocation. While some other personas estimated 12 approvals, I believe 10 is a more pragmatic number for projects that can be vetted and approved within a few weeks. For AI prototypes, actual development takes time. Even with approvals and allocated GPU hours, only 2 prototypes, likely from projects with pre-existing ideation or very short development cycles, would be successfully built by year-end. This aligns with the strong consensus from all other participants, reflecting the reality of project lifecycles. Regarding training, my 40 foundational workshops, combined with the 250 available trainers, would enable approximately 800 individuals to complete shorter, intensive training modules. This is a robust initial step towards skill-building, aligning with Sophia and A (ev04c5)'s estimates, and demonstrating effective use of resources for early adopters. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies deployment and integration, which requires extensive testing and refinement beyond just a prototype. Therefore, I concur with all other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication severely limits the time window for any tangible outputs, necessitating a focus on foundational approvals and initial training.",
+            "My persona's 12 enterprise outreach sessions and 3 matchmaking events would generate a pipeline of strong candidates, leading to 10 100E projects receiving approval for funding, representing a pragmatic initial cohort.",
+            "Developing a functional AI prototype requires significant time; therefore, only 2 prototypes are realistic for projects initiated in late 2023, aligning with the consensus on project development cycles.",
+            "My 40 estimated training workshops, utilizing the 250 available trainers, could realistically train 800 individuals in short, intensive modules, contributing to immediate skill enhancement for early adopters."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 8,
+            "ai_prototypes_developed": 1,
+            "trainees_completed_programme": 720,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a data engineer, I'm focused on the practical outputs given the late 2023 policy publication. For 100E projects, the 8 enterprise outreach sessions and 3 matchmaking events would have generated a pipeline, leading to a modest 8 projects being approved for funding in 2023. However, actual AI prototype development takes time; even with approvals, it's highly unlikely more than one project, perhaps a very fast-tracked or pre-existing one, would have a prototype ready by year-end. On the training front, the 60 workshops my persona anticipated would be crucial for quickly building foundational skills. Assuming these are shorter, intensive programs, and with a good completion rate, around 720 individuals could have completed these specific training modules. Finally, for enterprises to have a full AI solution developed through the program, it requires more than just a prototype; it needs integration and deployment. Given the very short timeframe and limited prototype development, I don't foresee any enterprises having a fully developed solution from these new projects in 2023.",
+          "evidence": [
+            "The 8 enterprise outreach sessions and 3 researcher matchmaking events in 2023 would realistically lead to a limited number of well-scoped 100E projects, resulting in approximately 8 approvals within the short timeframe.",
+            "As a data engineer, I know that even after project approval, the development of an AI prototype is a multi-month process, making it highly improbable for more than one to be completed in late 2023.",
+            "The 60 training workshops conducted in 2023, as per the activities phase, are likely short-duration programs, allowing approximately 720 participants (60 workshops * 15 participants * 80% completion) to complete them within the year.",
+            "Given the minimal prototype development and the late start of the program, it is not feasible for any enterprises to have a fully developed and integrated AI solution from these new projects by the end of 2023."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 12,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As an AI researcher, my estimates for the 'Outputs' phase in 2023 reflect a realistic understanding of project lifecycles and the initial rollout of a major policy. Given the S$100 million initial funding and the 15 enterprise outreach sessions I anticipated, I believe 12 100E projects would have received approval. This number represents a strong initial cohort of quality projects, carefully selected after the 3 matchmaking events, aligning with my focus on impactful research. While the AIPractitioner persona estimated 8 approvals, my slightly higher outreach estimate and emphasis on identifying diverse problem statements lead me to believe a few more high-quality projects would be greenlit. However, developing a meaningful AI prototype takes significant time, even with allocated compute resources. Therefore, I estimate only 2 AI prototypes would have been successfully built by the end of 2023, likely from projects that were already well-defined or had a very short development cycle. This aligns with the AIPractitioner's conservative estimate, as rushing development compromises quality and responsible AI principles. For training, with 55 workshops held and 250 trainers, I estimate 800 individuals would have completed shorter, intensive training programmes. This is slightly higher than the AIPractitioner's 720, reflecting my academic emphasis on robust knowledge dissemination and a belief in effective initial uptake. Finally, for enterprises to have a fully developed AI solution from projects initiated in late 2023, it's simply not feasible within such a short timeframe. A solution implies deployment and integration, which requires extensive testing and refinement beyond just a prototype. Therefore, I agree with the AIPractitioner that 0 enterprises would have a fully developed AI solution by year-end 2023.",
+          "evidence": [
+            "My estimate of 12 approved 100E projects reflects a strong initial pipeline generated by 15 outreach sessions and 3 matchmaking events, prioritizing quality and impact for a researcher.",
+            "I estimate only 2 AI prototypes developed, as meaningful AI development, especially with responsible AI considerations, requires several months of R&D and iteration, making rapid completion unlikely for projects approved late in 2023.",
+            "With 55 training workshops and 250 trainers, 800 individuals completing shorter, intensive training programmes is a realistic initial achievement, aligning with the goal of boosting the AI practitioner pool.",
+            "Zero enterprises will have a fully developed AI solution, as the short 2023 timeframe for new projects does not allow for the complete cycle of prototyping, testing, refinement, and deployment required for a functional solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 12,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a junior data scientist, I believe the initial outputs for 2023, given the late policy publication, would be focused on foundational steps and early-stage development. With 12 enterprise outreach sessions and 3 curated researcher-enterprise matchmaking events, a strong pipeline of problem statements would have been identified. This would lead to 12 100E projects receiving approval for funding by year-end, aligning with the AIResearcher's estimate and reflecting a robust initial selection process. However, actual AI prototype development takes significant time. Even with approvals and allocated compute, it's highly improbable that more than 2 prototypes, likely from projects with pre-existing ideation or very short development cycles, would be completed by the end of 2023. This aligns with the conservative estimates from both the AIPractitioner and AIResearcher, as rushing development compromises quality. On the training front, my persona's emphasis on skill development, coupled with 50 workshops and 250 trainers, would result in approximately 800 individuals completing shorter, intensive training modules. This is slightly higher than the AIPractitioner's estimate but aligns with the AIResearcher, reflecting the critical need for expanding the AI practitioner pool. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies integration and deployment, which requires extensive testing and refinement beyond just a prototype. Therefore, I concur with both other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The late 2023 policy publication significantly constrains the timeframe for project development and deployment, making rapid completion of prototypes and full solutions highly unlikely.",
+            "My persona's emphasis on a strong initial push for outreach (12 sessions) and the curated matchmaking events would effectively identify and approve a solid cohort of 12 100E projects.",
+            "With 50 training workshops and 250 trainers, a substantial number of individuals (800) would complete foundational AI training, reflecting the policy's goal of expanding the AI practitioner pool.",
+            "Developing and deploying a full AI solution requires extensive time for testing, integration, and refinement, making it unrealistic for any projects approved in late 2023 to reach this stage by year-end."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 10,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 780,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a senior researcher actively involved in a 100 Experiments project, my estimates for the 2023 outputs are grounded in the practical realities of project initiation and development, especially given the late 2023 policy publication. From the 10 enterprise outreach sessions and 3 researcher-enterprise matchmaking events I anticipated, I believe 10 100E projects would have received approval for funding. This number reflects a strong initial cohort, carefully selected for quality and impact rather than sheer volume, aligning with my persona's focus on 'AI for Public Good' and the need for robust problem statements. While some other personas estimated slightly higher approvals, my experience suggests a more deliberate vetting process for such significant projects. However, developing a meaningful AI prototype takes considerable time, even with dedicated compute resources. Therefore, I concur with the consensus that only 2 AI prototypes would have been successfully built by the end of 2023, likely from projects with very short development cycles or pre-existing foundational work. Rushing development compromises the quality and responsible AI principles I advocate for. For training, with 45 workshops held and 250 trainers, I estimate 780 individuals would have completed various foundational or pilot training programmes. This is a robust initial step towards boosting the AI practitioner pool, leveraging available resources effectively, and is in line with the higher end of other participants' estimates, reflecting the importance of knowledge dissemination. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies deployment, integration, and extensive testing, which extends far beyond the prototype stage. Therefore, I strongly agree with all other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The late 2023 policy publication and my persona's emphasis on quality over quantity for 100E projects suggest a moderate number of carefully vetted approvals (10) rather than a large initial batch.",
+            "As a researcher, I understand that AI prototype development is an iterative and time-intensive process, making it highly unlikely for more than 1-2 projects to reach completion within a few months.",
+            "The 45 training workshops and 250 available trainers provide sufficient capacity for a substantial initial cohort of 780 trainees to complete foundational programs, kickstarting skill development.",
+            "A fully deployed AI solution requires significant integration, testing, and refinement beyond prototyping, making it impossible for projects initiated in late 2023 to achieve this output by year-end."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 10,
+            "ai_prototypes_developed": 2,
+            "trainees_completed_programme": 800,
+            "enterprises_with_solution": 0
+          },
+          "narrative": "As a logistics manager focused on practical outcomes, my estimates for the 2023 outputs are heavily influenced by the extremely limited timeframe following the NAIS 2.0 policy publication in December. Based on the 12 enterprise outreach sessions and 3 matchmaking events I anticipated, I believe 10 100E projects would have received approval. This reflects a strong initial selection of well-defined projects ready for immediate funding, leveraging the S$100 million allocation. While some other personas estimated 12 approvals, I believe 10 is a more pragmatic number for projects that can be vetted and approved within a few weeks. For AI prototypes, actual development takes time. Even with approvals and allocated GPU hours, only 2 prototypes, likely from projects with pre-existing ideation or very short development cycles, would be successfully built by year-end. This aligns with the strong consensus from all other participants, reflecting the reality of project lifecycles. Regarding training, my 40 foundational workshops, combined with the 250 available trainers, would enable approximately 800 individuals to complete shorter, intensive training modules. This is a robust initial step towards skill-building, aligning with Sophia and A (ev04c5)'s estimates, and demonstrating effective use of resources for early adopters. Finally, for enterprises to have a fully developed AI solution from projects initiated so late in the year is simply not feasible. A solution implies deployment and integration, which requires extensive testing and refinement beyond just a prototype. Therefore, I concur with all other personas that 0 enterprises would have a complete AI solution by year-end 2023.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication severely limits the time window for any tangible outputs, necessitating a focus on foundational approvals and initial training.",
+            "My persona's 12 enterprise outreach sessions and 3 matchmaking events would generate a pipeline of strong candidates, leading to 10 100E projects receiving approval for funding, representing a pragmatic initial cohort.",
+            "Developing a functional AI prototype requires significant time; therefore, only 2 prototypes are realistic for projects initiated in late 2023, aligning with the consensus on project development cycles.",
+            "My 40 estimated training workshops, utilizing the 250 available trainers, could realistically train 800 individuals in short, intensive modules, contributing to immediate skill enhancement for early adopters."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberations consistently emphasized that the late 2023 policy publication severely limited tangible outputs, focusing initial efforts on foundational steps. There was strong consensus that only 1-2 AI prototypes would be developed and zero enterprises would have a fully deployed AI solution by year-end, given the extensive time required for development, testing, and integration. Estimates for approved 100E projects ranged from 8 to 12, influenced by assumptions on outreach effectiveness and vetting rigor. For training, participants largely agreed that 720-800 individuals would complete programs, reflecting effective use of workshops and trainers for early skill building.",
+      "posting_order": [
+        "Mid-level",
+        "Sophia",
+        "A (ev04c5)",
+        "A (0cjivp)",
+        "A (sdjchg)"
+      ]
+    },
+    {
+      "phase": "Outcomes",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 12,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7000,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a junior data scientist, I see the 'Outcomes' for 2023 as largely foundational, reflecting the late 2023 policy publication. Based on the strong initial outreach and matchmaking efforts, I maintain that 12 100E projects would have been approved. However, the critical step of moving from approved projects or even prototypes to full production deployment is a lengthy process. From my experience in a startup, even with two prototypes developed, achieving full production deployment within the few weeks or months remaining in 2023 is simply not feasible, hence 0 deployed projects. Regarding the AI practitioner pool, the 800 individuals who completed training programs represent a vital initial boost, but this is still a modest step towards the ambitious 15,000 target; the total pool would likely be around 7,000, far from 'approaching' the goal yet. For generative AI use cases, while the '100 in 100 days' is an exciting target, the late start means only a fraction, perhaps 30, would realistically be developed by year-end, as even with free tools, ideation and initial development take time. Finally, the enterprise AI adoption rate would see minimal direct impact from the program in 2023. While awareness is building through outreach, and some enterprises might be exploring AI, the fact that 0 program-driven solutions were deployed means the overall adoption rate, which I estimate at 8.0%, would not have significantly increased due to NAIS 2.0 activities within this short timeframe.",
+          "evidence": [
+            "The late 2023 policy publication severely limits the timeframe for significant outcomes, especially the complex process of AI solution development and production deployment.",
+            "My prior estimates of 12 approved 100E projects and 800 trainees completing programs directly feed into these outcomes, demonstrating initial momentum in project initiation and skill building.",
+            "Practical experience in a startup environment highlights the extensive time required for AI solution development, testing, and production deployment, making 0 deployed projects a realistic outcome for 2023.",
+            "The ambitious '100 generative AI use cases in 100 days' target would realistically only see partial achievement within the limited 2023 window, even with initial onboarding support, due to the time needed for development."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 10,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7800,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a logistics manager focused on practical implementation, my estimates for these outcomes in 2023 are heavily tempered by the extremely limited timeframe following the NAIS 2.0 policy publication in December. For the 'number_of_100e_projects_approved_in_2023', I maintain my previous estimate of 10. This reflects a pragmatic number of projects that could be vetted and approved within the few weeks available, leveraging the initial funding and outreach efforts. However, the critical step of moving from approved projects or even prototypes to full production deployment is a lengthy process. My prior estimate of 0 enterprises with a deployed solution directly translates to 'deployed_100e_projects' also being 0. This aligns perfectly with A (ev04c5)'s reasoning, as actual deployment requires extensive development, testing, and integration beyond what was possible in late 2023. Regarding the 'ai_practitioner_pool', the 800 individuals who completed training programs, as per my 'Outputs' estimate, represent a direct contribution. If we consider A (ev04c5)'s baseline of 7,000 existing practitioners, this brings the total pool to 7,800. While a positive step, this is still far from 'approaching' the ambitious 15,000 target, as A (ev04c5) also noted. For 'generative_ai_use_cases', the '100 in 100 days' target was ambitious even for a full period. Given the late start, I agree with A (ev04c5) that only a fraction, likely 30, would realistically be developed by year-end, as ideation and initial development still take time, even with free tools. Finally, for 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed and only initial awareness activities, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with A (ev04c5) that an 8.0% adoption rate represents a baseline, not a significant increase attributable to the program's direct outcomes within this short window.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication severely limited the time window, meaning most outcomes would be foundational rather than fully realized deployments.",
+            "My previous 'Outputs' estimate of 10 approved 100E projects directly translates to the 'number_of_100e_projects_approved_in_2023', reflecting a pragmatic initial selection.",
+            "As a logistics manager, I understand that moving from project approval or prototype to full production deployment is a multi-month process, making 0 deployed 100E projects by year-end 2023 a realistic outcome.",
+            "The 800 individuals trained through the program contribute to the 'ai_practitioner_pool', bringing the total to 7,800 when combined with a reasonable baseline of existing practitioners, but this is still far from the 15,000 target."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 12,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7800,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As an AI researcher, my estimates for the 'Outcomes' phase in 2023 continue to reflect a pragmatic view of project timelines and the initial rollout of NAIS 2.0, especially with my focus on quality and responsible AI. I maintain my estimate of 12 approved 100E projects, as this aligns with the strong initial pipeline generated by the outreach and matchmaking efforts I anticipated, prioritizing impactful research. However, the transition from approved projects or prototypes to full production deployment is a complex and time-consuming process, requiring rigorous testing and validation, particularly from a responsible AI perspective. Therefore, I concur with other participants that 0 100E projects would have reached production deployment by the end of 2023. Regarding the AI practitioner pool, the 800 individuals who completed training programs, as per my 'Outputs' estimate, represent a direct contribution. Adding this to a reasonable baseline of 7,000 existing practitioners, as suggested by others, brings the total pool to 7,800. While a positive step, this is still far from 'approaching' the ambitious 15,000 target. For generative AI use cases, the '100 in 100 days' target was highly ambitious for a full period, and with the late 2023 start, I agree that only a fraction, likely 30, would be developed. My research perspective emphasizes that developing meaningful and robust use cases, even with free tools, requires careful ideation and initial development, not just rapid creation. Finally, the enterprise AI adoption rate would see minimal direct impact from the program in 2023. With 0 program-driven solutions deployed, the 8.0% adoption rate represents a baseline, with any significant increase attributable to NAIS 2.0's direct outcomes being a longer-term effect.",
+          "evidence": [
+            "My estimate of 12 approved 100E projects carries forward from the 'Outputs' phase, reflecting a strong initial cohort identified through robust outreach and matchmaking, aligning with a researcher's focus on impactful collaborations.",
+            "Zero deployed 100E projects is consistent with my previous estimate of zero enterprises with a solution, as full production deployment requires extensive testing, validation, and ethical considerations that cannot be rushed within a short timeframe.",
+            "The AI practitioner pool of 7,800 combines a baseline of 7,000 existing practitioners with the 800 individuals who completed training programs, representing a direct, albeit initial, contribution towards the 15,000 target.",
+            "Only 30 generative AI use cases are estimated, as developing meaningful and robust use cases, especially those incorporating responsible AI principles, requires careful ideation and iterative development beyond what's possible in a late 2023 launch."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 10,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7780,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a senior researcher focused on 'AI for Public Good', my estimates for the 2023 outcomes are firmly rooted in the practical realities of project timelines and the late 2023 policy publication. For the 'number_of_100e_projects_approved_in_2023', I stand by my previous estimate of 10. This reflects a carefully vetted initial cohort, prioritizing quality and impact over sheer volume, which aligns with my persona's commitment to robust problem statements and responsible AI development. While some other participants, like A (ev04c5) and Sophia, estimated 12, my experience suggests a more deliberate approval process for projects of this significance. Regarding 'deployed_100e_projects', I strongly concur with all other participants that 0 projects would have reached production deployment by year-end 2023. Moving from an approved project or even a prototype to a fully deployed, integrated, and tested solution is a complex, time-consuming process that simply cannot be achieved within a few weeks or months. This directly addresses the question of how many 100E projects reached production deployment. For the 'ai_practitioner_pool', based on my 'Outputs' estimate of 780 trainees completing programs, and adopting a reasonable baseline of 7,000 existing practitioners as suggested by other participants, the total pool would be 7,780. This is a positive initial step, but it is clearly far from 'approaching' the ambitious 15,000 target, as A (ev04c5), A (sdjchg), and Sophia also noted. For 'generative_ai_use_cases', the '100 in 100 days' target was highly ambitious. Given the late start, I agree with the consensus of 30 use cases. As a researcher, I know that developing meaningful and robust use cases, even with free tools, requires careful ideation and initial development, not just rapid creation, which answers how many have been created. Finally, for the 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with the 8.0% figure from other participants, viewing it as a baseline rate rather than a significant increase attributable to the program's direct outcomes within this short timeframe, thus addressing the observed adoption rate.",
+          "evidence": [
+            "My estimate of 10 approved 100E projects prioritizes quality and strategic alignment for 'AI for Public Good' over a higher quantity, reflecting a deliberate vetting process for significant research initiatives.",
+            "As a researcher, I understand that the transition from AI prototype to production deployment is a lengthy, complex process involving rigorous testing and integration, making 0 deployed projects by late 2023 a practical certainty.",
+            "The 'ai_practitioner_pool' of 7,780 is derived from my 780 completed trainees added to a reasonable baseline of 7,000 existing practitioners, indicating a positive but early stage towards the 15,000 target.",
+            "The '100 in 100 days' target for generative AI use cases was highly ambitious; the late 2023 start and the need for meaningful development limit the realistic number to 30, aligning with other expert opinions."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 8,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7720,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a data engineer, I continue to emphasize the practical implications of the late 2023 NAIS 2.0 policy publication on these outcomes. For the 'number_of_100e_projects_approved_in_2023', I maintain my estimate of 8. While some participants like A (ev04c5) and Sophia suggested 12, my experience indicates that even with initial outreach, the rigorous vetting and approval process for 100E projects means a more conservative number is realistic within the short timeframe. Regarding 'deployed_100e_projects', I strongly concur with all other participants that 0 projects would have reached production deployment. From my background in deploying computer vision systems, I know that moving from an approved project or even a prototype to a fully integrated and operational solution takes significant time, far beyond what was available in late 2023. For the 'ai_practitioner_pool', my 'Outputs' estimate of 720 trainees completing programs, combined with a reasonable baseline of 7,000 existing practitioners (as suggested by others), brings the total to 7,720. This is a positive step, but clearly not 'approaching' the ambitious 15,000 target yet, aligning with the observations of other participants. For 'generative_ai_use_cases', the '100 in 100 days' target was highly ambitious. Given the late start, I agree with the consensus of 30 use cases; even with free tools, developing meaningful use cases requires careful ideation and initial development. Finally, for the 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with the 8.0% figure from other participants, viewing it as a baseline rate rather than a significant increase attributable to the program's direct outcomes within this short timeframe.",
+          "evidence": [
+            "The 8 enterprise outreach sessions and 3 matchmaking events I predicted would realistically lead to 8 approved 100E projects, considering the short timeframe and the rigor of the approval process.",
+            "As a data engineer, I understand that deploying an AI solution to production involves extensive integration, testing, and operationalization, making it impossible for any new 100E projects to reach this stage by end-2023.",
+            "My estimate of 720 trainees completing programs, when added to a plausible baseline of 7,000 existing practitioners, results in a total AI practitioner pool of 7,720, which is far from the 15,000 target.",
+            "The '100 generative AI use cases in 100 days' target is highly ambitious, and given the late 2023 policy publication, only about 30 exploratory or proof-of-concept use cases would realistically be developed."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 12,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7000,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a junior data scientist, I see the 'Outcomes' for 2023 as largely foundational, reflecting the late 2023 policy publication. Based on the strong initial outreach and matchmaking efforts, I maintain that 12 100E projects would have been approved. However, the critical step of moving from approved projects or even prototypes to full production deployment is a lengthy process. From my experience in a startup, even with two prototypes developed, achieving full production deployment within the few weeks or months remaining in 2023 is simply not feasible, hence 0 deployed projects. Regarding the AI practitioner pool, the 800 individuals who completed training programs represent a vital initial boost, but this is still a modest step towards the ambitious 15,000 target; the total pool would likely be around 7,000, far from 'approaching' the goal yet. For generative AI use cases, while the '100 in 100 days' is an exciting target, the late start means only a fraction, perhaps 30, would realistically be developed by year-end, as even with free tools, ideation and initial development take time. Finally, the enterprise AI adoption rate would see minimal direct impact from the program in 2023. While awareness is building through outreach, and some enterprises might be exploring AI, the fact that 0 program-driven solutions were deployed means the overall adoption rate, which I estimate at 8.0%, would not have significantly increased due to NAIS 2.0 activities within this short timeframe.",
+          "evidence": [
+            "The late 2023 policy publication severely limits the timeframe for significant outcomes, especially the complex process of AI solution development and production deployment.",
+            "My prior estimates of 12 approved 100E projects and 800 trainees completing programs directly feed into these outcomes, demonstrating initial momentum in project initiation and skill building.",
+            "Practical experience in a startup environment highlights the extensive time required for AI solution development, testing, and production deployment, making 0 deployed projects a realistic outcome for 2023.",
+            "The ambitious '100 generative AI use cases in 100 days' target would realistically only see partial achievement within the limited 2023 window, even with initial onboarding support, due to the time needed for development."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 10,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7800,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a logistics manager focused on practical implementation, my estimates for these outcomes in 2023 are heavily tempered by the extremely limited timeframe following the NAIS 2.0 policy publication in December. For the 'number_of_100e_projects_approved_in_2023', I maintain my previous estimate of 10. This reflects a pragmatic number of projects that could be vetted and approved within the few weeks available, leveraging the initial funding and outreach efforts. However, the critical step of moving from approved projects or even prototypes to full production deployment is a lengthy process. My prior estimate of 0 enterprises with a deployed solution directly translates to 'deployed_100e_projects' also being 0. This aligns perfectly with A (ev04c5)'s reasoning, as actual deployment requires extensive development, testing, and integration beyond what was possible in late 2023. Regarding the 'ai_practitioner_pool', the 800 individuals who completed training programs, as per my 'Outputs' estimate, represent a direct contribution. If we consider A (ev04c5)'s baseline of 7,000 existing practitioners, this brings the total pool to 7,800. While a positive step, this is still far from 'approaching' the ambitious 15,000 target, as A (ev04c5) also noted. For 'generative_ai_use_cases', the '100 in 100 days' target was ambitious even for a full period. Given the late start, I agree with A (ev04c5) that only a fraction, likely 30, would realistically be developed by year-end, as ideation and initial development still take time, even with free tools. Finally, for 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed and only initial awareness activities, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with A (ev04c5) that an 8.0% adoption rate represents a baseline, not a significant increase attributable to the program's direct outcomes within this short window.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication severely limited the time window, meaning most outcomes would be foundational rather than fully realized deployments.",
+            "My previous 'Outputs' estimate of 10 approved 100E projects directly translates to the 'number_of_100e_projects_approved_in_2023', reflecting a pragmatic initial selection.",
+            "As a logistics manager, I understand that moving from project approval or prototype to full production deployment is a multi-month process, making 0 deployed 100E projects by year-end 2023 a realistic outcome.",
+            "The 800 individuals trained through the program contribute to the 'ai_practitioner_pool', bringing the total to 7,800 when combined with a reasonable baseline of existing practitioners, but this is still far from the 15,000 target."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 12,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7800,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As an AI researcher, my estimates for the 'Outcomes' phase in 2023 continue to reflect a pragmatic view of project timelines and the initial rollout of NAIS 2.0, especially with my focus on quality and responsible AI. I maintain my estimate of 12 approved 100E projects, as this aligns with the strong initial pipeline generated by the outreach and matchmaking efforts I anticipated, prioritizing impactful research. However, the transition from approved projects or prototypes to full production deployment is a complex and time-consuming process, requiring rigorous testing and validation, particularly from a responsible AI perspective. Therefore, I concur with other participants that 0 100E projects would have reached production deployment by the end of 2023. Regarding the AI practitioner pool, the 800 individuals who completed training programs, as per my 'Outputs' estimate, represent a direct contribution. Adding this to a reasonable baseline of 7,000 existing practitioners, as suggested by others, brings the total pool to 7,800. While a positive step, this is still far from 'approaching' the ambitious 15,000 target. For generative AI use cases, the '100 in 100 days' target was highly ambitious for a full period, and with the late 2023 start, I agree that only a fraction, likely 30, would be developed. My research perspective emphasizes that developing meaningful and robust use cases, even with free tools, requires careful ideation and initial development, not just rapid creation. Finally, the enterprise AI adoption rate would see minimal direct impact from the program in 2023. With 0 program-driven solutions deployed, the 8.0% adoption rate represents a baseline, with any significant increase attributable to NAIS 2.0's direct outcomes being a longer-term effect.",
+          "evidence": [
+            "My estimate of 12 approved 100E projects carries forward from the 'Outputs' phase, reflecting a strong initial cohort identified through robust outreach and matchmaking, aligning with a researcher's focus on impactful collaborations.",
+            "Zero deployed 100E projects is consistent with my previous estimate of zero enterprises with a solution, as full production deployment requires extensive testing, validation, and ethical considerations that cannot be rushed within a short timeframe.",
+            "The AI practitioner pool of 7,800 combines a baseline of 7,000 existing practitioners with the 800 individuals who completed training programs, representing a direct, albeit initial, contribution towards the 15,000 target.",
+            "Only 30 generative AI use cases are estimated, as developing meaningful and robust use cases, especially those incorporating responsible AI principles, requires careful ideation and iterative development beyond what's possible in a late 2023 launch."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 10,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7780,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a senior researcher focused on 'AI for Public Good', my estimates for the 2023 outcomes are firmly rooted in the practical realities of project timelines and the late 2023 policy publication. For the 'number_of_100e_projects_approved_in_2023', I stand by my previous estimate of 10. This reflects a carefully vetted initial cohort, prioritizing quality and impact over sheer volume, which aligns with my persona's commitment to robust problem statements and responsible AI development. While some other participants, like A (ev04c5) and Sophia, estimated 12, my experience suggests a more deliberate approval process for projects of this significance. Regarding 'deployed_100e_projects', I strongly concur with all other participants that 0 projects would have reached production deployment by year-end 2023. Moving from an approved project or even a prototype to a fully deployed, integrated, and tested solution is a complex, time-consuming process that simply cannot be achieved within a few weeks or months. This directly addresses the question of how many 100E projects reached production deployment. For the 'ai_practitioner_pool', based on my 'Outputs' estimate of 780 trainees completing programs, and adopting a reasonable baseline of 7,000 existing practitioners as suggested by other participants, the total pool would be 7,780. This is a positive initial step, but it is clearly far from 'approaching' the ambitious 15,000 target, as A (ev04c5), A (sdjchg), and Sophia also noted. For 'generative_ai_use_cases', the '100 in 100 days' target was highly ambitious. Given the late start, I agree with the consensus of 30 use cases. As a researcher, I know that developing meaningful and robust use cases, even with free tools, requires careful ideation and initial development, not just rapid creation, which answers how many have been created. Finally, for the 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with the 8.0% figure from other participants, viewing it as a baseline rate rather than a significant increase attributable to the program's direct outcomes within this short timeframe, thus addressing the observed adoption rate.",
+          "evidence": [
+            "My estimate of 10 approved 100E projects prioritizes quality and strategic alignment for 'AI for Public Good' over a higher quantity, reflecting a deliberate vetting process for significant research initiatives.",
+            "As a researcher, I understand that the transition from AI prototype to production deployment is a lengthy, complex process involving rigorous testing and integration, making 0 deployed projects by late 2023 a practical certainty.",
+            "The 'ai_practitioner_pool' of 7,780 is derived from my 780 completed trainees added to a reasonable baseline of 7,000 existing practitioners, indicating a positive but early stage towards the 15,000 target.",
+            "The '100 in 100 days' target for generative AI use cases was highly ambitious; the late 2023 start and the need for meaningful development limit the realistic number to 30, aligning with other expert opinions."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 8,
+            "deployed_100e_projects": 0,
+            "ai_practitioner_pool": 7720,
+            "generative_ai_use_cases": 30,
+            "enterprise_ai_adoption_rate": 8.0
+          },
+          "narrative": "As a data engineer, I continue to emphasize the practical implications of the late 2023 NAIS 2.0 policy publication on these outcomes. For the 'number_of_100e_projects_approved_in_2023', I maintain my estimate of 8. While some participants like A (ev04c5) and Sophia suggested 12, my experience indicates that even with initial outreach, the rigorous vetting and approval process for 100E projects means a more conservative number is realistic within the short timeframe. Regarding 'deployed_100e_projects', I strongly concur with all other participants that 0 projects would have reached production deployment. From my background in deploying computer vision systems, I know that moving from an approved project or even a prototype to a fully integrated and operational solution takes significant time, far beyond what was available in late 2023. For the 'ai_practitioner_pool', my 'Outputs' estimate of 720 trainees completing programs, combined with a reasonable baseline of 7,000 existing practitioners (as suggested by others), brings the total to 7,720. This is a positive step, but clearly not 'approaching' the ambitious 15,000 target yet, aligning with the observations of other participants. For 'generative_ai_use_cases', the '100 in 100 days' target was highly ambitious. Given the late start, I agree with the consensus of 30 use cases; even with free tools, developing meaningful use cases requires careful ideation and initial development. Finally, for the 'enterprise_ai_adoption_rate', with 0 program-driven solutions deployed, the direct impact of NAIS 2.0 on the overall adoption rate in 2023 would be minimal. I concur with the 8.0% figure from other participants, viewing it as a baseline rate rather than a significant increase attributable to the program's direct outcomes within this short timeframe.",
+          "evidence": [
+            "The 8 enterprise outreach sessions and 3 matchmaking events I predicted would realistically lead to 8 approved 100E projects, considering the short timeframe and the rigor of the approval process.",
+            "As a data engineer, I understand that deploying an AI solution to production involves extensive integration, testing, and operationalization, making it impossible for any new 100E projects to reach this stage by end-2023.",
+            "My estimate of 720 trainees completing programs, when added to a plausible baseline of 7,000 existing practitioners, results in a total AI practitioner pool of 7,720, which is far from the 15,000 target.",
+            "The '100 generative AI use cases in 100 days' target is highly ambitious, and given the late 2023 policy publication, only about 30 exploratory or proof-of-concept use cases would realistically be developed."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "Stakeholders largely agreed that 2023 outcomes would be foundational due to the late policy publication and the extensive time required for AI solution development and deployment. There was full consensus that 0 100E projects would be deployed into production and 30 generative AI use cases developed, with the enterprise AI adoption rate remaining at a baseline of 8.0%. The AI practitioner pool was estimated to be between 7,720 and 7,800, reflecting initial training efforts but still far from the 15,000 target. Disagreement was observed in the number of 100E projects approved, ranging from 8 to 12, influenced by perspectives on approval rigor versus initial outreach effectiveness.",
+      "posting_order": [
+        "A (ev04c5)",
+        "A (sdjchg)",
+        "Sophia",
+        "A (0cjivp)",
+        "Mid-level"
+      ]
+    },
+    {
+      "phase": "Impact",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a data engineer, I understand that 'Impact' is a long-term phase, and for a policy launched in late 2023, the actual, measurable impact by year-end would be extremely limited. Singapore's global AI readiness rank might see a slight improvement, moving from perhaps 3rd to 2nd, primarily due to the strategic announcement of NAIS 2.0, which signals strong national commitment and investment. However, this is more about perceived leadership and strategic intent rather than tangible, widespread outcomes from the program itself. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show minimal change. With only one prototype developed and zero deployed solutions from the program in 2023, direct economic contributions are negligible. Any observed growth would likely be a continuation of pre-existing trends rather than a direct result of NAIS 2.0. Similarly, public trust in AI systems would remain largely stable. While the strategy emphasizes building trust, significant shifts require widespread, successful, and ethical deployments, which were not present in 2023. Finally, the AI talent retention rate might see a very slight positive bump. The initial training of 720 individuals and the clear strategic commitment to AI talent development could make Singapore a more attractive place for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period.",
+          "evidence": [
+            "The late 2023 policy publication means that any 'Impact' in that year would primarily stem from the strategic signal of NAIS 2.0, rather than widespread, tangible outcomes, leading to a slight improvement in global AI readiness rank from a high baseline.",
+            "With only 1 AI prototype developed and 0 deployed solutions from the program in 2023, the direct contribution of NAIS 2.0 to the AI sector's GDP share would be negligible, maintaining a baseline level.",
+            "Public trust in AI is built over time through successful and ethical deployments; given the lack of new program-driven deployments in 2023, the public AI trust score would remain largely stable.",
+            "The initial training of 720 individuals and the clear strategic commitment to AI talent development, while not a massive influx, could provide a slight positive signal that helps in retaining AI talent in Singapore."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As an AI researcher specializing in responsible AI, I view the 'Impact' phase, especially for a policy launched in late 2023, as primarily reflecting strategic intent and foundational groundwork rather than widespread, measurable changes. Singapore's global AI leadership ranking would likely see a slight improvement, moving to 2nd, not due to direct, tangible outputs from NAIS 2.0 in 2023, but because the policy's announcement signals a strong national commitment to AI, including responsible AI principles, which enhances its perceived readiness. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only 2 prototypes developed and 0 projects deployed into production by year-end 2023, the direct contribution from NAIS 2.0 initiatives to GDP is minimal; any observed growth would be a continuation of existing trends. My focus on quality and ethical deployment means I wouldn't expect rapid, unsustainable economic shifts. Public trust in AI systems would also remain largely stable. While NAIS 2.0 emphasizes building a trusted environment, significant shifts in public perception require widespread, successful, and ethically sound deployments, which were not present in 2023. I concur with the AIPractitioner that trust levels would largely hold steady. Finally, the AI talent retention rate might experience a very slight positive bump. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive, subtly influencing retention, but not dramatically changing the overall rate in such a short period, as direct retention from program completion would be hard to measure for such a nascent cohort.",
+          "evidence": [
+            "The launch of NAIS 2.0, with its significant funding and focus on responsible AI, acts as a strong strategic signal, leading to a slight improvement in Singapore's global AI readiness rank due to enhanced perception and commitment.",
+            "With only 2 AI prototypes developed and 0 projects deployed into production by end-2023, the direct economic contribution of NAIS 2.0 to the AI sector's GDP share would be negligible, reflecting a baseline rather than program-driven growth.",
+            "Public trust in AI systems remains stable because no new, widespread public-facing AI deployments from NAIS 2.0 occurred in 2023 to significantly alter citizen perceptions, despite the policy's emphasis on trust.",
+            "The initial training of 800 individuals and the strategic commitment of NAIS 2.0 might offer a very slight positive influence on AI talent retention, but it's too short a timeframe for a direct, measurable impact on retention rates after program completion for a significant cohort."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a logistics manager focused on tangible results, I view the 'Impact' phase for late 2023 as primarily reflecting strategic intent rather than widespread, measurable changes from the NAIS 2.0 program itself. Singapore's global AI readiness rank might see a slight improvement to 2nd, not because of direct operational outcomes, but due to the strategic announcement of NAIS 2.0, which signals strong national commitment and investment. However, the economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only 2 prototypes developed and zero deployed solutions from the program in 2023, direct economic contributions are minimal; any observed growth would be a continuation of pre-existing trends. Public trust in AI systems would also remain largely stable at 68.0%. Significant shifts in public perception require widespread, successful, and ethical deployments, which were not present in 2023. Finally, the AI talent retention rate might see a very slight positive bump to 88.5%. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore a marginally more attractive place for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period. My estimates align with Sophia and Mid-level, as the limited timeframe dictates that most 'impact' is still aspirational.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication means any 'impact' by year-end is primarily due to the strategic announcement, not the operational results of the program.",
+            "With 0 deployed 100E projects and 0 enterprises with a fully developed AI solution by year-end 2023, the direct economic contribution to GDP from the program would be negligible.",
+            "Public trust requires widespread, successful, and ethically sound AI deployments, which were not achieved by the program in the limited 2023 timeframe, leading to a stable trust score.",
+            "The training of 800 individuals and the strategic signaling of national commitment to AI talent could lead to a very slight positive influence on talent retention, but not a dramatic shift in such a short period."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a junior data scientist, I view the 'Impact' phase for 2023 as largely reflecting strategic intent and foundational groundwork, rather than widespread, measurable changes directly attributable to NAIS 2.0's operational outcomes. Given the late 2023 policy publication, the timeframe for tangible impact is extremely limited. Singapore's global AI readiness rank would likely see a slight improvement to 2nd. This is primarily due to the strategic announcement of NAIS 2.0, which signals a strong national commitment and investment in AI, enhancing its perceived leadership on the global stage, rather than immediate results from the program itself. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only two prototypes developed and zero 100E projects deployed into production by year-end 2023, the direct contribution from NAIS 2.0 initiatives to GDP is minimal; any observed growth would be a continuation of existing trends. Public trust in AI systems would also remain largely stable at 68.0%. As a practitioner, I know that significant shifts in public perception and trust require widespread, successful, and ethically sound deployments, which were not present in 2023. Finally, the AI talent retention rate might experience a very slight positive bump to 88.5%. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period. My estimates align with the other participants, reflecting a shared understanding of the limited timeframe for direct, measurable impact.",
+          "evidence": [
+            "The late 2023 policy publication severely limits the timeframe for tangible, measurable operational impacts from NAIS 2.0 by year-end.",
+            "The strategic announcement of NAIS 2.0, with its significant funding and national commitment, is the primary driver for any short-term improvement in Singapore's perceived global AI readiness rank.",
+            "With zero 100E projects deployed and only two prototypes developed by year-end 2023, direct economic contribution to GDP from the program's initiatives would be negligible.",
+            "Public trust in AI and AI talent retention require widespread successful deployments and sustained program benefits, which were not present in the short 2023 timeframe, leading to stable trust and only a slight retention bump."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a senior researcher focused on 'AI for Public Good', my estimates for the 'Impact' phase in 2023 are heavily constrained by the late 2023 policy publication. While the strategic announcement of NAIS 2.0 signals a strong national commitment, actual, widespread impact takes considerable time to materialize. I agree with other participants that Singapore's global AI readiness rank would likely see a slight improvement to 2nd. This is primarily due to the perceived leadership and strategic intent conveyed by the comprehensive national strategy, rather than direct, measurable operational outcomes from the program itself within such a short timeframe. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change from NAIS 2.0. With only 2 prototypes developed and 0 projects deployed into production by year-end 2023, the direct contribution to GDP is minimal; any observed growth would be a continuation of existing trends, as Sophia and the Mid-level persona also noted. Public trust in AI systems would also remain largely stable at 68.0%. As an advocate for responsible AI, I understand that significant shifts in public perception and trust require widespread, successful, and ethically sound deployments, which were not present in 2023. Finally, the AI talent retention rate might experience a very slight positive bump to 88.5%. The initial training of 780 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period, aligning with the consensus from other participants.",
+          "evidence": [
+            "The late 2023 policy publication means any improvement in global AI readiness rank is due to the strategic announcement and perceived national commitment, not tangible program outcomes, leading to a slight bump to 2nd.",
+            "With only 2 AI prototypes developed and 0 100E projects deployed into production by year-end 2023, the direct economic contribution of NAIS 2.0 to the AI sector's GDP share is minimal, resulting in a stable 1.8%.",
+            "Building public trust in AI requires widespread, successful, and ethical deployments; as these were not achieved by NAIS 2.0 in 2023, the public AI trust score would remain stable at 68.0%.",
+            "The initial training of 780 individuals and the strategic signaling of long-term AI talent development could lead to a very slight positive influence on AI talent retention, moving it marginally to 88.5%."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Mid-level",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a data engineer, I understand that 'Impact' is a long-term phase, and for a policy launched in late 2023, the actual, measurable impact by year-end would be extremely limited. Singapore's global AI readiness rank might see a slight improvement, moving from perhaps 3rd to 2nd, primarily due to the strategic announcement of NAIS 2.0, which signals strong national commitment and investment. However, this is more about perceived leadership and strategic intent rather than tangible, widespread outcomes from the program itself. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show minimal change. With only one prototype developed and zero deployed solutions from the program in 2023, direct economic contributions are negligible. Any observed growth would likely be a continuation of pre-existing trends rather than a direct result of NAIS 2.0. Similarly, public trust in AI systems would remain largely stable. While the strategy emphasizes building trust, significant shifts require widespread, successful, and ethical deployments, which were not present in 2023. Finally, the AI talent retention rate might see a very slight positive bump. The initial training of 720 individuals and the clear strategic commitment to AI talent development could make Singapore a more attractive place for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period.",
+          "evidence": [
+            "The late 2023 policy publication means that any 'Impact' in that year would primarily stem from the strategic signal of NAIS 2.0, rather than widespread, tangible outcomes, leading to a slight improvement in global AI readiness rank from a high baseline.",
+            "With only 1 AI prototype developed and 0 deployed solutions from the program in 2023, the direct contribution of NAIS 2.0 to the AI sector's GDP share would be negligible, maintaining a baseline level.",
+            "Public trust in AI is built over time through successful and ethical deployments; given the lack of new program-driven deployments in 2023, the public AI trust score would remain largely stable.",
+            "The initial training of 720 individuals and the clear strategic commitment to AI talent development, while not a massive influx, could provide a slight positive signal that helps in retaining AI talent in Singapore."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Sophia",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As an AI researcher specializing in responsible AI, I view the 'Impact' phase, especially for a policy launched in late 2023, as primarily reflecting strategic intent and foundational groundwork rather than widespread, measurable changes. Singapore's global AI leadership ranking would likely see a slight improvement, moving to 2nd, not due to direct, tangible outputs from NAIS 2.0 in 2023, but because the policy's announcement signals a strong national commitment to AI, including responsible AI principles, which enhances its perceived readiness. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only 2 prototypes developed and 0 projects deployed into production by year-end 2023, the direct contribution from NAIS 2.0 initiatives to GDP is minimal; any observed growth would be a continuation of existing trends. My focus on quality and ethical deployment means I wouldn't expect rapid, unsustainable economic shifts. Public trust in AI systems would also remain largely stable. While NAIS 2.0 emphasizes building a trusted environment, significant shifts in public perception require widespread, successful, and ethically sound deployments, which were not present in 2023. I concur with the AIPractitioner that trust levels would largely hold steady. Finally, the AI talent retention rate might experience a very slight positive bump. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive, subtly influencing retention, but not dramatically changing the overall rate in such a short period, as direct retention from program completion would be hard to measure for such a nascent cohort.",
+          "evidence": [
+            "The launch of NAIS 2.0, with its significant funding and focus on responsible AI, acts as a strong strategic signal, leading to a slight improvement in Singapore's global AI readiness rank due to enhanced perception and commitment.",
+            "With only 2 AI prototypes developed and 0 projects deployed into production by end-2023, the direct economic contribution of NAIS 2.0 to the AI sector's GDP share would be negligible, reflecting a baseline rather than program-driven growth.",
+            "Public trust in AI systems remains stable because no new, widespread public-facing AI deployments from NAIS 2.0 occurred in 2023 to significantly alter citizen perceptions, despite the policy's emphasis on trust.",
+            "The initial training of 800 individuals and the strategic commitment of NAIS 2.0 might offer a very slight positive influence on AI talent retention, but it's too short a timeframe for a direct, measurable impact on retention rates after program completion for a significant cohort."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (sdjchg)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a logistics manager focused on tangible results, I view the 'Impact' phase for late 2023 as primarily reflecting strategic intent rather than widespread, measurable changes from the NAIS 2.0 program itself. Singapore's global AI readiness rank might see a slight improvement to 2nd, not because of direct operational outcomes, but due to the strategic announcement of NAIS 2.0, which signals strong national commitment and investment. However, the economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only 2 prototypes developed and zero deployed solutions from the program in 2023, direct economic contributions are minimal; any observed growth would be a continuation of pre-existing trends. Public trust in AI systems would also remain largely stable at 68.0%. Significant shifts in public perception require widespread, successful, and ethical deployments, which were not present in 2023. Finally, the AI talent retention rate might see a very slight positive bump to 88.5%. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore a marginally more attractive place for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period. My estimates align with Sophia and Mid-level, as the limited timeframe dictates that most 'impact' is still aspirational.",
+          "evidence": [
+            "The NAIS 2.0 policy's late December 2023 publication means any 'impact' by year-end is primarily due to the strategic announcement, not the operational results of the program.",
+            "With 0 deployed 100E projects and 0 enterprises with a fully developed AI solution by year-end 2023, the direct economic contribution to GDP from the program would be negligible.",
+            "Public trust requires widespread, successful, and ethically sound AI deployments, which were not achieved by the program in the limited 2023 timeframe, leading to a stable trust score.",
+            "The training of 800 individuals and the strategic signaling of national commitment to AI talent could lead to a very slight positive influence on talent retention, but not a dramatic shift in such a short period."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ev04c5)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a junior data scientist, I view the 'Impact' phase for 2023 as largely reflecting strategic intent and foundational groundwork, rather than widespread, measurable changes directly attributable to NAIS 2.0's operational outcomes. Given the late 2023 policy publication, the timeframe for tangible impact is extremely limited. Singapore's global AI readiness rank would likely see a slight improvement to 2nd. This is primarily due to the strategic announcement of NAIS 2.0, which signals a strong national commitment and investment in AI, enhancing its perceived leadership on the global stage, rather than immediate results from the program itself. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change. With only two prototypes developed and zero 100E projects deployed into production by year-end 2023, the direct contribution from NAIS 2.0 initiatives to GDP is minimal; any observed growth would be a continuation of existing trends. Public trust in AI systems would also remain largely stable at 68.0%. As a practitioner, I know that significant shifts in public perception and trust require widespread, successful, and ethically sound deployments, which were not present in 2023. Finally, the AI talent retention rate might experience a very slight positive bump to 88.5%. The initial training of 800 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period. My estimates align with the other participants, reflecting a shared understanding of the limited timeframe for direct, measurable impact.",
+          "evidence": [
+            "The late 2023 policy publication severely limits the timeframe for tangible, measurable operational impacts from NAIS 2.0 by year-end.",
+            "The strategic announcement of NAIS 2.0, with its significant funding and national commitment, is the primary driver for any short-term improvement in Singapore's perceived global AI readiness rank.",
+            "With zero 100E projects deployed and only two prototypes developed by year-end 2023, direct economic contribution to GDP from the program's initiatives would be negligible.",
+            "Public trust in AI and AI talent retention require widespread successful deployments and sustained program benefits, which were not present in the short 2023 timeframe, leading to stable trust and only a slight retention bump."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (0cjivp)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 2,
+            "ai_sector_gdp_share": 1.8,
+            "public_ai_trust_score": 68.0,
+            "ai_talent_retention_rate": 88.5
+          },
+          "narrative": "As a senior researcher focused on 'AI for Public Good', my estimates for the 'Impact' phase in 2023 are heavily constrained by the late 2023 policy publication. While the strategic announcement of NAIS 2.0 signals a strong national commitment, actual, widespread impact takes considerable time to materialize. I agree with other participants that Singapore's global AI readiness rank would likely see a slight improvement to 2nd. This is primarily due to the perceived leadership and strategic intent conveyed by the comprehensive national strategy, rather than direct, measurable operational outcomes from the program itself within such a short timeframe. The economic value generated by AI adoption, specifically the AI sector's GDP share, would show negligible direct change from NAIS 2.0. With only 2 prototypes developed and 0 projects deployed into production by year-end 2023, the direct contribution to GDP is minimal; any observed growth would be a continuation of existing trends, as Sophia and the Mid-level persona also noted. Public trust in AI systems would also remain largely stable at 68.0%. As an advocate for responsible AI, I understand that significant shifts in public perception and trust require widespread, successful, and ethically sound deployments, which were not present in 2023. Finally, the AI talent retention rate might experience a very slight positive bump to 88.5%. The initial training of 780 individuals and the clear strategic commitment to AI talent development could make Singapore marginally more attractive for AI professionals, subtly influencing retention, but not dramatically changing the overall rate in such a short period, aligning with the consensus from other participants.",
+          "evidence": [
+            "The late 2023 policy publication means any improvement in global AI readiness rank is due to the strategic announcement and perceived national commitment, not tangible program outcomes, leading to a slight bump to 2nd.",
+            "With only 2 AI prototypes developed and 0 100E projects deployed into production by year-end 2023, the direct economic contribution of NAIS 2.0 to the AI sector's GDP share is minimal, resulting in a stable 1.8%.",
+            "Building public trust in AI requires widespread, successful, and ethical deployments; as these were not achieved by NAIS 2.0 in 2023, the public AI trust score would remain stable at 68.0%.",
+            "The initial training of 780 individuals and the strategic signaling of long-term AI talent development could lead to a very slight positive influence on AI talent retention, moving it marginally to 88.5%."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The deliberations converged on the understanding that the late 2023 policy publication severely limited tangible impact by year-end, with most observed changes stemming from strategic signaling rather than operational outcomes. Consensus was reached on a global AI readiness rank of 2, driven by the perceived national commitment from NAIS 2.0. The AI sector's GDP share remained stable at 1.8% and public AI trust at 68.0% due to minimal prototypes (1-2) and zero deployed solutions, which are necessary for widespread economic contribution and shifts in public perception. A slight positive bump in AI talent retention to 88.5% was attributed to initial training of 720-800 individuals and the strategic focus on talent development.",
+      "posting_order": [
+        "Mid-level",
+        "Sophia",
+        "A (sdjchg)",
+        "A (ev04c5)",
+        "A (0cjivp)"
+      ]
+    }
+  ],
+  "backward_pass": null,
+  "fwd_bwd_fwd_pass": null,
+  "fwd_bwd_fwd_bwd_pass": null,
+  "cross_checks": [
+    {
+      "phase": "Inputs",
+      "variable": "total_funding_sgd",
+      "forward_agg": 100000000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 100000000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "max_co_funding_per_project_sgd",
+      "forward_agg": 330000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 330000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "available_gpu_hours",
+      "forward_agg": 5000000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 5000000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "trainer_personnel_count",
+      "forward_agg": 250.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 250.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "enterprise_outreach_sessions",
+      "forward_agg": 11.4,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 11.4
+    },
+    {
+      "phase": "Activities",
+      "variable": "researcher_matchmaking_events",
+      "forward_agg": 3.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 3.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "training_workshops_held",
+      "forward_agg": 50.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 50.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "platform_onboarding_assists",
+      "forward_agg": 40.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 40.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "approved_100e_projects",
+      "forward_agg": 10.4,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 10.4
+    },
+    {
+      "phase": "Outputs",
+      "variable": "ai_prototypes_developed",
+      "forward_agg": 1.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 1.8
+    },
+    {
+      "phase": "Outputs",
+      "variable": "trainees_completed_programme",
+      "forward_agg": 780.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 780.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "enterprises_with_solution",
+      "forward_agg": 0.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 0.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "number_of_100e_projects_approved_in_2023",
+      "forward_agg": 10.4,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 10.4
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "deployed_100e_projects",
+      "forward_agg": 0.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 0.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "ai_practitioner_pool",
+      "forward_agg": 7620.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 7620.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "generative_ai_use_cases",
+      "forward_agg": 30.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 30.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "enterprise_ai_adoption_rate",
+      "forward_agg": 8.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 8.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "global_ai_readiness_rank",
+      "forward_agg": 2.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 2.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_sector_gdp_share",
+      "forward_agg": 1.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 1.8
+    },
+    {
+      "phase": "Impact",
+      "variable": "public_ai_trust_score",
+      "forward_agg": 68.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 68.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_talent_retention_rate",
+      "forward_agg": 88.5,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 88.5
+    }
+  ],
+  "scenario_impact": {
+    "global_ai_readiness_rank": 2.0,
+    "ai_sector_gdp_share": 1.8,
+    "public_ai_trust_score": 68.0,
+    "ai_talent_retention_rate": 88.5
+  },
+  "scenario_confidence": {
+    "global_ai_readiness_rank": null,
+    "ai_sector_gdp_share": null,
+    "public_ai_trust_score": null,
+    "ai_talent_retention_rate": null
+  }
+}

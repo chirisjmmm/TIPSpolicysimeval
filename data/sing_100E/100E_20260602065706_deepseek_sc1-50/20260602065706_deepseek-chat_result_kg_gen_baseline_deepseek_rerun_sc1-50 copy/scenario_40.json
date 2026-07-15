@@ -1,0 +1,1323 @@
+{
+  "scenario_id": "S40_Kenji-(8ptzs_A-(rilnrf)_An-(hz5tnw)_A-(ocgqbg)_Priya-(2ta59",
+  "participants": [
+    {
+      "stakeholder_type": "AIResearcher",
+      "name": "Kenji (8ptzsm)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIResearcher | KG-Gen-8ptzsmpk",
+      "persona_id": "P_AIResearcher__8ptzsmpk",
+      "representative_type": "AIResearcher | KG-Gen-8ptzsmpk",
+      "professional_persona": "Kenji is a postdoctoral fellow at A*STAR working on generative AI for drug discovery. He moved to Singapore from Japan to collaborate on a joint grant call between Singapore and Japan.",
+      "skills_and_expertise": "Expert in molecular graph generation, protein-ligand docking prediction, and high-throughput screening automation. Has published in Nature Machine Intelligence.",
+      "career_goals_and_ambitions": "Seeks to establish a biotech AI startup in Singapore that partners with local hospitals for clinical trials. Aims to contribute to Singapore’s reputation as a hub for AI-driven life sciences.",
+      "sex": "male",
+      "age": 30,
+      "marital_status": "single",
+      "education_level": "PhD",
+      "occupation": "Postdoctoral Fellow",
+      "district": "Buona Vista",
+      "bachelors_field": "Bioinformatics"
+    },
+    {
+      "stakeholder_type": "PolicyRole",
+      "name": "A (rilnrf)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AI for Public Good Principle | KG-Gen-rilnrfeg",
+      "persona_id": "P_PolicyRole__rilnrfeg",
+      "representative_type": "AI for Public Good Principle | KG-Gen-rilnrfeg",
+      "professional_persona": "A former preschool teacher, I retrained into AI via a Career Conversion Programme. I now work in a public agency’s Smart Nation team, building AI tools that help social workers identify at-risk families earlier.",
+      "skills_and_expertise": "I specialise in natural language processing for multilingual text analysis and have developed a chatbot that answers citizens’ queries on community services. I also advocate for inclusive AI design.",
+      "career_goals_and_ambitions": "I want to champion the use of AI for social good, particularly to support vulnerable groups. My longer-term ambition is to design AI literacy programmes for non-tech public officers.",
+      "sex": "female",
+      "age": 37,
+      "marital_status": "divorced",
+      "education_level": "bachelor degree",
+      "occupation": "data analyst (public sector)",
+      "district": "Woodlands",
+      "bachelors_field": "Social Work"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "An (hz5tnw)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-hz5tnw39",
+      "persona_id": "P_AIPractitioner__hz5tnw39",
+      "representative_type": "AIPractitioner | KG-Gen-hz5tnw39",
+      "professional_persona": "An AI safety and ethics specialist who ensures responsible AI deployment in a multinational corporation. She contributes to the development of trusted AI guidelines.",
+      "skills_and_expertise": "Deep understanding of AI fairness, bias detection, and model interpretability. Experienced in designing governance frameworks and conducting audits.",
+      "career_goals_and_ambitions": "Seeks to shape Singapore's responsible AI standards and become a leading voice in the global AI ethics community.",
+      "sex": "female",
+      "age": 38,
+      "marital_status": "married",
+      "education_level": "Master's degree",
+      "occupation": "AI Ethics Specialist",
+      "district": "Central",
+      "bachelors_field": "Philosophy"
+    },
+    {
+      "stakeholder_type": "AIPractitioner",
+      "name": "A (ocgqbg)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AIPractitioner | KG-Gen-ocgqbguo",
+      "persona_id": "P_AIPractitioner__ocgqbguo",
+      "representative_type": "AIPractitioner | KG-Gen-ocgqbguo",
+      "professional_persona": "A computer vision engineer at an industrial automation startup. He previously participated in an AI Trailblazers programme and now builds AI solutions for manufacturing.",
+      "skills_and_expertise": "Expert in deep learning for image recognition and edge AI deployment. Skilled in rapid prototyping and working with limited compute resources.",
+      "career_goals_and_ambitions": "Aims to develop resource-efficient AI models that can run on low-power devices, making AI accessible to small factories.",
+      "sex": "male",
+      "age": 25,
+      "marital_status": "single",
+      "education_level": "Bachelor's degree",
+      "occupation": "Computer Vision Engineer",
+      "district": "West",
+      "bachelors_field": "Computer Engineering"
+    },
+    {
+      "stakeholder_type": "PolicyRole",
+      "name": "Priya (2ta59r)",
+      "institution": "",
+      "role": "",
+      "background": "",
+      "entity_name": "AI for Public Good Principle | KG-Gen-2ta59rl1",
+      "persona_id": "P_PolicyRole__2ta59rl1",
+      "representative_type": "AI for Public Good Principle | KG-Gen-2ta59rl1",
+      "professional_persona": "Priya is a mid-career data scientist at a local fintech startup, passionate about making AI accessible for underbanked communities. She actively participates in industry hackathons and incubator programmes to identify pain points where AI can drive inclusion.",
+      "skills_and_expertise": "Skilled in machine learning, natural language processing, and Python. Experienced in deploying AI prototypes for financial inclusion use cases.",
+      "career_goals_and_ambitions": "She aims to lead a social-impact AI team within an enterprise and eventually advise the government on ethical AI adoption for vulnerable groups.",
+      "sex": "Female",
+      "age": 32,
+      "marital_status": "Single",
+      "education_level": "Master's Degree",
+      "occupation": "Data Scientist",
+      "district": "Queenstown",
+      "bachelors_field": "Computer Science"
+    }
+  ],
+  "forward_pass": [
+    {
+      "phase": "Inputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a data scientist focused on AI for public good, I see the government's commitment of over S$500 million as a strong signal to support R&D and adoption. The co-funding cap of S$330,000 per 100E project is explicitly stated and aligns with enabling enterprises to tackle meaningful AI problems without prohibitive costs. For compute, I estimate 500,000 GPU hours based on the need to support multiple experiments and the scale of typical cloud allocations for such programs. For trainers, I estimate 150 personnel, drawing from my experience in hackathons where a ratio of about 1 trainer per 3-4 projects is effective, and given the target of 100 experiments, this seems reasonable to provide adequate guidance.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'co-funding up to S$330,000 per project for 100 Experiments', so I take these as ground truth.",
+            "Compute infrastructure is a key enabler; based on typical cloud GPU allocations for national AI programs (e.g., 1000 GPU hours per experiment for 500 experiments), 500,000 GPU hours supports a robust pipeline.",
+            "Trainer count of 150 is derived from needing to support multiple concurrent projects and trainees, with a ratio of 1 trainer per 2-3 projects for effective mentorship, as seen in similar programs."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the government's commitment of over S$500 million as a strong signal to support R&D and adoption. The co-funding cap of S$330,000 per 100E project is explicitly stated and aligns with enabling enterprises to tackle meaningful AI problems without prohibitive costs. For compute, I estimate 500,000 GPU hours based on the need to support multiple experiments and the scale of typical cloud allocations for such programs. For trainers, I estimate 150 personnel, drawing from my experience in hackathons where a ratio of about 1 trainer per 3-4 projects is effective, and given the target of 100 experiments, this seems reasonable to provide adequate guidance.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so I adopt these as ground truth.",
+            "For compute, 500,000 GPU hours is a plausible allocation to support 100 experiments, each requiring roughly 5,000 hours of training and inference, based on typical cloud GPU packages for AI projects.",
+            "For trainers, 150 personnel aligns with a ratio of 1.5 trainers per experiment, which is sufficient for hands-on guidance and troubleshooting during the 100E programme's lifecycle.",
+            "My experience in public sector AI projects confirms that these resource levels are consistent with Singapore's ambition to scale AI adoption while maintaining quality support."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As an AI ethics specialist in a multinational corporation, I view the government's S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are factual anchors.",
+            "For compute, 500,000 GPU hours is a reasonable estimate for a national program supporting 100 experiments, based on typical cloud allocations for AI R&D programs of this scale.",
+            "For trainers, 150 personnel provides a 1:1.5 ratio to 100 experiments, which is effective for hands-on guidance in AI projects, as seen in my experience with AI ethics workshops."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As an AI researcher at A*STAR, I see the S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are factual anchors.",
+            "Based on my experience with compute-intensive AI projects, 500,000 GPU hours is a reasonable allocation to support 100 experiments, each requiring roughly 5,000 GPU hours for training and validation.",
+            "From my involvement in AI training programs, a ratio of 1 trainer per 3-4 projects is effective, so for 100 experiments, 150 trainers provide adequate coverage for hands-on guidance and troubleshooting.",
+            "The estimates from other participants align with my independent reasoning, as the policy context and practical constraints lead to consistent conclusions across different stakeholder perspectives."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a computer vision engineer at a startup who participated in the AI Trailblazers programme, I see the government's S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are ground truth values.",
+            "Based on my experience with AI Trailblazers and typical cloud allocations for national programs supporting 100 experiments, 500,000 GPU hours is a reasonable estimate to provide sufficient compute for diverse AI projects.",
+            "From my work in hackathons and training programs, a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and with 100 experiments targeted, 150 trainers ensures adequate support."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a data scientist focused on AI for public good, I see the government's commitment of over S$500 million as a strong signal to support R&D and adoption. The co-funding cap of S$330,000 per 100E project is explicitly stated and aligns with enabling enterprises to tackle meaningful AI problems without prohibitive costs. For compute, I estimate 500,000 GPU hours based on the need to support multiple experiments and the scale of typical cloud allocations for such programs. For trainers, I estimate 150 personnel, drawing from my experience in hackathons where a ratio of about 1 trainer per 3-4 projects is effective, and given the target of 100 experiments, this seems reasonable to provide adequate guidance.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'co-funding up to S$330,000 per project for 100 Experiments', so I take these as ground truth.",
+            "Compute infrastructure is a key enabler; based on typical cloud GPU allocations for national AI programs (e.g., 1000 GPU hours per experiment for 500 experiments), 500,000 GPU hours supports a robust pipeline.",
+            "Trainer count of 150 is derived from needing to support multiple concurrent projects and trainees, with a ratio of 1 trainer per 2-3 projects for effective mentorship, as seen in similar programs."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the government's commitment of over S$500 million as a strong signal to support R&D and adoption. The co-funding cap of S$330,000 per 100E project is explicitly stated and aligns with enabling enterprises to tackle meaningful AI problems without prohibitive costs. For compute, I estimate 500,000 GPU hours based on the need to support multiple experiments and the scale of typical cloud allocations for such programs. For trainers, I estimate 150 personnel, drawing from my experience in hackathons where a ratio of about 1 trainer per 3-4 projects is effective, and given the target of 100 experiments, this seems reasonable to provide adequate guidance.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so I adopt these as ground truth.",
+            "For compute, 500,000 GPU hours is a plausible allocation to support 100 experiments, each requiring roughly 5,000 hours of training and inference, based on typical cloud GPU packages for AI projects.",
+            "For trainers, 150 personnel aligns with a ratio of 1.5 trainers per experiment, which is sufficient for hands-on guidance and troubleshooting during the 100E programme's lifecycle.",
+            "My experience in public sector AI projects confirms that these resource levels are consistent with Singapore's ambition to scale AI adoption while maintaining quality support."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As an AI ethics specialist in a multinational corporation, I view the government's S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are factual anchors.",
+            "For compute, 500,000 GPU hours is a reasonable estimate for a national program supporting 100 experiments, based on typical cloud allocations for AI R&D programs of this scale.",
+            "For trainers, 150 personnel provides a 1:1.5 ratio to 100 experiments, which is effective for hands-on guidance in AI projects, as seen in my experience with AI ethics workshops."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As an AI researcher at A*STAR, I see the S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are factual anchors.",
+            "Based on my experience with compute-intensive AI projects, 500,000 GPU hours is a reasonable allocation to support 100 experiments, each requiring roughly 5,000 GPU hours for training and validation.",
+            "From my involvement in AI training programs, a ratio of 1 trainer per 3-4 projects is effective, so for 100 experiments, 150 trainers provide adequate coverage for hands-on guidance and troubleshooting.",
+            "The estimates from other participants align with my independent reasoning, as the policy context and practical constraints lead to consistent conclusions across different stakeholder perspectives."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "total_funding_sgd": 500000000,
+            "max_co_funding_per_project_sgd": 330000,
+            "available_gpu_hours": 500000,
+            "trainer_personnel_count": 150
+          },
+          "narrative": "As a computer vision engineer at a startup who participated in the AI Trailblazers programme, I see the government's S$500 million commitment as a credible anchor for NAIS 2.0, consistent with the policy context. The S$330,000 co-funding cap per 100E project is explicitly stated and aligns with enabling meaningful AI projects without excessive cost. For compute, I estimate 500,000 GPU hours based on typical allocations for national AI programs supporting 100 experiments, balancing the need for experimentation with efficient resource use. For trainers, I estimate 150 personnel, drawing from my experience in AI ethics workshops where a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and given the target of 100 experiments, this ensures adequate support. My estimates align with those of Priya and A, as the policy context provides clear anchors for funding and co-funding, and my practical experience supports the compute and trainer estimates.",
+          "evidence": [
+            "The policy context explicitly states 'Over S$500 million committed through AI Singapore for AI R&D' and 'Co-funding up to S$330,000 per project for 100 Experiments', so these are ground truth values.",
+            "Based on my experience with AI Trailblazers and typical cloud allocations for national programs supporting 100 experiments, 500,000 GPU hours is a reasonable estimate to provide sufficient compute for diverse AI projects.",
+            "From my work in hackathons and training programs, a ratio of 1 trainer per 3-4 projects is effective for hands-on guidance, and with 100 experiments targeted, 150 trainers ensures adequate support."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The group reached full consensus on all input variables, anchoring total funding at S$500 million and co-funding at S$330,000 per project based on explicit policy statements. Compute capacity was uniformly estimated at 500,000 GPU hours, justified by typical allocations for 100 experiments requiring roughly 5,000 hours each. Trainer personnel were consistently set at 150, derived from a 1:1.5 trainer-to-experiment ratio to ensure effective hands-on guidance. No disagreements emerged, as all participants aligned their reasoning on the same policy anchors and practical experience. The central tendency and range for each variable were identical: total_funding_sgd = 500,000,000; max_co_funding_per_project_sgd = 330,000; available_gpu_hours = 500,000; trainer_personnel_count = 150.",
+      "posting_order": [
+        "Priya (2ta59r)",
+        "A (rilnrf)",
+        "An (hz5tnw)",
+        "Kenji (8ptzsm)",
+        "A (ocgqbg)"
+      ]
+    },
+    {
+      "phase": "Activities",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 50,
+            "researcher_matchmaking_events": 20,
+            "training_workshops_held": 30,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I expect around 50 enterprise outreach sessions to engage companies for problem statements, based on my experience that each session can cover multiple firms but requires significant preparation. For matchmaking, with 100 experiments targeted, 20 events seem reasonable to pair researchers with enterprise challenges, as each event can facilitate several pairings. Training workshops: with 150 trainers and 100 experiments, 30 workshops provide hands-on guidance for teams, consistent with my hackathon experience where each trainer covers 3-4 projects. Platform onboarding: 100 assists align with the 100 experiments, as each project likely needs initial technical support to use the AI experimentation platform.",
+          "evidence": [
+            "With S$500 million funding and 150 trainers, 50 outreach sessions can effectively engage enterprises across sectors, as each session can reach multiple companies but requires coordination time.",
+            "20 matchmaking events are sufficient to pair researchers with 100 enterprise challenges, based on typical event formats where 5-10 pairings occur per event.",
+            "30 training workshops leverage the 150 trainers to cover all 100 experiments, with each workshop serving 3-4 project teams, matching my experience with effective trainer-to-project ratios.",
+            "100 platform onboarding assists directly correspond to the 100 experiments, as each project needs initial technical guidance to set up and use the AI experimentation platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 40,
+            "researcher_matchmaking_events": 15,
+            "training_workshops_held": 25,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the S$500 million funding and 150 trainers provide a solid base for activities. I estimate 40 enterprise outreach sessions, as engaging companies for problem statements requires careful preparation and follow-up, and not all sessions will yield viable challenges. For matchmaking, 15 events seem appropriate to pair researchers with enterprise challenges, given the need for quality matches over quantity. Training workshops: with 150 trainers and 100 experiments, 25 workshops allow for hands-on guidance, aligning with my experience that each trainer can effectively cover 3-4 projects. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project will need initial technical support to use the AI experimentation platform. A's estimates are slightly higher for outreach and matchmaking, but my experience suggests a more conservative pace to ensure quality engagement.",
+          "evidence": [
+            "Based on my involvement in collaborative projects, each outreach session requires significant preparation and follow-up, so 40 sessions is a realistic number to engage enterprises effectively.",
+            "Matchmaking events need careful curation to pair researchers with relevant challenges; 15 events allow for meaningful pairings without overwhelming participants.",
+            "With 150 trainers and 100 experiments, 25 workshops provide a ratio of 1.5 trainers per workshop, enabling personalized guidance similar to my experience in AI training programs.",
+            "Platform onboarding assists directly map to the 100 experiments, as each project requires initial technical support to set up and use the AI experimentation platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the S$500 million funding and 150 trainers as a strong foundation. For enterprise outreach, I estimate 45 sessions, slightly below A's 50 and above Kenji's 40, because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "The S$500 million funding and 150 trainers provide ample resources for outreach, but my experience in community engagement suggests that 45 sessions are realistic to ensure quality interactions and follow-up with enterprises.",
+            "With 100 experiments targeted, 18 matchmaking events allow for careful pairing of researchers with enterprise challenges, avoiding rushed matches that could undermine project success.",
+            "Given 150 trainers and 100 experiments, 28 training workshops provide hands-on guidance while allowing for some consolidation of sessions to maximize trainer effectiveness.",
+            "Platform onboarding assists at 100 directly align with the 100 experiments, as each project requires initial technical support to use the AI experimentation platform, a standard assumption in such programmes."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 45 enterprise outreach sessions to engage companies for problem statements. This is slightly below A's 50 and above Kenji's 40 because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "Enterprise outreach: 45 sessions is a balanced estimate considering the need for quality engagement with enterprises new to AI, based on my experience in community-driven AI initiatives.",
+            "Matchmaking: 18 events allow for meaningful pairings without overwhelming researchers or enterprises, aligning with the target of 100 experiments.",
+            "Training workshops: 28 workshops leverage the 150 trainers efficiently, with each workshop covering multiple projects, as seen in similar upskilling programs.",
+            "Platform onboarding: 100 assists match the 100 experiments, ensuring each project receives the technical support needed to start using the AI platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 45 enterprise outreach sessions to engage companies for problem statements. This is slightly below A's 50 and above Kenji's 40 because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "With S$500 million funding and 150 trainers, enterprise outreach must balance quantity with quality; 45 sessions allow for thorough engagement and follow-up, avoiding superficial contacts.",
+            "Researcher matchmaking events at 18 ensure each event can facilitate multiple high-quality pairings, supporting the 100 experiments target without overwhelming participants.",
+            "Training workshops at 28 leverage the 150 trainers efficiently, with a 1.5 trainer-to-experiment ratio allowing for hands-on guidance while combining some workshops for scale.",
+            "Platform onboarding assists at 100 directly match the 100 experiments, as each project requires initial technical support to use the AI experimentation platform, a standard practice in such programmes."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 50,
+            "researcher_matchmaking_events": 20,
+            "training_workshops_held": 30,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I expect around 50 enterprise outreach sessions to engage companies for problem statements, based on my experience that each session can cover multiple firms but requires significant preparation. For matchmaking, with 100 experiments targeted, 20 events seem reasonable to pair researchers with enterprise challenges, as each event can facilitate several pairings. Training workshops: with 150 trainers and 100 experiments, 30 workshops provide hands-on guidance for teams, consistent with my hackathon experience where each trainer covers 3-4 projects. Platform onboarding: 100 assists align with the 100 experiments, as each project likely needs initial technical support to use the AI experimentation platform.",
+          "evidence": [
+            "With S$500 million funding and 150 trainers, 50 outreach sessions can effectively engage enterprises across sectors, as each session can reach multiple companies but requires coordination time.",
+            "20 matchmaking events are sufficient to pair researchers with 100 enterprise challenges, based on typical event formats where 5-10 pairings occur per event.",
+            "30 training workshops leverage the 150 trainers to cover all 100 experiments, with each workshop serving 3-4 project teams, matching my experience with effective trainer-to-project ratios.",
+            "100 platform onboarding assists directly correspond to the 100 experiments, as each project needs initial technical guidance to set up and use the AI experimentation platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 40,
+            "researcher_matchmaking_events": 15,
+            "training_workshops_held": 25,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the S$500 million funding and 150 trainers provide a solid base for activities. I estimate 40 enterprise outreach sessions, as engaging companies for problem statements requires careful preparation and follow-up, and not all sessions will yield viable challenges. For matchmaking, 15 events seem appropriate to pair researchers with enterprise challenges, given the need for quality matches over quantity. Training workshops: with 150 trainers and 100 experiments, 25 workshops allow for hands-on guidance, aligning with my experience that each trainer can effectively cover 3-4 projects. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project will need initial technical support to use the AI experimentation platform. A's estimates are slightly higher for outreach and matchmaking, but my experience suggests a more conservative pace to ensure quality engagement.",
+          "evidence": [
+            "Based on my involvement in collaborative projects, each outreach session requires significant preparation and follow-up, so 40 sessions is a realistic number to engage enterprises effectively.",
+            "Matchmaking events need careful curation to pair researchers with relevant challenges; 15 events allow for meaningful pairings without overwhelming participants.",
+            "With 150 trainers and 100 experiments, 25 workshops provide a ratio of 1.5 trainers per workshop, enabling personalized guidance similar to my experience in AI training programs.",
+            "Platform onboarding assists directly map to the 100 experiments, as each project requires initial technical support to set up and use the AI experimentation platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the S$500 million funding and 150 trainers as a strong foundation. For enterprise outreach, I estimate 45 sessions, slightly below A's 50 and above Kenji's 40, because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "The S$500 million funding and 150 trainers provide ample resources for outreach, but my experience in community engagement suggests that 45 sessions are realistic to ensure quality interactions and follow-up with enterprises.",
+            "With 100 experiments targeted, 18 matchmaking events allow for careful pairing of researchers with enterprise challenges, avoiding rushed matches that could undermine project success.",
+            "Given 150 trainers and 100 experiments, 28 training workshops provide hands-on guidance while allowing for some consolidation of sessions to maximize trainer effectiveness.",
+            "Platform onboarding assists at 100 directly align with the 100 experiments, as each project requires initial technical support to use the AI experimentation platform, a standard assumption in such programmes."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 45 enterprise outreach sessions to engage companies for problem statements. This is slightly below A's 50 and above Kenji's 40 because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "Enterprise outreach: 45 sessions is a balanced estimate considering the need for quality engagement with enterprises new to AI, based on my experience in community-driven AI initiatives.",
+            "Matchmaking: 18 events allow for meaningful pairings without overwhelming researchers or enterprises, aligning with the target of 100 experiments.",
+            "Training workshops: 28 workshops leverage the 150 trainers efficiently, with each workshop covering multiple projects, as seen in similar upskilling programs.",
+            "Platform onboarding: 100 assists match the 100 experiments, ensuring each project receives the technical support needed to start using the AI platform."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "enterprise_outreach_sessions": 45,
+            "researcher_matchmaking_events": 18,
+            "training_workshops_held": 28,
+            "platform_onboarding_assists": 100
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 45 enterprise outreach sessions to engage companies for problem statements. This is slightly below A's 50 and above Kenji's 40 because my experience in community engagement suggests that quality interactions with enterprises, especially those new to AI, require careful preparation and follow-up, and not all sessions yield viable problem statements. For matchmaking, 18 events balance the need for quality pairings with the target of 100 experiments; each event can facilitate several matches, but too many events risk superficial connections. Training workshops: 28 workshops, between A's 30 and Kenji's 25, as 150 trainers can effectively cover 100 experiments with a ratio of 1.5 trainers per project, but some workshops may be combined for efficiency. Platform onboarding: 100 assists directly correspond to the 100 experiments, as each project needs initial technical support to use the AI experimentation platform, consistent with both A and Kenji's estimates.",
+          "evidence": [
+            "With S$500 million funding and 150 trainers, enterprise outreach must balance quantity with quality; 45 sessions allow for thorough engagement and follow-up, avoiding superficial contacts.",
+            "Researcher matchmaking events at 18 ensure each event can facilitate multiple high-quality pairings, supporting the 100 experiments target without overwhelming participants.",
+            "Training workshops at 28 leverage the 150 trainers efficiently, with a 1.5 trainer-to-experiment ratio allowing for hands-on guidance while combining some workshops for scale.",
+            "Platform onboarding assists at 100 directly match the 100 experiments, as each project requires initial technical support to use the AI experimentation platform, a standard practice in such programmes."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The group focused on how to translate S$500 million funding and 150 trainers into activities that drive 100E project approvals and deployments. There was strong consensus that platform onboarding assists should match the 100-experiment target, with all participants estimating exactly 100. For other activities, estimates converged around moderate numbers: enterprise outreach sessions ranged from 40 to 50 (central tendency ~45), researcher matchmaking events from 15 to 20 (~18), and training workshops from 25 to 30 (~28). Disagreements centered on the pace of engagement, with some favoring more aggressive outreach and matchmaking to maximize volume, while others emphasized quality interactions and careful pairing to ensure viable problem statements and successful matches.",
+      "posting_order": [
+        "A (ocgqbg)",
+        "Kenji (8ptzsm)",
+        "A (rilnrf)",
+        "Priya (2ta59r)",
+        "An (hz5tnw)"
+      ]
+    },
+    {
+      "phase": "Outputs",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 80,
+            "ai_prototypes_developed": 60,
+            "trainees_completed_programme": 120,
+            "enterprises_with_solution": 70
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate that 80 out of the targeted 100 experiments will be approved in 2023, as the rigorous selection process for viable problem statements and the need for quality researcher-enterprise pairings will filter out some proposals. From these, I expect 60 AI prototypes to be successfully built, reflecting the technical challenges and iterative nature of AI development. The AI Apprenticeship Programme, with 28 training workshops and 150 trainers, should produce 120 trainees completing the programme, assuming an average of 4-5 trainees per workshop and a 90% completion rate. Finally, I estimate 70 enterprises will have at least one AI solution developed through the programme, as some prototypes may not reach a deployable state or may be integrated into existing products without being counted as a separate solution. My estimates are slightly conservative compared to the policy's ambition, reflecting my experience in AI ethics where quality and responsible deployment often slow down initial outputs.",
+          "evidence": [
+            "The 100E programme's co-funding cap of S$330,000 per project and the need for viable problem statements mean not all 100 slots will be filled in the first year; 80 approvals is a realistic target based on typical pipeline attrition.",
+            "AI prototype development is inherently uncertain, with many projects failing to produce a working prototype; a 75% success rate from approved projects (60 out of 80) is reasonable given the complexity.",
+            "With 28 training workshops and 150 trainers, each workshop can support 4-5 trainees, yielding 112-140 trainees; 120 completions accounts for a 10% dropout rate, consistent with apprenticeship programmes.",
+            "Not every prototype will be adopted as a solution by the enterprise; some may be shelved or require further refinement, so 70 enterprises with a solution out of 80 approved projects is a plausible outcome."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 75 out of 100 targeted experiments will be approved in 2023. This is slightly lower than An's 80 because my experience in public sector AI projects shows that the rigorous selection process for viable problem statements, especially those without commercial off-the-shelf solutions, often filters out more proposals, particularly from less digitally mature enterprises. For AI prototypes, I expect 55 to be successfully built, lower than An's 60, as technical challenges and the need for iterative development often delay or halt some projects, especially when enterprises lack deep AI expertise. For trainees, I estimate 130 completions, higher than An's 120, because the 28 training workshops and 150 trainers can support more trainees per workshop, and my background in retraining programmes suggests high completion rates when hands-on guidance is strong. For enterprises with a solution, I estimate 65, slightly below An's 70, as some prototypes may not reach a deployable state or be integrated into existing products without being counted as a separate solution, reflecting the gap between prototype development and production deployment.",
+          "evidence": [
+            "My experience in public sector AI projects shows that the 100E programme's requirement for problem statements with no off-the-shelf solution leads to a high rejection rate, so I estimate 75 approvals out of 100 targeted, slightly below An's 80.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean that only about 73% of approved projects yield a working prototype, leading to my estimate of 55 prototypes.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support around 130 trainees completing the 9-month programme, based on a ratio of 4-5 trainees per workshop and a 90% completion rate, slightly higher than An's estimate due to strong trainer support.",
+            "The gap between prototype development and production deployment means only about 87% of enterprises with a prototype will have a deployable solution, resulting in 65 enterprises with at least one AI solution, slightly below An's 70."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "From my experience as a computer vision engineer in a startup, I see the 100E programme as a rigorous process. With S$500 million funding and S$330,000 co-funding per project, the selection will be thorough, filtering out less viable problem statements. I estimate 75 projects approved, aligning with A's view that enterprises without deep AI expertise may struggle to meet criteria. For prototypes, technical challenges in AI development, especially for manufacturing use cases, mean only 55 will be successfully built. The AI Apprenticeship Programme, with 150 trainers and 28 workshops, can support 130 trainees completing, as hands-on guidance boosts completion rates. Finally, 65 enterprises will have a deployable solution, as some prototypes won't reach production due to integration hurdles. My estimates are slightly more conservative than An's for approvals and prototypes, reflecting my practical experience in building AI solutions where delays and failures are common.",
+          "evidence": [
+            "The rigorous selection process for 100E, requiring problem statements with no off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Based on my experience in AI prototyping, only about 73% of approved projects will yield a working prototype due to technical challenges and iterative failures, resulting in 55 prototypes.",
+            "With 150 trainers and 28 workshops, the AI Apprenticeship Programme can achieve a high completion rate of around 87% for 150 trainees, yielding 130 completions, as hands-on guidance reduces dropout.",
+            "The gap between prototype and production deployment means only about 87% of enterprises with prototypes will have a deployable solution, giving 65 enterprises with an AI solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 75 out of 100 targeted experiments will be approved in 2023. This aligns with A's estimate and is slightly below An's 80 because my experience in fintech shows that rigorous selection for viable problem statements, especially those without off-the-shelf solutions, filters out many proposals from less digitally mature enterprises. For AI prototypes, I expect 55 to be successfully built, matching A's estimate and below An's 60, as technical challenges and iterative development often delay or halt projects, particularly when enterprises lack deep AI expertise. For trainees, I estimate 130 completions, higher than An's 120, because the 28 training workshops and 150 trainers can support more trainees per workshop, and my background in retraining programmes suggests high completion rates with strong hands-on guidance. For enterprises with a solution, I estimate 65, matching A's estimate and below An's 70, as some prototypes may not reach a deployable state or be integrated into existing products without being counted as a separate solution, reflecting the gap between prototype development and production deployment.",
+          "evidence": [
+            "The rigorous selection process for 100E projects, requiring problem statements with no commercial off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean only about 73% of approved projects (55 out of 75) will successfully build a prototype, consistent with typical failure rates in early-stage AI projects.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support an average of 4-5 trainees per workshop, yielding 130 completions assuming a 90% completion rate, as hands-on guidance boosts retention.",
+            "The gap between prototype development and production deployment means only about 87% of enterprises with a prototype (65 out of 75) will have a deployable solution, as integration hurdles and business readiness often delay final deployment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR working on generative AI for drug discovery, the rigorous selection process for 100E projects will filter out about 25% of proposals, especially those from enterprises without deep AI expertise. I estimate 75 projects approved, aligning with A and Priya's estimates, as my experience with collaborative grants shows that many problem statements lack the necessary novelty or feasibility. For prototypes, technical challenges in AI development, such as data quality and model generalization, mean only about 55 will be successfully built, consistent with the views of other practitioners. The AI Apprenticeship Programme, with 150 trainers and 28 workshops, can support 130 trainees completing, as hands-on guidance from trainers with a 1:1.5 ratio ensures high completion rates. Finally, 65 enterprises will have a deployable solution, as some prototypes won't reach production due to integration hurdles, reflecting the gap between prototype and production that I've seen in my own research collaborations.",
+          "evidence": [
+            "My experience with joint grant calls between Singapore and Japan shows that rigorous selection filters out about 25% of proposals, leading to 75 approvals out of 100 targeted experiments.",
+            "In my own AI research, technical challenges like data quality and model generalization often prevent about 30% of prototypes from being successfully built, so 55 prototypes is realistic.",
+            "With 150 trainers and 28 workshops, a 1:1.5 trainer-to-trainee ratio supports 130 completions, consistent with high completion rates in hands-on training programs I've observed.",
+            "Based on my collaborations with industry, about 15% of prototypes fail to reach production due to integration issues, resulting in 65 enterprises with a deployable solution."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 80,
+            "ai_prototypes_developed": 60,
+            "trainees_completed_programme": 120,
+            "enterprises_with_solution": 70
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate that 80 out of the targeted 100 experiments will be approved in 2023, as the rigorous selection process for viable problem statements and the need for quality researcher-enterprise pairings will filter out some proposals. From these, I expect 60 AI prototypes to be successfully built, reflecting the technical challenges and iterative nature of AI development. The AI Apprenticeship Programme, with 28 training workshops and 150 trainers, should produce 120 trainees completing the programme, assuming an average of 4-5 trainees per workshop and a 90% completion rate. Finally, I estimate 70 enterprises will have at least one AI solution developed through the programme, as some prototypes may not reach a deployable state or may be integrated into existing products without being counted as a separate solution. My estimates are slightly conservative compared to the policy's ambition, reflecting my experience in AI ethics where quality and responsible deployment often slow down initial outputs.",
+          "evidence": [
+            "The 100E programme's co-funding cap of S$330,000 per project and the need for viable problem statements mean not all 100 slots will be filled in the first year; 80 approvals is a realistic target based on typical pipeline attrition.",
+            "AI prototype development is inherently uncertain, with many projects failing to produce a working prototype; a 75% success rate from approved projects (60 out of 80) is reasonable given the complexity.",
+            "With 28 training workshops and 150 trainers, each workshop can support 4-5 trainees, yielding 112-140 trainees; 120 completions accounts for a 10% dropout rate, consistent with apprenticeship programmes.",
+            "Not every prototype will be adopted as a solution by the enterprise; some may be shelved or require further refinement, so 70 enterprises with a solution out of 80 approved projects is a plausible outcome."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 75 out of 100 targeted experiments will be approved in 2023. This is slightly lower than An's 80 because my experience in public sector AI projects shows that the rigorous selection process for viable problem statements, especially those without commercial off-the-shelf solutions, often filters out more proposals, particularly from less digitally mature enterprises. For AI prototypes, I expect 55 to be successfully built, lower than An's 60, as technical challenges and the need for iterative development often delay or halt some projects, especially when enterprises lack deep AI expertise. For trainees, I estimate 130 completions, higher than An's 120, because the 28 training workshops and 150 trainers can support more trainees per workshop, and my background in retraining programmes suggests high completion rates when hands-on guidance is strong. For enterprises with a solution, I estimate 65, slightly below An's 70, as some prototypes may not reach a deployable state or be integrated into existing products without being counted as a separate solution, reflecting the gap between prototype development and production deployment.",
+          "evidence": [
+            "My experience in public sector AI projects shows that the 100E programme's requirement for problem statements with no off-the-shelf solution leads to a high rejection rate, so I estimate 75 approvals out of 100 targeted, slightly below An's 80.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean that only about 73% of approved projects yield a working prototype, leading to my estimate of 55 prototypes.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support around 130 trainees completing the 9-month programme, based on a ratio of 4-5 trainees per workshop and a 90% completion rate, slightly higher than An's estimate due to strong trainer support.",
+            "The gap between prototype development and production deployment means only about 87% of enterprises with a prototype will have a deployable solution, resulting in 65 enterprises with at least one AI solution, slightly below An's 70."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "From my experience as a computer vision engineer in a startup, I see the 100E programme as a rigorous process. With S$500 million funding and S$330,000 co-funding per project, the selection will be thorough, filtering out less viable problem statements. I estimate 75 projects approved, aligning with A's view that enterprises without deep AI expertise may struggle to meet criteria. For prototypes, technical challenges in AI development, especially for manufacturing use cases, mean only 55 will be successfully built. The AI Apprenticeship Programme, with 150 trainers and 28 workshops, can support 130 trainees completing, as hands-on guidance boosts completion rates. Finally, 65 enterprises will have a deployable solution, as some prototypes won't reach production due to integration hurdles. My estimates are slightly more conservative than An's for approvals and prototypes, reflecting my practical experience in building AI solutions where delays and failures are common.",
+          "evidence": [
+            "The rigorous selection process for 100E, requiring problem statements with no off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Based on my experience in AI prototyping, only about 73% of approved projects will yield a working prototype due to technical challenges and iterative failures, resulting in 55 prototypes.",
+            "With 150 trainers and 28 workshops, the AI Apprenticeship Programme can achieve a high completion rate of around 87% for 150 trainees, yielding 130 completions, as hands-on guidance reduces dropout.",
+            "The gap between prototype and production deployment means only about 87% of enterprises with prototypes will have a deployable solution, giving 65 enterprises with an AI solution."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "Given the S$500 million funding and 150 trainers, I estimate 75 out of 100 targeted experiments will be approved in 2023. This aligns with A's estimate and is slightly below An's 80 because my experience in fintech shows that rigorous selection for viable problem statements, especially those without off-the-shelf solutions, filters out many proposals from less digitally mature enterprises. For AI prototypes, I expect 55 to be successfully built, matching A's estimate and below An's 60, as technical challenges and iterative development often delay or halt projects, particularly when enterprises lack deep AI expertise. For trainees, I estimate 130 completions, higher than An's 120, because the 28 training workshops and 150 trainers can support more trainees per workshop, and my background in retraining programmes suggests high completion rates with strong hands-on guidance. For enterprises with a solution, I estimate 65, matching A's estimate and below An's 70, as some prototypes may not reach a deployable state or be integrated into existing products without being counted as a separate solution, reflecting the gap between prototype development and production deployment.",
+          "evidence": [
+            "The rigorous selection process for 100E projects, requiring problem statements with no commercial off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean only about 73% of approved projects (55 out of 75) will successfully build a prototype, consistent with typical failure rates in early-stage AI projects.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support an average of 4-5 trainees per workshop, yielding 130 completions assuming a 90% completion rate, as hands-on guidance boosts retention.",
+            "The gap between prototype development and production deployment means only about 87% of enterprises with a prototype (65 out of 75) will have a deployable solution, as integration hurdles and business readiness often delay final deployment."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "approved_100e_projects": 75,
+            "ai_prototypes_developed": 55,
+            "trainees_completed_programme": 130,
+            "enterprises_with_solution": 65
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR working on generative AI for drug discovery, the rigorous selection process for 100E projects will filter out about 25% of proposals, especially those from enterprises without deep AI expertise. I estimate 75 projects approved, aligning with A and Priya's estimates, as my experience with collaborative grants shows that many problem statements lack the necessary novelty or feasibility. For prototypes, technical challenges in AI development, such as data quality and model generalization, mean only about 55 will be successfully built, consistent with the views of other practitioners. The AI Apprenticeship Programme, with 150 trainers and 28 workshops, can support 130 trainees completing, as hands-on guidance from trainers with a 1:1.5 ratio ensures high completion rates. Finally, 65 enterprises will have a deployable solution, as some prototypes won't reach production due to integration hurdles, reflecting the gap between prototype and production that I've seen in my own research collaborations.",
+          "evidence": [
+            "My experience with joint grant calls between Singapore and Japan shows that rigorous selection filters out about 25% of proposals, leading to 75 approvals out of 100 targeted experiments.",
+            "In my own AI research, technical challenges like data quality and model generalization often prevent about 30% of prototypes from being successfully built, so 55 prototypes is realistic.",
+            "With 150 trainers and 28 workshops, a 1:1.5 trainer-to-trainee ratio supports 130 completions, consistent with high completion rates in hands-on training programs I've observed.",
+            "Based on my collaborations with industry, about 15% of prototypes fail to reach production due to integration issues, resulting in 65 enterprises with a deployable solution."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The group consistently estimated that rigorous selection criteria for the 100E programme would approve around 75 projects (range 75-80), with technical challenges and iterative development reducing successful prototypes to about 55 (range 55-60). They agreed that the AI Apprenticeship Programme, with 150 trainers and 28 workshops, would produce approximately 130 trainees (range 120-130), and that roughly 65 enterprises (range 65-70) would have a deployable solution due to integration hurdles. Key causal mechanisms included the filtering of proposals by viability and enterprise AI maturity, the inherent uncertainty in prototype development, and the gap between prototype completion and production deployment. Minor divergence centered on whether approvals would be 75 or 80, and whether trainees would be 120 or 130, reflecting different assumptions about pipeline attrition and training capacity.",
+      "posting_order": [
+        "An (hz5tnw)",
+        "A (rilnrf)",
+        "A (ocgqbg)",
+        "Priya (2ta59r)",
+        "Kenji (8ptzsm)"
+      ]
+    },
+    {
+      "phase": "Outcomes",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my experience as a computer vision engineer in a startup, I see the 100E programme's rigorous selection and technical challenges leading to 75 approved projects, consistent with the prior phase's outputs. However, deployment into production is harder: only about two-thirds of prototypes (55) will be production-ready due to integration hurdles in manufacturing environments, giving 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small factories like those I work with are still experimenting.",
+          "evidence": [
+            "The 100E programme's rigorous selection and technical challenges mean only 75 projects are approved, and of the 55 prototypes, about 90% reach production deployment, yielding 50 deployed projects.",
+            "The AI practitioner pool grows from existing base plus 130 programme completions and other training, reaching 14,000 by end of 2023, short of the 15,000 target.",
+            "The AI Trailblazers programme generates 90 generative AI use cases in 100 days, as enterprises need time to adapt to new tools.",
+            "Enterprise AI adoption rate is 28%, based on gradual uptake among small and medium enterprises in manufacturing and other sectors."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the rigorous selection process for 100E projects will approve 75 projects, consistent with the prior phase's outputs and my experience with joint grant calls. However, deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in manufacturing and other sectors, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small factories like those I work with are still experimenting. A's estimates align closely with mine, and I agree with their reasoning on deployment challenges and adoption rates.",
+          "evidence": [
+            "My experience with joint grant calls between Singapore and Japan shows that rigorous selection filters out about 25% of proposals, leading to 75 approvals out of 100 targeted experiments.",
+            "In my own AI research, technical challenges like data quality and model generalization often prevent about 30% of prototypes from being successfully built, so 55 prototypes is realistic, and deployment further reduces that to 50.",
+            "With 150 trainers and 28 workshops, a 1:1.5 trainer-to-trainee ratio supports 130 completions, consistent with high completion rates in hands-on training programs I've observed, contributing to a practitioner pool of 14,000.",
+            "Based on my collaborations with industry, about 15% of prototypes fail to reach production due to integration issues, resulting in 50 deployed projects, and enterprise AI adoption remains around 28% as many firms are still experimenting."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my perspective as a public sector data analyst focused on AI for social good, the rigorous selection process for 100E projects will approve 75 projects, consistent with the prior phase's outputs. However, deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in social service and other sectors, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small enterprises like those I work with are still experimenting. A and Kenji's estimates align closely with mine, and I agree with their reasoning on deployment challenges and adoption rates.",
+          "evidence": [
+            "My experience in public sector AI projects shows that the 100E programme's requirement for problem statements with no off-the-shelf solution leads to a high rejection rate, so I estimate 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean that only about 67% of prototypes reach production deployment, leading to my estimate of 50 deployed projects.",
+            "With 130 trainees completing the programme and other upskilling efforts, the AI practitioner pool is approaching but not yet at the 15,000 target, so I estimate 14,000 practitioners by end of 2023.",
+            "The AI Trailblazers programme's free access to Google Cloud tools should generate around 90 generative AI use cases in 100 days, slightly below the target due to enterprise learning curves and integration challenges."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "Given the rigorous selection process for 100E projects, I expect 75 approvals, consistent with the prior phase's outputs. Deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in sectors like fintech and social services, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small enterprises like those I work with are still experimenting. My estimates align with those of A, Kenji, and the other PolicyRole participant, as we all see similar deployment challenges and adoption rates.",
+          "evidence": [
+            "The rigorous selection process for 100E projects, requiring problem statements with no commercial off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean only about 73% of approved projects (55 out of 75) will successfully build a prototype, and of those, only about 91% (50 out of 55) will be production-ready due to integration hurdles.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support an average of 4-5 trainees per workshop, yielding 130 completions, and combined with other upskilling efforts, the practitioner pool reaches 14,000.",
+            "The AI Trailblazers programme's free access to Google Cloud AI toolsets for up to three months will generate around 90 generative AI use cases in 100 days, as enterprises need time to learn and adapt the tools, and the enterprise AI adoption rate will be around 28% due to gradual uptake."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 80,
+            "deployed_100e_projects": 55,
+            "ai_practitioner_pool": 14500,
+            "generative_ai_use_cases": 95,
+            "enterprise_ai_adoption_rate": 30.0
+          },
+          "narrative": "As an AI ethics specialist, I see the 100E programme's rigorous selection and co-funding cap leading to 80 approved projects, consistent with my prior estimate. However, deployment into production is harder due to integration hurdles and the need for responsible AI validation; I estimate 55 deployed projects, slightly higher than others' 50 because some prototypes may be production-ready with proper ethics checks. The AI practitioner pool is approaching the 15,000 target but not yet there; with 120 trainees completing the programme and other upskilling efforts, I estimate 14,500 practitioners by end of 2023, reflecting a more optimistic view of ongoing training and hiring. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 95 use cases in 100 days, close to the target due to enterprise enthusiasm and my experience with rapid prototyping in ethics workshops. Enterprise AI adoption rate is around 30%, slightly higher than others' 28% because my work with multinational corporations shows growing confidence in AI tools, though small enterprises still lag. My estimates differ from A, Kenji, and Priya on deployment and adoption rates because I emphasize the role of responsible AI practices in enabling smoother deployment and adoption.",
+          "evidence": [
+            "The 100E programme's co-funding cap of S$330,000 per project and the need for viable problem statements mean not all 100 slots will be filled in the first year; 80 approvals is a realistic target based on typical pipeline attrition and my experience with project selection.",
+            "Deployment into production is challenging due to integration hurdles and the need for responsible AI validation; I estimate 55 deployed projects out of 80 approved, as some prototypes will pass ethics checks and be production-ready, consistent with my experience in AI ethics audits.",
+            "The AI practitioner pool is approaching 15,000 but not yet there; with 120 trainees completing the programme and other upskilling efforts, I estimate 14,500 practitioners by end of 2023, reflecting ongoing hiring and training in the ecosystem.",
+            "The AI Trailblazers programme's free access to Google Cloud tools should generate around 95 generative AI use cases in 100 days, close to the target due to enterprise enthusiasm and rapid prototyping, as seen in my ethics workshops where teams quickly develop use cases."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my experience as a computer vision engineer in a startup, I see the 100E programme's rigorous selection and technical challenges leading to 75 approved projects, consistent with the prior phase's outputs. However, deployment into production is harder: only about two-thirds of prototypes (55) will be production-ready due to integration hurdles in manufacturing environments, giving 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small factories like those I work with are still experimenting.",
+          "evidence": [
+            "The 100E programme's rigorous selection and technical challenges mean only 75 projects are approved, and of the 55 prototypes, about 90% reach production deployment, yielding 50 deployed projects.",
+            "The AI practitioner pool grows from existing base plus 130 programme completions and other training, reaching 14,000 by end of 2023, short of the 15,000 target.",
+            "The AI Trailblazers programme generates 90 generative AI use cases in 100 days, as enterprises need time to adapt to new tools.",
+            "Enterprise AI adoption rate is 28%, based on gradual uptake among small and medium enterprises in manufacturing and other sectors."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the rigorous selection process for 100E projects will approve 75 projects, consistent with the prior phase's outputs and my experience with joint grant calls. However, deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in manufacturing and other sectors, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small factories like those I work with are still experimenting. A's estimates align closely with mine, and I agree with their reasoning on deployment challenges and adoption rates.",
+          "evidence": [
+            "My experience with joint grant calls between Singapore and Japan shows that rigorous selection filters out about 25% of proposals, leading to 75 approvals out of 100 targeted experiments.",
+            "In my own AI research, technical challenges like data quality and model generalization often prevent about 30% of prototypes from being successfully built, so 55 prototypes is realistic, and deployment further reduces that to 50.",
+            "With 150 trainers and 28 workshops, a 1:1.5 trainer-to-trainee ratio supports 130 completions, consistent with high completion rates in hands-on training programs I've observed, contributing to a practitioner pool of 14,000.",
+            "Based on my collaborations with industry, about 15% of prototypes fail to reach production due to integration issues, resulting in 50 deployed projects, and enterprise AI adoption remains around 28% as many firms are still experimenting."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "From my perspective as a public sector data analyst focused on AI for social good, the rigorous selection process for 100E projects will approve 75 projects, consistent with the prior phase's outputs. However, deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in social service and other sectors, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small enterprises like those I work with are still experimenting. A and Kenji's estimates align closely with mine, and I agree with their reasoning on deployment challenges and adoption rates.",
+          "evidence": [
+            "My experience in public sector AI projects shows that the 100E programme's requirement for problem statements with no off-the-shelf solution leads to a high rejection rate, so I estimate 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean that only about 67% of prototypes reach production deployment, leading to my estimate of 50 deployed projects.",
+            "With 130 trainees completing the programme and other upskilling efforts, the AI practitioner pool is approaching but not yet at the 15,000 target, so I estimate 14,000 practitioners by end of 2023.",
+            "The AI Trailblazers programme's free access to Google Cloud tools should generate around 90 generative AI use cases in 100 days, slightly below the target due to enterprise learning curves and integration challenges."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 75,
+            "deployed_100e_projects": 50,
+            "ai_practitioner_pool": 14000,
+            "generative_ai_use_cases": 90,
+            "enterprise_ai_adoption_rate": 28.0
+          },
+          "narrative": "Given the rigorous selection process for 100E projects, I expect 75 approvals, consistent with the prior phase's outputs. Deployment into production is harder: only about two-thirds of the 55 prototypes will be production-ready due to integration hurdles in sectors like fintech and social services, yielding 50 deployed projects. The AI practitioner pool is approaching the 15,000 target but not yet there; with 130 trainees completing the programme and other upskilling efforts, I estimate 14,000 practitioners by end of 2023. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 90 use cases in 100 days, slightly below the target due to enterprise learning curves. Enterprise AI adoption rate is around 28%, reflecting gradual uptake as small enterprises like those I work with are still experimenting. My estimates align with those of A, Kenji, and the other PolicyRole participant, as we all see similar deployment challenges and adoption rates.",
+          "evidence": [
+            "The rigorous selection process for 100E projects, requiring problem statements with no commercial off-the-shelf AI solution, will filter out about 25% of proposals, leading to 75 approvals out of 100 targeted.",
+            "Technical challenges in AI development, especially for enterprises new to AI, mean only about 73% of approved projects (55 out of 75) will successfully build a prototype, and of those, only about 91% (50 out of 55) will be production-ready due to integration hurdles.",
+            "With 28 training workshops and 150 trainers, the AI Apprenticeship Programme can support an average of 4-5 trainees per workshop, yielding 130 completions, and combined with other upskilling efforts, the practitioner pool reaches 14,000.",
+            "The AI Trailblazers programme's free access to Google Cloud AI toolsets for up to three months will generate around 90 generative AI use cases in 100 days, as enterprises need time to learn and adapt the tools, and the enterprise AI adoption rate will be around 28% due to gradual uptake."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "number_of_100e_projects_approved_in_2023": 80,
+            "deployed_100e_projects": 55,
+            "ai_practitioner_pool": 14500,
+            "generative_ai_use_cases": 95,
+            "enterprise_ai_adoption_rate": 30.0
+          },
+          "narrative": "As an AI ethics specialist, I see the 100E programme's rigorous selection and co-funding cap leading to 80 approved projects, consistent with my prior estimate. However, deployment into production is harder due to integration hurdles and the need for responsible AI validation; I estimate 55 deployed projects, slightly higher than others' 50 because some prototypes may be production-ready with proper ethics checks. The AI practitioner pool is approaching the 15,000 target but not yet there; with 120 trainees completing the programme and other upskilling efforts, I estimate 14,500 practitioners by end of 2023, reflecting a more optimistic view of ongoing training and hiring. For generative AI use cases, the AI Trailblazers programme's free access to Google Cloud tools should generate around 95 use cases in 100 days, close to the target due to enterprise enthusiasm and my experience with rapid prototyping in ethics workshops. Enterprise AI adoption rate is around 30%, slightly higher than others' 28% because my work with multinational corporations shows growing confidence in AI tools, though small enterprises still lag. My estimates differ from A, Kenji, and Priya on deployment and adoption rates because I emphasize the role of responsible AI practices in enabling smoother deployment and adoption.",
+          "evidence": [
+            "The 100E programme's co-funding cap of S$330,000 per project and the need for viable problem statements mean not all 100 slots will be filled in the first year; 80 approvals is a realistic target based on typical pipeline attrition and my experience with project selection.",
+            "Deployment into production is challenging due to integration hurdles and the need for responsible AI validation; I estimate 55 deployed projects out of 80 approved, as some prototypes will pass ethics checks and be production-ready, consistent with my experience in AI ethics audits.",
+            "The AI practitioner pool is approaching 15,000 but not yet there; with 120 trainees completing the programme and other upskilling efforts, I estimate 14,500 practitioners by end of 2023, reflecting ongoing hiring and training in the ecosystem.",
+            "The AI Trailblazers programme's free access to Google Cloud tools should generate around 95 generative AI use cases in 100 days, close to the target due to enterprise enthusiasm and rapid prototyping, as seen in my ethics workshops where teams quickly develop use cases."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The group broadly agreed that rigorous selection and technical challenges would limit 100E project approvals to 75-80 and deployments to 50-55, with deployment hindered by integration hurdles and responsible AI validation. Consensus emerged on an AI practitioner pool of 14,000-14,500 (below the 15,000 target) and generative AI use cases of 90-95 (slightly below the 100 target), driven by enterprise learning curves and training program outputs. Enterprise AI adoption was estimated at 28-30%, reflecting gradual uptake among small firms. Minor disagreements centered on deployment counts (50 vs. 55) and adoption rates (28% vs. 30%), with one participant citing responsible AI practices as enabling smoother deployment and higher adoption.",
+      "posting_order": [
+        "A (ocgqbg)",
+        "Kenji (8ptzsm)",
+        "A (rilnrf)",
+        "Priya (2ta59r)",
+        "An (hz5tnw)"
+      ]
+    },
+    {
+      "phase": "Impact",
+      "direction": "forward",
+      "initial_posts": [
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress.",
+          "evidence": [
+            "Singapore's global AI readiness rank improves to 6th due to strong government commitment and infrastructure, but top ranks are held by larger economies like the US and China with more mature ecosystems.",
+            "AI sector GDP share reaches 3.8% from the 50 deployed 100E projects and 90 generative AI use cases, though many are still scaling and not yet contributing significantly to GDP.",
+            "Public trust in AI reaches 72% because of responsible AI practices in public services, but surveys show 20-30% of citizens remain skeptical about job displacement and bias.",
+            "AI talent retention is 85% as the AIAP and 100E programme provide meaningful work and upskilling, but some talent leaves for higher salaries or global opportunities."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a computer vision engineer in a startup, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development from the 100E programme and AIAP, combined with global competition, push its AI readiness rank to 6th, consistent with the policy's ambition to be a pace-setter.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute to a 3.8% GDP share, though many solutions are still in early stages of scaling.",
+            "Public trust reaches 72% due to responsible AI practices and transparent deployment in social services, but job displacement concerns and bias incidents keep it below 80%.",
+            "The hands-on training and meaningful projects in the AIAP and 100E programme retain 85% of AI talent, though some are attracted by global tech giants."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the cumulative effects of the 100E programme and AI Apprenticeship Programme are now visible. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that A's estimates are identical to mine, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development from the 100E programme and AIAP, combined with global competition, support a rank of 6th, consistent with the prior phases' outputs of 50 deployed projects and 14,000 practitioners.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute directly to GDP, but early-stage solutions limit the share to 3.8%, as seen in my own research where prototypes take time to scale.",
+            "Public trust reaches 72% due to responsible AI practices in social services, but my experience with public engagement shows persistent concerns about job displacement and bias, preventing higher trust.",
+            "AI talent retention is 85% because the AIAP's hands-on training and meaningful projects create strong ties, though some practitioners are attracted by global tech giants, as I've observed among my peers."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As an AI ethics specialist, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 55 deployed 100E projects and 95 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that A and Kenji's estimates are identical to mine, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development, supported by S$500 million funding and 150 trainers, should move it to 6th globally, but competition from larger economies limits further gains.",
+            "The 55 deployed 100E projects and 95 generative AI use cases contribute to a 3.8% GDP share, though many solutions are still early-stage and not yet scaled.",
+            "Public trust reaches 72% due to responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%.",
+            "AI talent retention is high at 85% because the AIAP and 100E programme provide hands-on training and meaningful projects, though some talent is lured by global tech giants."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a data scientist focused on AI for public good, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that other participants have posted identical estimates, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure, talent development, and governance frameworks from NAIS 2.0 push its global AI readiness rank to 6th, but competition from larger economies like the US and China limits further improvement.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute to an AI sector GDP share of 3.8%, though many solutions are still early-stage and not yet generating significant revenue.",
+            "Public trust in AI reaches 72% due to responsible AI practices and transparent deployment in social services, but concerns about job displacement and algorithmic bias keep it below 80%.",
+            "AI talent retention is high at 85% because the AIAP and 100E programme provide hands-on training and meaningful projects, though some practitioners are attracted by global tech giants offering higher salaries."
+          ],
+          "judgment": null
+        }
+      ],
+      "revised_posts": [
+        {
+          "persona_name": "A (rilnrf)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a public sector data analyst focused on AI for social good, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress.",
+          "evidence": [
+            "Singapore's global AI readiness rank improves to 6th due to strong government commitment and infrastructure, but top ranks are held by larger economies like the US and China with more mature ecosystems.",
+            "AI sector GDP share reaches 3.8% from the 50 deployed 100E projects and 90 generative AI use cases, though many are still scaling and not yet contributing significantly to GDP.",
+            "Public trust in AI reaches 72% because of responsible AI practices in public services, but surveys show 20-30% of citizens remain skeptical about job displacement and bias.",
+            "AI talent retention is 85% as the AIAP and 100E programme provide meaningful work and upskilling, but some talent leaves for higher salaries or global opportunities."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "A (ocgqbg)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a computer vision engineer in a startup, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development from the 100E programme and AIAP, combined with global competition, push its AI readiness rank to 6th, consistent with the policy's ambition to be a pace-setter.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute to a 3.8% GDP share, though many solutions are still in early stages of scaling.",
+            "Public trust reaches 72% due to responsible AI practices and transparent deployment in social services, but job displacement concerns and bias incidents keep it below 80%.",
+            "The hands-on training and meaningful projects in the AIAP and 100E programme retain 85% of AI talent, though some are attracted by global tech giants."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Kenji (8ptzsm)",
+          "stakeholder_type": "AIResearcher",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "From my perspective as a postdoc at A*STAR, the cumulative effects of the 100E programme and AI Apprenticeship Programme are now visible. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that A's estimates are identical to mine, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development from the 100E programme and AIAP, combined with global competition, support a rank of 6th, consistent with the prior phases' outputs of 50 deployed projects and 14,000 practitioners.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute directly to GDP, but early-stage solutions limit the share to 3.8%, as seen in my own research where prototypes take time to scale.",
+            "Public trust reaches 72% due to responsible AI practices in social services, but my experience with public engagement shows persistent concerns about job displacement and bias, preventing higher trust.",
+            "AI talent retention is 85% because the AIAP's hands-on training and meaningful projects create strong ties, though some practitioners are attracted by global tech giants, as I've observed among my peers."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "An (hz5tnw)",
+          "stakeholder_type": "AIPractitioner",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As an AI ethics specialist, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 55 deployed 100E projects and 95 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that A and Kenji's estimates are identical to mine, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure and talent development, supported by S$500 million funding and 150 trainers, should move it to 6th globally, but competition from larger economies limits further gains.",
+            "The 55 deployed 100E projects and 95 generative AI use cases contribute to a 3.8% GDP share, though many solutions are still early-stage and not yet scaled.",
+            "Public trust reaches 72% due to responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%.",
+            "AI talent retention is high at 85% because the AIAP and 100E programme provide hands-on training and meaningful projects, though some talent is lured by global tech giants."
+          ],
+          "judgment": null
+        },
+        {
+          "persona_name": "Priya (2ta59r)",
+          "stakeholder_type": "PolicyRole",
+          "prediction_values": {
+            "global_ai_readiness_rank": 6,
+            "ai_sector_gdp_share": 3.8,
+            "public_ai_trust_score": 72,
+            "ai_talent_retention_rate": 85
+          },
+          "narrative": "As a data scientist focused on AI for public good, I see the cumulative effects of the 100E programme and AI Apprenticeship Programme translating into tangible impacts. Singapore's global AI readiness rank improves to 6th, reflecting our strong infrastructure and talent development, though competition from larger economies keeps us from the top 5. The AI sector's GDP share rises to 3.8%, driven by the 50 deployed 100E projects and 90 generative AI use cases, though many solutions are still early-stage. Public trust in AI reaches 72%, bolstered by responsible AI practices and transparent deployment in social services, but lingering concerns about job displacement and bias keep it below 80%. AI talent retention is high at 85%, as the hands-on training and meaningful projects in the AIAP and 100E programme encourage practitioners to stay in Singapore, though some are lured by global tech giants. My estimates align with the prior phases' outputs and outcomes, reflecting gradual but steady progress. I note that other participants have posted identical estimates, which is reasonable given our shared understanding of the policy's impact.",
+          "evidence": [
+            "Singapore's strong infrastructure, talent development, and governance frameworks from NAIS 2.0 push its global AI readiness rank to 6th, but competition from larger economies like the US and China limits further improvement.",
+            "The 50 deployed 100E projects and 90 generative AI use cases contribute to an AI sector GDP share of 3.8%, though many solutions are still early-stage and not yet generating significant revenue.",
+            "Public trust in AI reaches 72% due to responsible AI practices and transparent deployment in social services, but concerns about job displacement and algorithmic bias keep it below 80%.",
+            "AI talent retention is high at 85% because the AIAP and 100E programme provide hands-on training and meaningful projects, though some practitioners are attracted by global tech giants offering higher salaries."
+          ],
+          "judgment": null
+        }
+      ],
+      "refined_posts": null,
+      "phase_summary": "The group reached strong consensus that the 100E programme and AI Apprenticeship Programme would yield gradual, steady progress across all four impact metrics. All participants estimated Singapore's global AI readiness rank at 6th, AI sector GDP share at 3.8%, public AI trust at 72%, and AI talent retention at 85%, with no variation in numeric predictions. Key causal mechanisms included strong government infrastructure and talent development driving readiness, deployed 100E projects and generative AI use cases contributing to GDP, responsible AI practices boosting trust, and hands-on training retaining talent. However, participants consistently noted that competition from larger economies, early-stage scaling of solutions, lingering concerns about job displacement and bias, and lures from global tech giants prevented higher scores. No disagreements emerged, as all narratives and evidence aligned closely.",
+      "posting_order": [
+        "A (rilnrf)",
+        "A (ocgqbg)",
+        "Kenji (8ptzsm)",
+        "An (hz5tnw)",
+        "Priya (2ta59r)"
+      ]
+    }
+  ],
+  "backward_pass": null,
+  "fwd_bwd_fwd_pass": null,
+  "fwd_bwd_fwd_bwd_pass": null,
+  "cross_checks": [
+    {
+      "phase": "Inputs",
+      "variable": "total_funding_sgd",
+      "forward_agg": 500000000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 500000000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "max_co_funding_per_project_sgd",
+      "forward_agg": 330000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 330000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "available_gpu_hours",
+      "forward_agg": 500000.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 500000.0
+    },
+    {
+      "phase": "Inputs",
+      "variable": "trainer_personnel_count",
+      "forward_agg": 150.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 150.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "enterprise_outreach_sessions",
+      "forward_agg": 45.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 45.0
+    },
+    {
+      "phase": "Activities",
+      "variable": "researcher_matchmaking_events",
+      "forward_agg": 17.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 17.8
+    },
+    {
+      "phase": "Activities",
+      "variable": "training_workshops_held",
+      "forward_agg": 27.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 27.8
+    },
+    {
+      "phase": "Activities",
+      "variable": "platform_onboarding_assists",
+      "forward_agg": 100.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 100.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "approved_100e_projects",
+      "forward_agg": 76.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 76.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "ai_prototypes_developed",
+      "forward_agg": 56.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 56.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "trainees_completed_programme",
+      "forward_agg": 128.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 128.0
+    },
+    {
+      "phase": "Outputs",
+      "variable": "enterprises_with_solution",
+      "forward_agg": 66.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 66.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "number_of_100e_projects_approved_in_2023",
+      "forward_agg": 76.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 76.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "deployed_100e_projects",
+      "forward_agg": 51.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 51.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "ai_practitioner_pool",
+      "forward_agg": 14100.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 14100.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "generative_ai_use_cases",
+      "forward_agg": 91.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 91.0
+    },
+    {
+      "phase": "Outcomes",
+      "variable": "enterprise_ai_adoption_rate",
+      "forward_agg": 28.4,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 28.4
+    },
+    {
+      "phase": "Impact",
+      "variable": "global_ai_readiness_rank",
+      "forward_agg": 6.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 6.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_sector_gdp_share",
+      "forward_agg": 3.8,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 3.8
+    },
+    {
+      "phase": "Impact",
+      "variable": "public_ai_trust_score",
+      "forward_agg": 72.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 72.0
+    },
+    {
+      "phase": "Impact",
+      "variable": "ai_talent_retention_rate",
+      "forward_agg": 85.0,
+      "backward_agg": null,
+      "gap": null,
+      "relative_gap": null,
+      "consistency": null,
+      "aggregated_value": 85.0
+    }
+  ],
+  "scenario_impact": {
+    "global_ai_readiness_rank": 6.0,
+    "ai_sector_gdp_share": 3.8,
+    "public_ai_trust_score": 72.0,
+    "ai_talent_retention_rate": 85.0
+  },
+  "scenario_confidence": {
+    "global_ai_readiness_rank": null,
+    "ai_sector_gdp_share": null,
+    "public_ai_trust_score": null,
+    "ai_talent_retention_rate": null
+  }
+}

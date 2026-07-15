@@ -1,0 +1,185 @@
+{
+  "phases": [
+    {
+      "phase": "Inputs",
+      "prediction_fields": [
+        {
+          "name": "total_funding_sgd",
+          "unit": "SGD",
+          "type": "int",
+          "description": "Total funding allocated by the government for AI R&D under NAIS 2.0"
+        },
+        {
+          "name": "max_co_funding_per_project_sgd",
+          "unit": "SGD",
+          "type": "int",
+          "description": "Maximum co-funding amount available per 100E project"
+        },
+        {
+          "name": "available_gpu_hours",
+          "unit": "hours",
+          "type": "int",
+          "description": "Total compute capacity in GPU hours provided for AI experimentation"
+        },
+        {
+          "name": "trainer_personnel_count",
+          "unit": "person",
+          "type": "int",
+          "description": "Number of AI experts and trainers assigned to support the programme"
+        }
+      ],
+      "discussion_points": [
+        "What is the total financial commitment for AI R&D?",
+        "What is the cap on government co-funding per project?",
+        "How much compute infrastructure is allocated to support AI experiments?",
+        "How many trainers are available to guide enterprises and practitioners?"
+      ]
+    },
+    {
+      "phase": "Activities",
+      "prediction_fields": [
+        {
+          "name": "enterprise_outreach_sessions",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of outreach sessions conducted to engage enterprises for problem statement submission"
+        },
+        {
+          "name": "researcher_matchmaking_events",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of matchmaking events pairing researchers with enterprise challenges"
+        },
+        {
+          "name": "training_workshops_held",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of AI training workshops delivered to participating organizations"
+        },
+        {
+          "name": "platform_onboarding_assists",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of technical assistance sessions for onboarding onto the AI experimentation platform"
+        }
+      ],
+      "discussion_points": [
+        "How many enterprise outreach events were organized?",
+        "How many researcher–enterprise pairings were facilitated?",
+        "How many training workshops were conducted for the 100E programme?",
+        "What onboarding support was provided for the AI tools and platforms?"
+      ]
+    },
+    {
+      "phase": "Outputs",
+      "prediction_fields": [
+        {
+          "name": "approved_100e_projects",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of 100E projects approved for funding in 2023"
+        },
+        {
+          "name": "ai_prototypes_developed",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of AI prototypes built under the 100E programme"
+        },
+        {
+          "name": "trainees_completed_programme",
+          "unit": "person",
+          "type": "int",
+          "description": "Number of individuals who completed the AI apprenticeship or training programme"
+        },
+        {
+          "name": "enterprises_with_solution",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of enterprises that have at least one AI solution developed through the programme"
+        }
+      ],
+      "discussion_points": [
+        "How many 100E projects received approval?",
+        "How many AI prototypes were successfully built?",
+        "How many trainees finished the programme?",
+        "How many enterprises now have an AI solution from the programme?"
+      ]
+    },
+    {
+      "phase": "Outcomes",
+      "prediction_fields": [
+        {
+          "name": "number_of_100e_projects_approved_in_2023",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of 100E projects approved in 2023"
+        },
+        {
+          "name": "deployed_100e_projects",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of 100E projects completed and deployed into production in 2023"
+        },
+        {
+          "name": "ai_practitioner_pool",
+          "unit": "person",
+          "type": "int",
+          "description": "Total number of AI practitioners in Singapore (target 15,000)"
+        },
+        {
+          "name": "generative_ai_use_cases",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of generative AI use cases developed (target 100 in 100 days)"
+        },
+        {
+          "name": "enterprise_ai_adoption_rate",
+          "unit": "%",
+          "type": "float",
+          "description": "Percentage of enterprises adopting AI solutions in their operations"
+        }
+      ],
+      "discussion_points": [
+        "How many 100E projects have reached production deployment?",
+        "Is the AI practitioner pool approaching the 15,000 target?",
+        "How many generative AI use cases have been created?",
+        "What is the observed enterprise AI adoption rate?"
+      ]
+    },
+    {
+      "phase": "Impact",
+      "prediction_fields": [
+        {
+          "name": "global_ai_readiness_rank",
+          "unit": "rank",
+          "type": "int",
+          "description": "Singapore's rank in global AI readiness indices (lower is better)"
+        },
+        {
+          "name": "ai_sector_gdp_share",
+          "unit": "%",
+          "type": "float",
+          "description": "Estimated contribution of AI-related activities to GDP"
+        },
+        {
+          "name": "public_ai_trust_score",
+          "unit": "%",
+          "type": "float",
+          "description": "Percentage of citizens expressing trust in AI systems deployed in public services"
+        },
+        {
+          "name": "ai_talent_retention_rate",
+          "unit": "%",
+          "type": "float",
+          "description": "Proportion of AI talent remaining in Singapore after programme completion"
+        }
+      ],
+      "discussion_points": [
+        "Has Singapore improved its global AI leadership ranking?",
+        "What economic value is generated by AI adoption?",
+        "Does the public trust AI in government and business?",
+        "Is Singapore retaining its AI talent?"
+      ]
+    }
+  ]
+}

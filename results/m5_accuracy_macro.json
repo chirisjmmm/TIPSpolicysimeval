@@ -1,0 +1,122 @@
+{
+  "BK21_deepseek": {
+    "policy_id": "BK21",
+    "model_id": "deepseek",
+    "metrics": {
+      "employment_rate": {
+        "gt": 82.2,
+        "phase": "Outcomes",
+        "var": "employment_rate",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 3.9985401459854004,
+        "mape_median_robust": 3.406326034063257,
+        "calibration": {
+          "p10": 78.61,
+          "p90": 87.19,
+          "coverage_gt_in_p10_p90": true,
+          "sharpness_p90_minus_p10": 8.579999999999998
+        },
+        "n_out_of_declared_range": 0
+      },
+      "intl_collaboration_rate": {
+        "gt": 36.0,
+        "phase": "Outcomes",
+        "var": "international_collaboration_rate",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 32.11111111111111,
+        "mape_median_robust": 27.77777777777778,
+        "calibration": {
+          "p10": 19.9,
+          "p90": 50.0,
+          "coverage_gt_in_p10_p90": true,
+          "sharpness_p90_minus_p10": 30.1
+        },
+        "n_out_of_declared_range": 0
+      }
+    }
+  },
+  "100E_deepseek": {
+    "policy_id": "100E",
+    "model_id": "deepseek",
+    "metrics": {
+      "approved_projects": {
+        "gt": 115,
+        "phase": "Outcomes",
+        "var": "number_of_100e_projects_approved_in_2023",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 32.44173913043478,
+        "mape_median_robust": 30.434782608695656,
+        "calibration": {
+          "p10": 40.64000000000001,
+          "p90": 100.0,
+          "coverage_gt_in_p10_p90": false,
+          "sharpness_p90_minus_p10": 59.35999999999999
+        },
+        "n_out_of_declared_range": 0
+      },
+      "deployed_projects": {
+        "gt": 73,
+        "phase": "Outcomes",
+        "var": "deployed_100e_projects",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 41.71506849315068,
+        "mape_median_robust": 37.26027397260274,
+        "calibration": {
+          "p10": 20.0,
+          "p90": 60.0,
+          "coverage_gt_in_p10_p90": false,
+          "sharpness_p90_minus_p10": 40.0
+        },
+        "n_out_of_declared_range": 0
+      }
+    }
+  },
+  "100E_gemini": {
+    "policy_id": "100E",
+    "model_id": "gemini",
+    "metrics": {
+      "approved_projects": {
+        "gt": 115,
+        "phase": "Outcomes",
+        "var": "number_of_100e_projects_approved_in_2023",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 30.914782608695656,
+        "mape_median_robust": 15.217391304347828,
+        "calibration": {
+          "p10": 64.64000000000001,
+          "p90": 179.1,
+          "coverage_gt_in_p10_p90": true,
+          "sharpness_p90_minus_p10": 114.45999999999998
+        },
+        "n_out_of_declared_range": 0
+      },
+      "deployed_projects": {
+        "gt": 73,
+        "phase": "Outcomes",
+        "var": "deployed_100e_projects",
+        "n_scenarios": 50,
+        "n_fallback_used": 0,
+        "n_skipped": 0,
+        "mape": 39.87397260273973,
+        "mape_median_robust": 31.23287671232876,
+        "calibration": {
+          "p10": 32.76,
+          "p90": 113.68,
+          "coverage_gt_in_p10_p90": true,
+          "sharpness_p90_minus_p10": 80.92000000000002
+        },
+        "n_out_of_declared_range": 0
+      }
+    }
+  }
+}

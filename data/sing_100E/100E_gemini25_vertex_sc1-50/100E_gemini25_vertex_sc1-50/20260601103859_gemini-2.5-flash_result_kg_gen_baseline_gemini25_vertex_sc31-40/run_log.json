@@ -1,0 +1,91 @@
+{
+  "command": "stage2-toc",
+  "model": "gemini-2.5-flash",
+  "config_url": null,
+  "config_path": "config/gemini25_vertex.yaml",
+  "started_at": "2026-06-01T10:38:59",
+  "ended_at": "2026-06-01T10:47:54",
+  "duration_seconds": 535.04,
+  "usage": {
+    "llm_calls": 300,
+    "llm_calls_with_usage": 300,
+    "prompt_tokens": 2227446,
+    "completion_tokens": 159201,
+    "total_tokens": 3007065,
+    "call_count": 300,
+    "elapsed_sec": 0.0
+  },
+  "config": {
+    "llm": {
+      "api_type": "google_vertex",
+      "model": "gemini-2.5-flash",
+      "project": null,
+      "location": "us-central1",
+      "temperature": 0.3,
+      "max_tokens": 8192,
+      "max_retries": 6,
+      "initial_backoff": 5.0
+    },
+    "paths": {
+      "background_dir": "dataset/kor/background",
+      "input_policy_dir": "dataset/singapore/nais/input_policy",
+      "past_policy_dir": "dataset/singapore/nais/input_policy",
+      "processed_dir": "dataset/processed",
+      "outputs": {
+        "stage1": "outputs/singapore/nais/stage1",
+        "stage2_toc": "outputs/singapore/nais/stage2_toc"
+      }
+    },
+    "stage1": {
+      "personas_per_category": 2,
+      "use_economic_context": false,
+      "use_economic_context_in_persona": false,
+      "use_policy_plan": false,
+      "use_policy_plan_in_context": false,
+      "output_file": "stage1_result.json",
+      "non_actor_types": [
+        "Program",
+        "Organization",
+        "Person"
+      ]
+    },
+    "persona": {
+      "sampler": "scope_definer",
+      "actor_anchor_policy": "iad_actor",
+      "personas_per_role": 100,
+      "max_simulation_participants": 5,
+      "scope_definer": {
+        "parquet_glob": "dataset/processed/nemotron_sg/Nemotron-Personas-Singapore/data/*.parquet",
+        "values_module": "dataset.processed.nemotron_sg"
+      }
+    },
+    "stage2_toc": {
+      "sim_personas_per_entity": 2,
+      "max_scenarios": 20,
+      "run_forward": true,
+      "run_backward": true,
+      "final_forward_refinement": false,
+      "fwd_bwd_fwd_seq": true,
+      "fwd_bwd_fwd_bwd_seq": true,
+      "quantitative_target_only": false,
+      "sequential_backward": true,
+      "copy_forward_impact_to_backward": true,
+      "copy_backward_inputs_to_5th_forward": true,
+      "use_economic_context_in_simulation": false,
+      "inner_schema_file": "inner_schema.json",
+      "output_file": "stage2_toc_result.json",
+      "parallel_forward_backward": false,
+      "parallel_scenarios": true,
+      "inner_schema_llm": {}
+    }
+  },
+  "simulation_target": "Number of 100E projects approved in 2023, number of 100E projects completed and deployed into production in 2023",
+  "run_tag": "kg_gen_baseline_gemini25_vertex_sc31-40",
+  "stage1_result": "outputs/singapore/nais/stage1/20260518064009_deepseek-chat_result_v6_n300/stage1_result.json",
+  "simulation_personas": "outputs/singapore/nais/stage1/baseline_kg_generated_sc1-50/simulation_personas_baseline.json",
+  "scenario_count": 10,
+  "outputs": {
+    "stage2_toc_result": "stage2_toc_result.json",
+    "final_report": "final_report.json"
+  }
+}

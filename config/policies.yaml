@@ -1,0 +1,87 @@
+# TIPS 발화 평가 파이프라인 설정 (M1: role_map, gt_map만 채움. outcome bin/stance lexicon은 M2+에서 추가)
+
+# 실제 데이터 루트 (M0 스캔 결과 기준, scenario_*.json 외 메타 파일/-__MACOSX-는 로더가 제외함)
+raw_data_roots:
+  BK21_deepseek:
+    - "data/kor_BK21/BK21_20260530231445_deepseek_sc1-50/20260530231445_deepseek-chat_result_kg_gen_baseline_deepseek_sc1-50 copy"
+  100E_deepseek:
+    - "data/sing_100E/100E_20260602065706_deepseek_sc1-50/20260602065706_deepseek-chat_result_kg_gen_baseline_deepseek_rerun_sc1-50 copy"
+  # gemini는 5개 폴더가 자연 정렬 순서(폴더명의 sc 범위 오름차순)대로 folder_rank 1~5를 부여받는다 (§4)
+  100E_gemini:
+    - "data/sing_100E/100E_gemini25_vertex_sc1-50/100E_gemini25_vertex_sc1-50/20260531170239_gemini-2.5-flash_result_kg_gen_baseline_gemini25_sc1-10"
+    - "data/sing_100E/100E_gemini25_vertex_sc1-50/100E_gemini25_vertex_sc1-50/20260601031902_gemini-2.5-flash_result_kg_gen_baseline_gemini25_vertex_sc11-20"
+    - "data/sing_100E/100E_gemini25_vertex_sc1-50/100E_gemini25_vertex_sc1-50/20260601101002_gemini-2.5-flash_result_kg_gen_baseline_gemini25_vertex_sc21-30"
+    - "data/sing_100E/100E_gemini25_vertex_sc1-50/100E_gemini25_vertex_sc1-50/20260601103859_gemini-2.5-flash_result_kg_gen_baseline_gemini25_vertex_sc31-40"
+    - "data/sing_100E/100E_gemini25_vertex_sc1-50/100E_gemini25_vertex_sc1-50/20260601110726_gemini-2.5-flash_result_kg_gen_baseline_gemini25_vertex_sc41-50"
+
+# stakeholder_type -> 실제 KG 노드 인덱스 키("Type:Name", data/{kor_BK21,sing_100E}/*_policy_graph.json의
+# nodes[].id 형식). 항등매핑이 아니라 KG 파일에서 실제로 존재를 확인한 노드 id를 그대로 적었다.
+# - GraduateStudent/EducationResearchGroup/EarlyCareerResearcher/AIResearcher/AIPractitioner:
+#   150개 시나리오 전수에서 entity_name의 name-part가 100% type명과 동일 -> "Type:Type" 자기참조 노드.
+# - PolicyRole: KG 온톨로지상 "Auto-recovered IAD Positions coverage" 플레이스홀더라 자기참조
+#   노드("PolicyRole:PolicyRole")가 없다. 대신 entity_name의 name-part가 세트 내에서 100% 고정값이라
+#   (BK21 59/59, 100E_deepseek 94/94, 100E_gemini 79/79) 그 값을 그대로 crosswalk에 채웠다.
+#   파서는 매 파일마다 entity_name 기반 키가 이 값과 실제로 일치하는지 assert하고, 어긋나면 중단한다
+#   (M0 가정이 깨졌다는 신호이므로 여기 값을 갱신해야 함).
+role_map:
+  BK21:
+    GraduateStudent: "GraduateStudent:GraduateStudent"
+    EducationResearchGroup: "EducationResearchGroup:EducationResearchGroup"
+    EarlyCareerResearcher: "EarlyCareerResearcher:EarlyCareerResearcher"
+    PolicyRole: "PolicyRole:Education Research Group Participants and Graduate Innovation Practitioners"
+  100E:
+    AIResearcher: "AIResearcher:AIResearcher"
+    AIPractitioner: "AIPractitioner:AIPractitioner"
+    PolicyRole: "PolicyRole:AI for Public Good Principle"
+
+# BK21 mislabel 병합 규칙: stakeholder_type=="PolicyRole"이면서 flag_policyrole=True인 참가자는
+# kg_role을 role_map.BK21.GraduateStudent 값으로 강제 재배정하고 mislabel_source="policyrole_merged"를 단다
+# (stakeholder_type 원본 필드는 보존, 파생 필드만 덮어씀). 100E는 병합하지 않음 — PolicyRole 안에 실제
+# 정책 관련 직군(정책분석가/AI governance 등)이 다수 섞여 있어 단일 대체 타입이 없고, flag=True 항목은
+# §8 human 스팟체크 대상으로만 남긴다.
+bk21_policyrole_merge_target: GraduateStudent
+
+# kg_role(최종, BK21 병합 반영 후) 값이 아래 목록에 있으면 deontic_status="no_institutional_position_in_kg".
+# M2 준비 중 100E_policy_graph.json을 직접 열어 "PolicyRole:AI for Public Good Principle" 노드를 조회한 결과:
+#   1) 이 노드가 source(행위 주체)인 deontic edge는 0건. 유일하게 연결된 deontic edge(edge_0013, "can")는
+#      source=GovernmentAgency:Singapore Government이고 이 노드는 target(대상/원칙 그 자체)일 뿐 -> 역할이
+#      직접 지는 의무/권한이 아님.
+#   2) ontology 상 iad_category="Positions"/is_actor=true로 태깅돼 있지만, summary="Guiding principle that
+#      AI must be harnessed sustainably..."이고 attributes.role_family="affected_actor"(수동적 피영향군
+#      카테고리) -> 내용상 actor/institutional-position이 아니라 principle/value 서술. BK21 PolicyRole과
+#      동일한 "Auto-recovered IAD Positions coverage" 플레이스홀더 계열.
+#   3) KG 안에는 "PolicyRole:Public Officer"(공무원), "PolicyRole:Citizen"(실제 deontic edge 보유) 등 이름이
+#      더 가까운 actor 후보가 존재한다. 하지만 100E PolicyRole 참가자 173명(deepseek 94+gemini 79) 전원의
+#      entity_name이 예외 없이 "AI for Public Good Principle"만 가리켜서(M0/M2 준비 단계 전수 스캔),
+#      role_map이 유사도 매칭으로 더 나은 후보를 "놓친" 게 아니라 원본 페르소나 생성 파이프라인이 애초에
+#      전부 이 노드로만 연결해 놓았다. 데이터에 없는 링크(Public Officer/Citizen)로 재배정하면 raw 필드에
+#      없는 연결을 지어내는 것(§6 가드레일 위반)이므로 재매핑하지 않는다.
+# -> M2에서 이 173명은 violation_rate 분모(n_applicable)에서 제외하고, no_institutional_position_in_kg
+#    카운트로 결과에 별도 표기한다(위반률에 숨기지 않음).
+kg_role_no_institutional_position:
+  - "PolicyRole:AI for Public Good Principle"
+
+# flag_policyrole 휴리스틱(§3): stakeholder_type=="PolicyRole"인 참가자의 occupation/education_level/
+# professional_persona에서 아래 키워드가 "단어 경계" 기준으로 매칭되면 "실제 서술이 학생/훈련생" 오배정
+# 가능성으로 플래그(사람 스팟체크 후보, 자동 재분류 아님 — 100E는 병합 없음).
+# 단어 경계 매칭인 이유(QA 라운드에서 발견된 오탐 수정):
+#   - "internal guidelines"의 "intern"을 "intern" 키워드가 부분일치로 잘못 잡던 문제 -> \b...\b로 방지.
+#   - "for students with dyslexia/disabilities/different abilities", "brings together students, ..."처럼
+#     페르소나 자신이 아니라 그가 돕는 대상(제3자)을 가리키는 복수형 "students"가 오탐이었음.
+#     단수 "student"만 단어 경계로 매칭하면 "students"(제3자 대상)는 자동으로 제외되고, "I am a student",
+#     "as a student" 같은 자기서술 단수형만 남는다 -> 사실상 "주어=페르소나 자신"인 문장만 남기는 효과.
+#   - 대신 "AI Apprenticeship Programme"처럼 페르소나 자신이 이수한 프로그램명(-ship 파생형)은
+#     "apprenticeship"을 별도 키워드로 추가해 단어 경계 매칭으로도 계속 잡히게 함.
+policyrole_student_keywords:
+  ko: ["대학원생", "박사후연구원", "학부생", "석사", "박사", "대학원"]
+  en: ["student", "trainee", "apprentice", "apprenticeship", "intern", "grad student", "graduate student", "phd candidate"]
+
+# Ground Truth (TIGRIS Appendix E, Table 4). §5 방어적 매핑 규칙: phase==Outcomes에서만 선택,
+# 비율(%) GT는 값이 [0,100]인 변수로 스케일 변형(800/350) 자동 배제.
+gt_map:
+  BK21:
+    employment_rate:         {phase: Outcomes, var: employment_rate,                 gt: 82.2, range: [0, 100]}
+    intl_collaboration_rate: {phase: Outcomes, var: international_collaboration_rate, gt: 36.0, range: [0, 100]}
+  100E:
+    approved_projects: {phase: Outcomes, var: number_of_100e_projects_approved_in_2023, gt: 115, range: [0, 1000]}
+    deployed_projects: {phase: Outcomes, var: deployed_100e_projects,                  gt: 73,  range: [0, 1000]}

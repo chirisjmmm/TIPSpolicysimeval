@@ -1,0 +1,209 @@
+{
+  "command": "stage2-toc",
+  "model": "deepseek-chat",
+  "config_url": "https://api.deepseek.com/v1/chat/completions",
+  "config_path": "config/deepseek.yaml",
+  "started_at": "2026-06-02T06:57:06",
+  "ended_at": "2026-06-02T06:59:05",
+  "duration_seconds": 119.01,
+  "usage": {
+    "llm_calls": 1500,
+    "llm_calls_with_usage": 1500,
+    "prompt_tokens": 10047825,
+    "completion_tokens": 624458,
+    "total_tokens": 10672283,
+    "call_count": 1500,
+    "elapsed_sec": 0.0
+  },
+  "config": {
+    "llm": {
+      "url": "https://api.deepseek.com/v1/chat/completions",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "auth_header": "bearer",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 8192,
+      "request_timeout": 180,
+      "max_retries": 3
+    },
+    "paths": {
+      "background_dir": "dataset/kor/background",
+      "input_policy_dir": "dataset/singapore/nais/input_policy",
+      "past_policy_dir": "dataset/singapore/nais/input_policy",
+      "processed_dir": "dataset/processed",
+      "outputs": {
+        "stage1": "outputs/singapore/nais/stage1",
+        "stage2_toc": "outputs/singapore/nais/stage2_toc"
+      }
+    },
+    "pdf": {
+      "parser": "opendataloader",
+      "fallback_to_pypdf": true,
+      "cache_dir": "dataset/processed/pdf_cache",
+      "output_formats": [
+        "markdown",
+        "json"
+      ],
+      "use_struct_tree": true,
+      "table_method": "cluster",
+      "reading_order": "xycut",
+      "keep_line_breaks": false,
+      "include_header_footer": false,
+      "markdown_page_separator": "\n\n--- page %page-number% ---\n\n"
+    },
+    "zep": {
+      "api_key_env": "ZEP_API_KEY",
+      "chunk_size": 500,
+      "chunk_overlap": 50,
+      "batch_size": 3,
+      "wait_timeout": 600
+    },
+    "kg": {
+      "use_iad_ig_ontology": true,
+      "chunk_size": 1200,
+      "chunk_overlap": 200,
+      "max_node_pool_context": 120,
+      "max_edges_per_chunk": 20,
+      "enable_validation_recovery": true
+    },
+    "stage1": {
+      "personas_per_category": 2,
+      "use_economic_context": false,
+      "use_economic_context_in_persona": false,
+      "use_policy_plan": false,
+      "use_policy_plan_in_context": false,
+      "output_file": "stage1_result.json",
+      "non_actor_types": [
+        "Program",
+        "Organization",
+        "Person"
+      ]
+    },
+    "persona": {
+      "sampler": "scope_definer",
+      "scope_definer": {
+        "enabled": true,
+        "min_pool_size": 300,
+        "target_pool_size": 300,
+        "max_per_tier_occupation": 3,
+        "candidate_pool_top_k": 100,
+        "parquet_glob": "dataset/processed/nemotron_sg/Nemotron-Personas-Singapore/data/*.parquet",
+        "fallback": {
+          "enabled": true,
+          "mode": "random_full_nemotron"
+        },
+        "num_scenarios": 300,
+        "participants_per_scenario": 5,
+        "values_module": "dataset.processed.nemotron_sg"
+      },
+      "role_actions": {
+        "enabled": true
+      },
+      "refiner": {
+        "enabled": true
+      },
+      "actor_anchor_policy": "iad_actor",
+      "personas_per_role": 100,
+      "max_simulation_participants": 5,
+      "simulation_sampling_strategy": "role_stratified_weighted",
+      "simulation_min_match_score": null,
+      "simulation_sample_seed": 42,
+      "simulation_role_gate": {
+        "enabled": false
+      },
+      "fallback_to_llm": true,
+      "nemotron": {
+        "dataset_name": "nvidia/Nemotron-Personas-Korea",
+        "split": "train",
+        "streaming": true,
+        "cache_dir": "dataset/processed/nemotron",
+        "local_data_dir": "dataset/processed/nemotron/Nemotron-Personas-Korea/data",
+        "seed": 42,
+        "require_column_signal": true,
+        "adaptive_matching": {
+          "enabled": true,
+          "profile_version": "iad_ig_role_scope_v4_full_local_ko",
+          "value_scan_limit": 5000,
+          "max_education_values": 100,
+          "max_bachelors_field_values": 100,
+          "max_occupation_values": 300,
+          "cache_dir": "dataset/processed/nemotron"
+        },
+        "synthesis": {
+          "enabled": true,
+          "scope": "selected",
+          "max_calls": 5
+        },
+        "shuffle_buffer_size": 10000,
+        "local_batch_size": 8192,
+        "scan_limit": 1000000,
+        "candidate_pool_size": 200,
+        "prefilter_heap_multiplier": 5,
+        "prefilter_field_heap_size": 200,
+        "prefilter_strategy": "top_m",
+        "top_m_light_scan": true,
+        "top_m_inline_text_columns": true,
+        "min_match_score": 1,
+        "reranker": "llm",
+        "llm_reranker": {
+          "enabled": true,
+          "batch_size": 20,
+          "top_n": 100
+        },
+        "diversity_penalty": {
+          "bachelors_field": 0.45,
+          "occupation": 0.35,
+          "province": 0.15,
+          "sex": 0.1
+        },
+        "columns": [
+          "uuid",
+          "persona",
+          "professional_persona",
+          "family_persona",
+          "skills_and_expertise",
+          "career_goals_and_ambitions",
+          "sex",
+          "age",
+          "marital_status",
+          "military_status",
+          "family_type",
+          "education_level",
+          "bachelors_field",
+          "occupation",
+          "district",
+          "province",
+          "hobbies_and_interests"
+        ]
+      }
+    },
+    "stage2_toc": {
+      "sim_personas_per_entity": 2,
+      "max_scenarios": 20,
+      "run_forward": true,
+      "run_backward": true,
+      "final_forward_refinement": false,
+      "fwd_bwd_fwd_seq": true,
+      "fwd_bwd_fwd_bwd_seq": true,
+      "quantitative_target_only": false,
+      "sequential_backward": true,
+      "use_economic_context_in_simulation": false,
+      "inner_schema_file": "inner_schema.json",
+      "output_file": "stage2_toc_result.json",
+      "parallel_forward_backward": false,
+      "parallel_scenarios": true,
+      "inner_schema_llm": {
+        "model": "deepseek-v4-pro"
+      }
+    }
+  },
+  "simulation_target": "Number of 100E projects approved in 2023, number of 100E projects completed and deployed into production in 2023",
+  "run_tag": "kg_gen_baseline_deepseek_rerun_sc1-50",
+  "stage1_result": "outputs/singapore/nais/stage1/20260518064009_deepseek-chat_result_v6_n300/stage1_result.json",
+  "simulation_personas": "outputs/singapore/nais/stage1/baseline_kg_generated_sc101-150/simulation_personas_baseline.json",
+  "scenario_count": 50,
+  "outputs": {
+    "stage2_toc_result": "stage2_toc_result.json",
+    "final_report": "final_report.json"
+  }
+}

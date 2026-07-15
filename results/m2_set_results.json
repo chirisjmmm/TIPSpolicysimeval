@@ -1,0 +1,98 @@
+{
+  "BK21_deepseek": {
+    "policy_id": "BK21",
+    "model_id": "deepseek",
+    "n_utterances": 2500,
+    "n_no_institutional_position_in_kg": 0,
+    "n_phase_out_of_scope_for_grounding": 1500,
+    "violation_rate": {
+      "n_applicable": 2500,
+      "n_violation": 2,
+      "rate": 0.0008
+    },
+    "grounded_ratio": {
+      "n": 1000,
+      "n_grounded": 500,
+      "rate": 0.5,
+      "threshold_used": 0.3775445335442064,
+      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+    },
+    "fabrication_rate": {
+      "n_applicable": 1000,
+      "n_fabricated": 644,
+      "rate": 0.644,
+      "note": "무근거 주장만(derived_estimate 제외)"
+    },
+    "derived_estimate_rate": {
+      "n_applicable": 1000,
+      "n_derived": 232,
+      "rate": 0.232,
+      "note": "원문 근거값에서 산술로 도출 가능(합/곱/나눗셈/뺄셈, 오차 3%). fabrication_rate와 분리 표시, 합산 안 함"
+    }
+  },
+  "100E_deepseek": {
+    "policy_id": "100E",
+    "model_id": "deepseek",
+    "n_utterances": 2500,
+    "n_no_institutional_position_in_kg": 940,
+    "n_phase_out_of_scope_for_grounding": 1500,
+    "violation_rate": {
+      "n_applicable": 1560,
+      "n_violation": 0,
+      "rate": 0.0
+    },
+    "grounded_ratio": {
+      "n": 1000,
+      "n_grounded": 574,
+      "rate": 0.574,
+      "threshold_used": 0.28783752382764694,
+      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+    },
+    "fabrication_rate": {
+      "n_applicable": 992,
+      "n_fabricated": 742,
+      "rate": 0.7479838709677419,
+      "note": "무근거 주장만(derived_estimate 제외)"
+    },
+    "derived_estimate_rate": {
+      "n_applicable": 992,
+      "n_derived": 6,
+      "rate": 0.006048387096774193,
+      "note": "원문 근거값에서 산술로 도출 가능(합/곱/나눗셈/뺄셈, 오차 3%). fabrication_rate와 분리 표시, 합산 안 함"
+    }
+  },
+  "100E_gemini": {
+    "policy_id": "100E",
+    "model_id": "gemini",
+    "n_utterances": 2500,
+    "n_no_institutional_position_in_kg": 790,
+    "n_phase_out_of_scope_for_grounding": 1500,
+    "violation_rate": {
+      "n_applicable": 1710,
+      "n_violation": 0,
+      "rate": 0.0
+    },
+    "grounded_ratio": {
+      "n": 1000,
+      "n_grounded": 426,
+      "rate": 0.426,
+      "threshold_used": 0.28783752382764694,
+      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+    },
+    "fabrication_rate": {
+      "n_applicable": 994,
+      "n_fabricated": 894,
+      "rate": 0.8993963782696177,
+      "note": "무근거 주장만(derived_estimate 제외)"
+    },
+    "derived_estimate_rate": {
+      "n_applicable": 994,
+      "n_derived": 4,
+      "rate": 0.004024144869215292,
+      "note": "원문 근거값에서 산술로 도출 가능(합/곱/나눗셈/뺄셈, 오차 3%). fabrication_rate와 분리 표시, 합산 안 함"
+    }
+  }
+}

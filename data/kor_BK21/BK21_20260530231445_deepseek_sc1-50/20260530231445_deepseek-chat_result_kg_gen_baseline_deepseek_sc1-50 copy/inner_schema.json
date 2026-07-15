@@ -1,0 +1,165 @@
+{
+  "phases": [
+    {
+      "phase": "Inputs",
+      "prediction_fields": [
+        {
+          "name": "total_funding_allocated",
+          "unit": "KRW",
+          "type": "int",
+          "description": "Total funding allocated to Hanyang University BK21 program for the year, including research group budgets and graduate innovation support"
+        },
+        {
+          "name": "graduate_scholarship_slots",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of monthly stipend slots funded for master's and doctoral students"
+        },
+        {
+          "name": "postdoc_positions",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of postdoctoral researcher positions funded"
+        }
+      ],
+      "discussion_points": [
+        "What total budget is available from the Ministry/National Research Foundation for Hanyang's BK21 program?",
+        "How are the graduate stipend levels and postdoc salary minimums (700K-1.3M KRW, 3M KRW) translated into number of slots?",
+        "What eligibility and field criteria limit the number of education research groups and thus slots allocated?"
+      ]
+    },
+    {
+      "phase": "Activities",
+      "prediction_fields": [
+        {
+          "name": "total_funds_disbursed",
+          "unit": "KRW",
+          "type": "int",
+          "description": "Total funds actually disbursed to education research groups and university accounts via the two-installment schedule"
+        },
+        {
+          "name": "evaluation_panels_convened",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of formal evaluation panel meetings (annual, mid-term, compliance) conducted"
+        },
+        {
+          "name": "consulting_sessions_held",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of consulting sessions provided to education research groups by the consulting committee"
+        },
+        {
+          "name": "compliance_checks_executed",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of compliance checks (document reviews, site visits) performed on participating groups"
+        }
+      ],
+      "discussion_points": [
+        "How efficiently are funds transferred according to the 70% March / 30% September payment schedule?",
+        "What triggers or prioritizes evaluation panels versus compliance checks?",
+        "What proportion of education research groups receive consulting vs. face sanctions?",
+        "How are budget adjustments and reallocations handled based on evaluation outcomes?"
+      ]
+    },
+    {
+      "phase": "Outputs",
+      "prediction_fields": [
+        {
+          "name": "graduate_students_supported",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of graduate students (master's, doctoral, doctoral candidates) who received BK21 scholarships during the year"
+        },
+        {
+          "name": "postdoc_researchers_supported",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of early-career researchers (postdoctoral) who received salary support from BK21"
+        },
+        {
+          "name": "publications_produced",
+          "unit": "publications",
+          "type": "int",
+          "description": "Total number of research publications (journal articles, conference papers) authored by BK21-supported participants"
+        },
+        {
+          "name": "international_conference_presentations",
+          "unit": "count",
+          "type": "int",
+          "description": "Number of presentations at international conferences made by BK21 participants"
+        }
+      ],
+      "discussion_points": [
+        "What is the typical research output (publications, presentations) per supported graduate student or postdoc?",
+        "How many students complete their degrees and transition to employment or further research?",
+        "What proportion of supported research involves international collaboration?",
+        "To what extent do education research groups comply with mandatory reporting (e.g., self-evaluations)?"
+      ]
+    },
+    {
+      "phase": "Outcomes",
+      "prediction_fields": [
+        {
+          "name": "international_research_collaboration_rate_of_bk21_participants_in_2022",
+          "unit": "count",
+          "type": "int",
+          "description": "international research collaboration rate of BK21 participants in 2022"
+        },
+        {
+          "name": "graduate_employment_rate_of_bk21_participants_in_2022",
+          "unit": "count",
+          "type": "int",
+          "description": "Graduate employment rate of BK21 participants in 2022"
+        },
+        {
+          "name": "employment_rate",
+          "unit": "%",
+          "type": "float",
+          "description": "Employment rate of BK21 graduate participants within one year of graduation (job in any sector)"
+        },
+        {
+          "name": "international_collaboration_rate",
+          "unit": "%",
+          "type": "float",
+          "description": "Percentage of BK21 participants involved in international research collaboration (co-authored papers, joint projects, or exchanges) during the program period"
+        },
+        {
+          "name": "full_time_faculty_lecture_ratio",
+          "unit": "%",
+          "type": "float",
+          "description": "Ratio of graduate-level lecture hours taught by full-time faculty in BK21-supported programs"
+        }
+      ],
+      "discussion_points": [
+        "What factors (e.g., network, training, reputation) influence the graduate employment rate?",
+        "How do program design elements (e.g., collaboration incentives, international conference support) affect the international collaboration rate?",
+        "To what extent does the increased reliance on full-time faculty (vs. part-time) improve educational quality and research mentoring?",
+        "How do evaluation and consulting feedback loops contribute to these short/medium-term outcome improvements?"
+      ]
+    },
+    {
+      "phase": "Impact",
+      "prediction_fields": [
+        {
+          "name": "national_st_talent_competitiveness_rank",
+          "unit": "rank",
+          "type": "int",
+          "description": "South Korea's rank in a global S&T talent competitiveness index (lower rank is better, e.g., 1 = top)"
+        },
+        {
+          "name": "high_impact_publications_per_1000_researchers",
+          "unit": "publications per 1000 researchers",
+          "type": "float",
+          "description": "Number of top 1% cited publications produced per 1000 full-time equivalent researchers nationally"
+        }
+      ],
+      "discussion_points": [
+        "How does sustained investment in graduate talent development affect national innovation capacity over a decade?",
+        "What systemic changes in research culture (integrity, collaboration, interdisciplinarity) are expected as alumni progress in their careers?",
+        "How do the dissemination of outstanding group achievements and operational know-how influence other institutions and the wider S&T ecosystem?"
+      ]
+    }
+  ]
+}
