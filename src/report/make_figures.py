@@ -217,9 +217,43 @@ def fig4():
     plt.close(fig)
 
 
+# ---------- Fig 5: micro diversity across sets ----------
+def fig5():
+    div = json.load(open(RESULTS / "m5_diversity.json", encoding="utf-8"))
+    sets = ["100E_gemini", "100E_deepseek", "BK21_deepseek"]
+    colors = [C_GEMINI, C_DEEPSEEK, "#1baf7a"]
+    self_bleu = [div[s]["micro"]["self_bleu"]["self_bleu"] for s in sets]
+    distinct2 = [div[s]["micro"]["distinct_2"]["distinct_n"] for s in sets]
+    btw_var = [div[s]["micro"]["group_variance"]["mean_between_group_variance"] for s in sets]
+
+    fig, axes = plt.subplots(1, 3, figsize=(12.5, 4.4))
+    panels = [
+        (self_bleu, "self-BLEU  (↓ = 더 다양)", True),
+        (distinct2, "distinct-2  (↑ = 더 다양)", False),
+        (btw_var, "역할간 예측분산 z  (↑ = 더 다양)", False),
+    ]
+    x = np.arange(len(sets))
+    for ax, (vals, title, invert) in zip(axes, panels):
+        bars = ax.bar(x, vals, 0.62, color=colors)
+        for b, v in zip(bars, vals):
+            ax.text(b.get_x() + b.get_width() / 2, b.get_height(),
+                    f"{v:.3f}" if max(vals) < 1 else f"{v:.2f}",
+                    ha="center", va="bottom", fontsize=9.5, color=INK)
+        ax.set_xticks(x)
+        ax.set_xticklabels(["100E\ngemini", "100E\ndeepseek", "BK21\ndeepseek"], fontsize=9)
+        ax.set_title(title, fontsize=11, color=INK, pad=8)
+        ax.grid(axis="y", color=GRID); ax.set_axisbelow(True)
+        ax.set_ylim(0, max(vals) * 1.18)
+    fig.suptitle("Micro Diversity — Gemini가 세 축 모두에서 가장 다양 (어휘·역할간 분산)",
+                 fontsize=12.8, color=INK, y=1.02)
+    fig.tight_layout()
+    fig.savefig(FIGDIR / "fig5_diversity_micro.png", dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+
 def main():
     macro = load_macro()
-    fig1(macro); fig2(macro); fig3(macro); fig4()
+    fig1(macro); fig2(macro); fig3(macro); fig4(); fig5()
     for p in sorted(FIGDIR.glob("*.png")):
         print("wrote:", p)
 

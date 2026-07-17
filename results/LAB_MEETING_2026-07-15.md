@@ -106,13 +106,39 @@
 
 **현재 결과(발췌)**
 
-| set | between-role 분산 | distinct-2 | self-BLEU | trajectory clusters |
-|---|---:|---:|---:|---|
-| BK21_deepseek | 0.619 | 0.084 | 0.858 | k=2 (22/28) |
-| 100E_deepseek | 0.646 | 0.112 | 0.814 | k=4 (3/19/15/13) |
-| 100E_gemini | 0.699 | **0.159** | **0.650** | k=2 (4/46) |
+![diversity micro](figures/fig5_diversity_micro.png)
 
-- **관찰**: **Gemini가 어휘적으로 가장 다양**(self-BLEU 0.65 ≪ deepseek 0.81–0.86, distinct-2 최고). 그리고 §4에서 보듯 macro 정확도도 최고 → **"다양성이 진실 주변에서 발생"**. 100E_deepseek은 pathway 유형이 4개로 갈리지만(clustering), 예측은 편향(§4).
+**표 D-1. Micro diversity (세 set 직접 비교)**
+
+| set | 역할간 예측분산(z) | distinct-1 | distinct-2 | **self-BLEU**(↑=다양성↓) | n_cells |
+|---|---:|---:|---:|---:|---:|
+| **100E_gemini** | **0.699** | 0.0132 | **0.159** | **0.651** | 390 |
+| 100E_deepseek | 0.646 | 0.0130 | 0.112 | 0.814 | 377 |
+| BK21_deepseek | 0.619 | 0.0096 | 0.084 | 0.858 | 269 |
+
+**표 D-2. Macro diversity — trajectory clustering (5-phase pathway 유형 수)**
+
+| set | best_k | silhouette | cluster_sizes | n_features |
+|---|---:|---:|---|---:|
+| 100E_gemini | 2 | 0.355 | [4, 46] | 21 |
+| 100E_deepseek | 4 | 0.189 | [3, 19, 15, 13] | 21 |
+| BK21_deepseek | 2 | 0.358 | [22, 28] | 18 |
+
+**표 D-3. Macro diversity — outcome range/IQR/bin-entropy (100E 공통 타겟 발췌)**
+`range`=max−min, `binEnt`=도메인 5구간 정규화 엔트로피(1=고르게 퍼짐).
+
+| target | Gemini range / IQR / binEnt | DeepSeek range / IQR / binEnt |
+|---|---|---|
+| approved_100e_projects | 298.0 / 32.8 / 0.74 | 79.0 / 40.0 / 0.85 |
+| deployed_100e_projects | 219.8 / 44.3 / 0.66 | 63.4 / 19.8 / 0.94 |
+| enterprise_ai_adoption_rate | 27.5 / 10.0 / 0.97 | 17.9 / 7.3 / 0.85 |
+| ai_practitioner_pool | 12490 / 2185 / 0.71 | 3800 / 75 / 0.66 |
+| Impact:ai_sector_gdp_share | 4.5 / 0.8 / 0.75 | 2.1 / 0.7 / 0.85 |
+| Impact:public_ai_trust_score | 18.8 / 6.6 / 0.81 | 17.0 / 3.9 / 0.74 |
+
+BK21_deepseek 주요 타겟: intl_collaboration_rate range 60.0/IQR 15.8/binEnt 0.95 · employment_rate 17.5/5.0/0.86 · st_talent_rank 10.4/4.3/0.73 · high_impact_pub 36.3/3.4/0.44.
+
+- **관찰**: **Gemini가 모든 축에서 가장 다양**(self-BLEU 0.65 ≪ deepseek 0.81–0.86, distinct-2 최고, 역할간 분산 최고, outcome range 최대). §4의 macro 정확도(Gemini 최고)와 합치면 → **"다양성이 진실 주변에서 발생"**(넓게 퍼지되 평균은 GT 수렴). 100E_deepseek은 pathway가 4유형(silhouette 0.19, 경계 흐림)으로 갈리나 예측은 편향(§4).
 
 **다음 방향**: Plausible-Diversity 필터(fabrication/grounding 통과 발화에만 diversity 집계)가 아직 passthrough — M3 검증 후 필터 적용.
 
