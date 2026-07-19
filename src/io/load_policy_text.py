@@ -30,7 +30,13 @@ class PolicyKG:
     # role type -> 그 role만 갖는 decision_authority류 권한 서술(짧은 구) 목록
     authority_phrases_by_role_type: dict[str, list[str]] = field(default_factory=dict)
     # 그라운딩/날조 검사용 텍스트 조각(노드 summary+source_spans, 엣지 fact+source_text). 중복 제거.
+    # pooled 형태 — lexical(TF-IDF) baseline 및 fabrication 수치 인덱스용으로 유지.
     grounding_corpus: list[str] = field(default_factory=list)
+    # semantic grounding(§7.1)용 "규범 항목" 단위 리스트. pooled grounding_corpus와 내용은 겹치지만
+    # 이쪽은 각 항목이 어디서 왔는지(kind/ref_id)를 보존해 "어느 규범에 근거했는가" 추적이 가능하다.
+    # kind: node_summary | source_span | edge_fact | deontic_norm(must/can/cannot 엣지의 fact/source_text
+    # — 가장 중요한 규범이라 edge_fact와 구분해서 표시). (text, kind) 기준 중복만 제거.
+    norm_units: list[dict] = field(default_factory=list)
 
 
 def _node_type(node_id_or_type: str) -> str:
@@ -48,27 +54,48 @@ def load_policy_kg(policy_id: str, repo_root: Path | None = None) -> PolicyKG:
 
     norms_by_role_type: dict[str, list[dict]] = {}
     grounding_corpus: list[str] = []
+    norm_units: list[dict] = []
     seen_text: set[str] = set()
+    seen_unit: set[tuple[str, str]] = set()
 
     def _add_text(text: str | None) -> None:
         if text and text not in seen_text:
             seen_text.add(text)
             grounding_corpus.append(text)
 
+    def _add_unit(text: str | None, kind: str, ref_id: str) -> None:
+        if not text:
+            return
+        key = (text, kind)
+        if key in seen_unit:
+            return
+        seen_unit.add(key)
+        norm_units.append({"text": text, "kind": kind, "ref_id": ref_id})
+
     authority_phrases_by_role_type: dict[str, list[str]] = {}
     for node in nodes:
         ntype = node.get("type", _node_type(node["id"]))
-        _add_text(node.get("summary"))
-        for span in node.get("source_spans", []) or []:
-            _add_text(span.get("text"))
+        summary = node.get("summary")
+        _add_text(summary)
+        _add_unit(summary, "node_summary", node["id"])
+        for i, span in enumerate(node.get("source_spans", []) or []):
+            span_text = span.get("text")
+            _add_text(span_text)
+            _add_unit(span_text, "source_span", f"{node['id']}#span{i}")
         decision_authority = (node.get("attributes") or {}).get("decision_authority")
         if decision_authority:
             authority_phrases_by_role_type.setdefault(ntype, []).append(decision_authority)
 
     for edge in edges:
-        _add_text(edge.get("fact"))
-        _add_text(edge.get("source_text"))
+        fact = edge.get("fact")
+        source_text = edge.get("source_text")
+        _add_text(fact)
+        _add_text(source_text)
         deontic = edge.get("deontic")
+        # must/can/cannot 엣지의 fact/source_text는 "deontic_norm"으로 별도 표시(가장 중요한 규범).
+        unit_kind = "deontic_norm" if deontic in DEONTIC_VALUES else "edge_fact"
+        _add_unit(fact, unit_kind, edge["id"])
+        _add_unit(source_text, unit_kind, f"{edge['id']}#source_text")
         if deontic in DEONTIC_VALUES:
             source_type = _node_type(edge["source"])
             norms_by_role_type.setdefault(source_type, []).append(
@@ -90,6 +117,7 @@ def load_policy_kg(policy_id: str, repo_root: Path | None = None) -> PolicyKG:
         norms_by_role_type=norms_by_role_type,
         authority_phrases_by_role_type=authority_phrases_by_role_type,
         grounding_corpus=grounding_corpus,
+        norm_units=norm_units,
     )
 
 

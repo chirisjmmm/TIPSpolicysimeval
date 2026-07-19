@@ -11,12 +11,187 @@
       "rate": 0.0008
     },
     "grounded_ratio": {
+      "basis": "semantic",
       "n": 1000,
-      "n_grounded": 500,
-      "rate": 0.5,
-      "threshold_used": 0.3775445335442064,
-      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
-      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+      "n_grounded": 976,
+      "rate": 0.976,
+      "threshold_used": 0.5772009402513504,
+      "threshold_source": "semantic_coherent_null_percentile_p95",
+      "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+      "threshold_note": "본 지표는 semantic support다: 발화가 이 policy KG의 개별 규범 unit (norm_units) 중 하나에 로컬 sentence-transformers 임베딩 기준으로 의미상 뒷받침되는가. τ는 coherent null(같은 policy의 '무관한' 규범 unit — 발화의 top-3 근접 후보 제외 후 무작위 샘플, word-salad 아님) cosine 분포 상위 95백분위. unvalidated(§8 gold 대조 전).",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)",
+      "real_distribution": {
+        "n": 1000,
+        "mean": 0.6840456030368804,
+        "median": 0.6858368813991547,
+        "p25": 0.6516398340463638,
+        "p75": 0.7235709130764008,
+        "min": 0.5395235419273376,
+        "max": 0.8000267744064331
+      },
+      "null_distribution": {
+        "n": 5000,
+        "mean": 0.3662164460448548,
+        "median": 0.3606179803609848,
+        "p25": 0.28219688683748245,
+        "p75": 0.4452955722808838,
+        "min": 0.01482680719345808,
+        "max": 0.7163928747177124
+      },
+      "separation_gap_median_real_minus_null": 0.32521890103816986,
+      "null_false_positive_rate_at_tau": 0.05,
+      "null_false_positive_rate_note": "이 값은 percentile 정의상 항상 ≈(1-null_percentile)에 수렴한다 — 임계값 계산 코드가 올바르게 동작했는지 확인하는 정확성 체크일 뿐, grounded 판정 자체의 실제 정확도 검증이 아니다(그건 §8 gold precision/recall의 역할).",
+      "threshold_sweep": [
+        {
+          "tau": 0.1,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.15,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.2,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.25,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.3,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.35,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.4,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.45,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.5,
+          "n_grounded": 1000,
+          "n": 1000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.55,
+          "n_grounded": 996,
+          "n": 1000,
+          "grounded_ratio": 0.996
+        }
+      ],
+      "lexical_baseline": {
+        "n_grounded": 126,
+        "rate": 0.126,
+        "threshold_used": 0.4549204196753298,
+        "threshold_source": "within_policy_decoy_null_percentile_p95",
+        "real_distribution": {
+          "n": 1000,
+          "mean": 0.3846438378565648,
+          "median": 0.3767809759767674,
+          "p25": 0.3407081417740406,
+          "p75": 0.41836842556637643,
+          "min": 0.2628529653450646,
+          "max": 0.6805411664653068
+        },
+        "null_distribution": {
+          "n": 1000,
+          "mean": 0.3897176894810063,
+          "median": 0.3941904766254065,
+          "p25": 0.3594318663620958,
+          "p75": 0.4195081950552513,
+          "min": 0.28608308388511916,
+          "max": 0.5041766979694948
+        },
+        "separation_gap_median_real_minus_null": -0.01740950064863911,
+        "null_false_positive_rate_at_tau": 0.05,
+        "threshold_sweep": [
+          {
+            "tau": 0.1,
+            "n_grounded": 1000,
+            "n": 1000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.15,
+            "n_grounded": 1000,
+            "n": 1000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.2,
+            "n_grounded": 1000,
+            "n": 1000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.25,
+            "n_grounded": 1000,
+            "n": 1000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.3,
+            "n_grounded": 950,
+            "n": 1000,
+            "grounded_ratio": 0.95
+          },
+          {
+            "tau": 0.35,
+            "n_grounded": 698,
+            "n": 1000,
+            "grounded_ratio": 0.698
+          },
+          {
+            "tau": 0.4,
+            "n_grounded": 362,
+            "n": 1000,
+            "grounded_ratio": 0.362
+          },
+          {
+            "tau": 0.45,
+            "n_grounded": 136,
+            "n": 1000,
+            "grounded_ratio": 0.136
+          },
+          {
+            "tau": 0.5,
+            "n_grounded": 42,
+            "n": 1000,
+            "grounded_ratio": 0.042
+          },
+          {
+            "tau": 0.55,
+            "n_grounded": 12,
+            "n": 1000,
+            "grounded_ratio": 0.012
+          }
+        ],
+        "note": "lexical(TF-IDF), within-policy decoy null 기준 — 참조/비교용 baseline이며 grounded 판정에는 쓰지 않는다(본 지표는 위 semantic)."
+      }
     },
     "fabrication_rate": {
       "n_applicable": 1000,
@@ -43,12 +218,187 @@
       "rate": 0.0
     },
     "grounded_ratio": {
+      "basis": "semantic",
       "n": 1000,
-      "n_grounded": 574,
-      "rate": 0.574,
-      "threshold_used": 0.28783752382764694,
-      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
-      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+      "n_grounded": 928,
+      "rate": 0.928,
+      "threshold_used": 0.5881869465112686,
+      "threshold_source": "semantic_coherent_null_percentile_p95",
+      "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+      "threshold_note": "본 지표는 semantic support다: 발화가 이 policy KG의 개별 규범 unit (norm_units) 중 하나에 로컬 sentence-transformers 임베딩 기준으로 의미상 뒷받침되는가. τ는 coherent null(같은 policy의 '무관한' 규범 unit — 발화의 top-3 근접 후보 제외 후 무작위 샘플, word-salad 아님) cosine 분포 상위 95백분위. unvalidated(§8 gold 대조 전).",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)",
+      "real_distribution": {
+        "n": 2000,
+        "mean": 0.6906259714066982,
+        "median": 0.6943151354789734,
+        "p25": 0.6555050909519196,
+        "p75": 0.7296885699033737,
+        "min": 0.5068151950836182,
+        "max": 0.8356644511222839
+      },
+      "null_distribution": {
+        "n": 10000,
+        "mean": 0.3983741987701738,
+        "median": 0.40854407846927643,
+        "p25": 0.3128959611058235,
+        "p75": 0.4905330166220665,
+        "min": -0.04782876744866371,
+        "max": 0.7256739139556885
+      },
+      "separation_gap_median_real_minus_null": 0.28577105700969696,
+      "null_false_positive_rate_at_tau": 0.05,
+      "null_false_positive_rate_note": "이 값은 percentile 정의상 항상 ≈(1-null_percentile)에 수렴한다 — 임계값 계산 코드가 올바르게 동작했는지 확인하는 정확성 체크일 뿐, grounded 판정 자체의 실제 정확도 검증이 아니다(그건 §8 gold precision/recall의 역할).",
+      "threshold_sweep": [
+        {
+          "tau": 0.1,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.15,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.2,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.25,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.3,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.35,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.4,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.45,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.5,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.55,
+          "n_grounded": 1978,
+          "n": 2000,
+          "grounded_ratio": 0.989
+        }
+      ],
+      "lexical_baseline": {
+        "n_grounded": 156,
+        "rate": 0.156,
+        "threshold_used": 0.3871372675699533,
+        "threshold_source": "within_policy_decoy_null_percentile_p95",
+        "real_distribution": {
+          "n": 2000,
+          "mean": 0.2938362174286713,
+          "median": 0.2874714627712871,
+          "p25": 0.2475079159881966,
+          "p75": 0.32997517331782344,
+          "min": 0.16450958895683968,
+          "max": 0.47456284363101947
+        },
+        "null_distribution": {
+          "n": 2000,
+          "mean": 0.31967205052414954,
+          "median": 0.32012678372250136,
+          "p25": 0.2908391911231315,
+          "p75": 0.3494657542759442,
+          "min": 0.18563547936504987,
+          "max": 0.4413413193465081
+        },
+        "separation_gap_median_real_minus_null": -0.03265532095121426,
+        "null_false_positive_rate_at_tau": 0.05,
+        "threshold_sweep": [
+          {
+            "tau": 0.1,
+            "n_grounded": 2000,
+            "n": 2000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.15,
+            "n_grounded": 2000,
+            "n": 2000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.2,
+            "n_grounded": 1954,
+            "n": 2000,
+            "grounded_ratio": 0.977
+          },
+          {
+            "tau": 0.25,
+            "n_grounded": 1468,
+            "n": 2000,
+            "grounded_ratio": 0.734
+          },
+          {
+            "tau": 0.3,
+            "n_grounded": 848,
+            "n": 2000,
+            "grounded_ratio": 0.424
+          },
+          {
+            "tau": 0.35,
+            "n_grounded": 356,
+            "n": 2000,
+            "grounded_ratio": 0.178
+          },
+          {
+            "tau": 0.4,
+            "n_grounded": 112,
+            "n": 2000,
+            "grounded_ratio": 0.056
+          },
+          {
+            "tau": 0.45,
+            "n_grounded": 18,
+            "n": 2000,
+            "grounded_ratio": 0.009
+          },
+          {
+            "tau": 0.5,
+            "n_grounded": 0,
+            "n": 2000,
+            "grounded_ratio": 0.0
+          },
+          {
+            "tau": 0.55,
+            "n_grounded": 0,
+            "n": 2000,
+            "grounded_ratio": 0.0
+          }
+        ],
+        "note": "lexical(TF-IDF), within-policy decoy null 기준 — 참조/비교용 baseline이며 grounded 판정에는 쓰지 않는다(본 지표는 위 semantic)."
+      }
     },
     "fabrication_rate": {
       "n_applicable": 992,
@@ -75,12 +425,187 @@
       "rate": 0.0
     },
     "grounded_ratio": {
+      "basis": "semantic",
       "n": 1000,
-      "n_grounded": 426,
-      "rate": 0.426,
-      "threshold_used": 0.28783752382764694,
-      "threshold_note": "policy 내 ('Inputs', 'Activities') phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
-      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)"
+      "n_grounded": 966,
+      "rate": 0.966,
+      "threshold_used": 0.5881869465112686,
+      "threshold_source": "semantic_coherent_null_percentile_p95",
+      "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+      "threshold_note": "본 지표는 semantic support다: 발화가 이 policy KG의 개별 규범 unit (norm_units) 중 하나에 로컬 sentence-transformers 임베딩 기준으로 의미상 뒷받침되는가. τ는 coherent null(같은 policy의 '무관한' 규범 unit — 발화의 top-3 근접 후보 제외 후 무작위 샘플, word-salad 아님) cosine 분포 상위 95백분위. unvalidated(§8 gold 대조 전).",
+      "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 (원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)",
+      "real_distribution": {
+        "n": 2000,
+        "mean": 0.6906259714066982,
+        "median": 0.6943151354789734,
+        "p25": 0.6555050909519196,
+        "p75": 0.7296885699033737,
+        "min": 0.5068151950836182,
+        "max": 0.8356644511222839
+      },
+      "null_distribution": {
+        "n": 10000,
+        "mean": 0.3983741987701738,
+        "median": 0.40854407846927643,
+        "p25": 0.3128959611058235,
+        "p75": 0.4905330166220665,
+        "min": -0.04782876744866371,
+        "max": 0.7256739139556885
+      },
+      "separation_gap_median_real_minus_null": 0.28577105700969696,
+      "null_false_positive_rate_at_tau": 0.05,
+      "null_false_positive_rate_note": "이 값은 percentile 정의상 항상 ≈(1-null_percentile)에 수렴한다 — 임계값 계산 코드가 올바르게 동작했는지 확인하는 정확성 체크일 뿐, grounded 판정 자체의 실제 정확도 검증이 아니다(그건 §8 gold precision/recall의 역할).",
+      "threshold_sweep": [
+        {
+          "tau": 0.1,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.15,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.2,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.25,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.3,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.35,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.4,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.45,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.5,
+          "n_grounded": 2000,
+          "n": 2000,
+          "grounded_ratio": 1.0
+        },
+        {
+          "tau": 0.55,
+          "n_grounded": 1978,
+          "n": 2000,
+          "grounded_ratio": 0.989
+        }
+      ],
+      "lexical_baseline": {
+        "n_grounded": 10,
+        "rate": 0.01,
+        "threshold_used": 0.3871372675699533,
+        "threshold_source": "within_policy_decoy_null_percentile_p95",
+        "real_distribution": {
+          "n": 2000,
+          "mean": 0.2938362174286713,
+          "median": 0.2874714627712871,
+          "p25": 0.2475079159881966,
+          "p75": 0.32997517331782344,
+          "min": 0.16450958895683968,
+          "max": 0.47456284363101947
+        },
+        "null_distribution": {
+          "n": 2000,
+          "mean": 0.31967205052414954,
+          "median": 0.32012678372250136,
+          "p25": 0.2908391911231315,
+          "p75": 0.3494657542759442,
+          "min": 0.18563547936504987,
+          "max": 0.4413413193465081
+        },
+        "separation_gap_median_real_minus_null": -0.03265532095121426,
+        "null_false_positive_rate_at_tau": 0.05,
+        "threshold_sweep": [
+          {
+            "tau": 0.1,
+            "n_grounded": 2000,
+            "n": 2000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.15,
+            "n_grounded": 2000,
+            "n": 2000,
+            "grounded_ratio": 1.0
+          },
+          {
+            "tau": 0.2,
+            "n_grounded": 1954,
+            "n": 2000,
+            "grounded_ratio": 0.977
+          },
+          {
+            "tau": 0.25,
+            "n_grounded": 1468,
+            "n": 2000,
+            "grounded_ratio": 0.734
+          },
+          {
+            "tau": 0.3,
+            "n_grounded": 848,
+            "n": 2000,
+            "grounded_ratio": 0.424
+          },
+          {
+            "tau": 0.35,
+            "n_grounded": 356,
+            "n": 2000,
+            "grounded_ratio": 0.178
+          },
+          {
+            "tau": 0.4,
+            "n_grounded": 112,
+            "n": 2000,
+            "grounded_ratio": 0.056
+          },
+          {
+            "tau": 0.45,
+            "n_grounded": 18,
+            "n": 2000,
+            "grounded_ratio": 0.009
+          },
+          {
+            "tau": 0.5,
+            "n_grounded": 0,
+            "n": 2000,
+            "grounded_ratio": 0.0
+          },
+          {
+            "tau": 0.55,
+            "n_grounded": 0,
+            "n": 2000,
+            "grounded_ratio": 0.0
+          }
+        ],
+        "note": "lexical(TF-IDF), within-policy decoy null 기준 — 참조/비교용 baseline이며 grounded 판정에는 쓰지 않는다(본 지표는 위 semantic)."
+      }
     },
     "fabrication_rate": {
       "n_applicable": 994,

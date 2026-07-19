@@ -1,13 +1,20 @@
-"""§7.1 Accuracy/micro: deontic compliance(위반률) · grounding · fabrication. 전부 rule/lexical, API-free.
+"""§7.1 Accuracy/micro: deontic compliance(위반률) · grounding · fabrication.
+violation/fabrication은 rule/lexical(API-free). grounding은 semantic support가 본 지표이고
+로컬 sentence-transformers(§11 허용 — 외부 LLM API 아님)를 쓴다. lexical(TF-IDF)은 baseline
+진단값으로만 병기한다.
 
 입력은 IR(data/ir/utterances.jsonl)만 받는다 — 파싱 로직은 여기 섞지 않는다(§12 가드레일).
 """
 from __future__ import annotations
 
+import random
 import re
 import sys
 from collections import defaultdict
+from functools import lru_cache
 from pathlib import Path
+
+import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "io"))
 from load_policy_text import PolicyKG  # noqa: E402
@@ -273,29 +280,315 @@ GROUNDING_FABRICATION_PHASES = ("Inputs", "Activities")
 PHASE_OUT_OF_SCOPE_FOR_GROUNDING = "phase_out_of_scope_for_grounding"
 
 
-def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG]) -> dict:
-    """(policy_id, model_id)별로 묶어서 §7.1 세 지표를 산출.
-    grounding 임계값은 policy_id별로 GROUNDING_FABRICATION_PHASES 범위 발화(모델 풀링)의
-    max_cosine 중앙값을 써서 데이터 기반으로 잡는다(고정값 0.12는 이 코퍼스 최솟값 0.164보다 낮아
-    전부 grounded=True가 되는 무의미한 임계값이었음 — 실행 후 발견해 수정). 이 임계값 자체도
-    §8 검증 전까지 unvalidated.
+# ---------------------------------------------------------------------------
+# grounding 임계값: gold-free within-policy decoy(귀무) 보정
+#
+# 이전 방식(측정 대상 세트 자신의 max_cosine 중앙값)은 자기참조였다 — 정의상 그 세트 발화의
+# 딱 절반이 "중앙값 이상"이 되므로, 실제 grounding 품질과 무관하게 BK21_deepseek처럼 policy 내
+# 모델이 하나뿐인 세트는 항상 정확히 0.500이 나왔다(측정이 아니라 항등식).
+#
+# 그다음 시도(cross-policy null: 다른 policy 코퍼스와 대조)는 자기참조는 없앴지만 다른 문제를
+# 만들었다 — 그건 사실상 "이 발화가 100E 어휘를 쓰는가 vs BK21 어휘를 쓰는가"를 재는 것이지,
+# "이 발화가 이 policy의 KG 규범 내용과 실제로 닮았는가"를 재는 게 아니다(두 정책 어휘가 서로
+# 다르기만 하면 무엇을 재든 grounded로 보일 수 있음).
+#
+# 그래서 within-policy decoy로 바꾼다: 같은 policy KG 코퍼스의 토큰을 문서 경계 넘어 무작위
+# 재배치해 "이 policy 어휘는 그대로 쓰지만 실제 문서의 term 공기(co-occurrence) 구조는 파괴된"
+# 가짜 코퍼스를 만들고, 그것과의 max_cosine 분포 상위 백분위를 τ로 삼는다. 이러면 τ는
+# "이 policy의 일반 어휘 수준에서 우연히 나올 수 있는 유사도"를 대표하고, grounded 판정은
+# "그 우연 수준을 넘어 실제 규범 내용과 닮았는가"를 잰다. cross-policy 코퍼스는 쓰지 않는다.
+NULL_PERCENTILE_DEFAULT = 95  # τ = 귀무분포의 이 백분위값. 5%만 "우연히" 넘도록 잡음.
+GROUNDING_NULL_MODE = "within_policy_decoy"  # 유일한 null 소스 — cross-policy 코퍼스는 쓰지 않음
+SHUFFLE_SEED = 20260719  # 재현성 고정 시드(임의 날짜 아님 — 이 작업을 실행한 날짜)
+GROUNDING_THRESHOLD_SWEEP = [round(0.10 + 0.05 * i, 2) for i in range(10)]  # 0.10..0.55
+NULL_FPR_SANITY_TOLERANCE = 0.03  # null 위양성률이 (1-p/100) 근처인지 확인하는 허용오차(코드 정확성 체크용, 검증 아님)
+
+
+def build_shuffled_corpus(corpus: list[str], seed: int) -> list[str]:
+    """코퍼스 전체 토큰 풀을 문서 경계를 넘어 무작위로 재배치해, 전역 어휘분포·문서별 길이는
+    보존하되 문서별 term 공기(co-occurrence) 구조만 파괴한 decoy(귀무) 코퍼스를 만든다.
+    TF-IDF는 bag-of-words라 문서 '내부' 토큰 순서 셔플은 벡터에 영향이 없으므로(무효), 반드시
+    '문서 간' 재배치여야 한다 — 이 함수가 그렇게 한다: 전체 토큰을 한 풀에 모아 셔플한 뒤
+    원본과 같은 길이로 다시 잘라 담는다.
     """
+    rng = random.Random(seed)
+    doc_tokens = [doc.split() for doc in corpus]
+    lengths = [len(toks) for toks in doc_tokens]
+    pool: list[str] = [t for toks in doc_tokens for t in toks]
+    rng.shuffle(pool)
+    shuffled = []
+    idx = 0
+    for length in lengths:
+        shuffled.append(" ".join(pool[idx: idx + length]))
+        idx += length
+    return shuffled
+
+
+def compute_null_max_cosine(
+    utterances: list[dict],
+    own_kg: PolicyKG,
+    seed: int = SHUFFLE_SEED,
+) -> dict[str, float]:
+    """같은 policy KG 코퍼스의 decoy(문서 간 토큰 재배치, 전역 어휘·문서 길이 보존, term 공기
+    구조만 파괴)와 대조한 max_cosine — "이 policy 어휘를 쓰긴 하지만 실제 규범 내용과는 무관한
+    발화"가 우연히 얻을 수 있는 유사도 분포를 만든다. cross-policy(다른 policy) 코퍼스는 쓰지
+    않는다 — 그건 "정책 간 구별"을 재는 것이지 "이 policy 규범 근거성"을 재는 게 아니기 때문.
+    """
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    decoy_corpus = build_shuffled_corpus(own_kg.grounding_corpus, seed)
+    vectorizer = TfidfVectorizer(min_df=1)
+    corpus_matrix = vectorizer.fit_transform(decoy_corpus)
+    texts = [u["text"] or "" for u in utterances]
+    utt_matrix = vectorizer.transform(texts)
+    sims = cosine_similarity(utt_matrix, corpus_matrix)
+    max_sims = sims.max(axis=1)
+    return {u["utterance_id"]: float(sim) for u, sim in zip(utterances, max_sims)}
+
+
+def compute_null_threshold(null_values: list[float], null_percentile: float = NULL_PERCENTILE_DEFAULT) -> float:
+    if not null_values:
+        return 0.0
+    return float(np.percentile(np.array(null_values), null_percentile))
+
+
+def _distribution_summary(values: list[float]) -> dict:
+    if not values:
+        return {"n": 0, "mean": None, "median": None, "p25": None, "p75": None, "min": None, "max": None}
+    arr = np.array(values)
+    return {
+        "n": int(len(arr)),
+        "mean": float(arr.mean()),
+        "median": float(np.median(arr)),
+        "p25": float(np.percentile(arr, 25)),
+        "p75": float(np.percentile(arr, 75)),
+        "min": float(arr.min()),
+        "max": float(arr.max()),
+    }
+
+
+def _threshold_sweep(real_values: list[float], sweep: list[float] = GROUNDING_THRESHOLD_SWEEP) -> list[dict]:
+    """τ 후보값별 grounded_ratio 표(보고 투명성 — 단일 임계값 의존을 줄이기 위해 병기)."""
+    arr = np.array(real_values)
+    n = len(arr)
+    out = []
+    for tau in sweep:
+        n_grounded = int(np.sum(arr > tau)) if n else 0
+        out.append({"tau": tau, "n_grounded": n_grounded, "n": n, "grounded_ratio": (n_grounded / n) if n else None})
+    return out
+
+
+def _null_false_positive_rate(null_values: list[float], tau: float) -> float | None:
+    if not null_values:
+        return None
+    return float(np.mean(np.array(null_values) > tau))
+
+
+def _separation_gap(real_summary: dict, null_summary: dict) -> float | None:
+    if real_summary["median"] is None or null_summary["median"] is None:
+        return None
+    return real_summary["median"] - null_summary["median"]
+
+
+def _assert_null_fpr_sanity(policy_id: str, label: str, null_fpr: float | None) -> None:
+    """null 위양성률이 (1-p/100) 근처인지 확인 — percentile 정의상 항상 참에 가까운 코드
+    정확성 체크일 뿐, grounded 판정 자체의 검증이 아니다(§8 gold precision/recall이 담당)."""
+    if null_fpr is None:
+        return
+    expected = 1.0 - NULL_PERCENTILE_DEFAULT / 100.0
+    assert abs(null_fpr - expected) < NULL_FPR_SANITY_TOLERANCE, (
+        f"{policy_id}[{label}]: null 위양성률 sanity check 실패 — 관측 {null_fpr:.4f}, "
+        f"기대 {expected:.4f} (허용오차 {NULL_FPR_SANITY_TOLERANCE})"
+    )
+
+
+# ---------------------------------------------------------------------------
+# grounding 본 지표: semantic support (로컬 sentence-transformers, §11 허용 — 외부 LLM API 아님)
+#
+# lexical(TF-IDF)은 "같은 단어를 쓰는가"만 잡는다 — 정당한 패러프레이즈(단어는 다르지만 같은
+# 규범 내용)를 놓치고, within-policy decoy 실험에서 separation_gap이 세 세트 전부 음수로 나온 것도
+# 이 한계와 무관하지 않다(어휘 수준에서는 실제 발화가 decoy보다 딱히 더 KG를 안 닮았다는 뜻).
+# 그래서 grounded_ratio(하나의 지표, 축 분리 없음)의 정의를 semantic으로 바꾼다: "발화의 질적
+# 주장이 이 policy KG 규범(norm_units) 중 하나에 의미상 뒷받침되는가." lexical은 지우지 않고
+# baseline 진단값(lex_*)으로 병기한다.
+EMBEDDING_MODEL_NAME_DEFAULT = "paraphrase-multilingual-MiniLM-L12-v2"
+SEMANTIC_NULL_TOPK_EXCLUDE = 3  # 발화의 top-k 근접 norm unit은 "실제로 근거했을 후보"라 null에서 제외
+SEMANTIC_NULL_SAMPLES_PER_UTT = 5  # 발화당 "무관한 규범" 무작위 추출 개수(귀무 표본 크기 확보)
+TRACEABILITY_SAMPLE_SIZE = 200
+
+
+@lru_cache(maxsize=4)
+def get_embedder(model_name: str = EMBEDDING_MODEL_NAME_DEFAULT):
+    """로컬 sentence-transformers 모델 로더(프로세스당 1회, lru_cache로 재사용).
+    HuggingFace Hub에서 가중치를 최초 1회 내려받아 로컬에 캐시해두고 그 뒤로는 전부 로컬
+    추론이다 — 매 호출마다 외부 서버에 텍스트를 보내는 LLM API 호출이 아니다(§11 허용 항목).
+    """
+    from sentence_transformers import SentenceTransformer
+
+    model = SentenceTransformer(model_name)
+    assert model.__class__.__module__.startswith("sentence_transformers"), (
+        "임베딩은 로컬 sentence-transformers로만 계산해야 한다(외부 LLM API 금지, §11/§12)."
+    )
+    return model
+
+
+def embed_texts(model, texts: list[str]) -> np.ndarray:
+    if not texts:
+        dim = model.get_sentence_embedding_dimension()
+        return np.zeros((0, dim))
+    return np.asarray(
+        model.encode(texts, convert_to_numpy=True, show_progress_bar=False, normalize_embeddings=True)
+    )
+
+
+def compute_semantic_matches(
+    utterances: list[dict], norm_units: list[dict], model
+) -> tuple[dict[str, dict], np.ndarray]:
+    """발화별로 norm_units 전체와의 semantic cosine을 구해 최상위 매칭(top1)과 그 값을 남긴다.
+    pooled 코퍼스 전체에 대한 단일 max가 아니라 "어느 규범 unit에 근거했는가"(kind/ref_id/text)가
+    traceability로 남아야 하므로 per-utterance 결과에 top1 정보를 함께 기록한다.
+    반환: (utterance_id -> {sem_max_cosine, top1_norm_ref, top1_norm_text, top1_norm_kind}, sims 행렬).
+    sims 행렬은 coherent null 표본 추출에도 재사용한다(임베딩 재계산 방지).
+    """
+    if not utterances:
+        return {}, np.zeros((0, len(norm_units)))
+    if not norm_units:
+        empty = {
+            u["utterance_id"]: {
+                "sem_max_cosine": 0.0, "top1_norm_ref": None, "top1_norm_text": None, "top1_norm_kind": None,
+            }
+            for u in utterances
+        }
+        return empty, np.zeros((len(utterances), 0))
+
+    unit_texts = [nu["text"] for nu in norm_units]
+    unit_emb = embed_texts(model, unit_texts)
+    utt_texts = [u["text"] or "" for u in utterances]
+    utt_emb = embed_texts(model, utt_texts)
+    sims = utt_emb @ unit_emb.T  # 정규화된 임베딩이므로 내적 = 코사인
+
+    top1_idx = sims.argmax(axis=1)
+    per_utt: dict[str, dict] = {}
+    for i, u in enumerate(utterances):
+        j = int(top1_idx[i])
+        per_utt[u["utterance_id"]] = {
+            "sem_max_cosine": float(sims[i, j]),
+            "top1_norm_ref": norm_units[j]["ref_id"],
+            "top1_norm_text": norm_units[j]["text"],
+            "top1_norm_kind": norm_units[j]["kind"],
+        }
+    return per_utt, sims
+
+
+def compute_semantic_coherent_null(
+    sims: np.ndarray,
+    seed: int,
+    topk_exclude: int = SEMANTIC_NULL_TOPK_EXCLUDE,
+    samples_per_utt: int = SEMANTIC_NULL_SAMPLES_PER_UTT,
+) -> list[float]:
+    """coherent null: word-salad(토큰 셔플)이 아니라, 각 발화의 top-k 근접 norm unit(=그 발화가
+    실제로 근거했을 수 있는 후보)을 제외한 나머지 "같은 policy의 무관한 규범"들 중에서 무작위로
+    뽑은 cosine을 귀무 표본으로 쓴다. 이러면 "무관한 규범보다 유의하게 더 가깝다"가 grounded의
+    의미가 되어, 단순히 같은 주제(topical) 영역이라서 생기는 우연한 유사도까지 통제된다.
+    """
+    rng = random.Random(seed)
+    n_utts, n_units = sims.shape
+    null_values: list[float] = []
+    if n_units <= topk_exclude:
+        return null_values  # norm unit이 너무 적어 "무관한 나머지"를 만들 수 없는 방어적 케이스
+    for i in range(n_utts):
+        row = sims[i]
+        top_idx = set(np.argsort(row)[-topk_exclude:].tolist())
+        remaining = [j for j in range(n_units) if j not in top_idx]
+        if not remaining:
+            continue
+        k = min(samples_per_utt, len(remaining))
+        for j in rng.sample(remaining, k):
+            null_values.append(float(row[j]))
+    return null_values
+
+
+def compute_set_metrics(
+    utterances: list[dict],
+    policy_kgs: dict[str, PolicyKG],
+    embedding_model_name: str = EMBEDDING_MODEL_NAME_DEFAULT,
+) -> dict:
+    """(policy_id, model_id)별로 묶어서 §7.1 세 지표를 산출.
+    grounding 지표의 변천: (1) 자기 세트 max_cosine 중앙값(자기참조, BK21 항상 0.500) ->
+    (2) cross-policy null(사실상 "정책 간 어휘 구별"을 잼) -> (3) within-policy decoy null
+    (자기참조·정책 간 오염은 없앴지만 lexical(TF-IDF)이라 정당한 패러프레이즈를 놓치고,
+    separation_gap이 세 세트 전부 음수로 나옴 — 어휘 수준에서는 실제 발화가 decoy보다 딱히
+    KG를 더 안 닮았다는 뜻). 지금은 semantic support로 바꾼다: 로컬 sentence-transformers
+    임베딩으로 "발화가 이 policy KG의 개별 규범 unit 중 하나에 의미상 뒷받침되는가"를 재고,
+    coherent null(같은 policy의 "무관한" 규범 unit — word-salad 아님)로 τ를 보정한다.
+    lexical은 지우지 않고 baseline 진단값(lex_*)으로 병기. 여전히 §8 gold 검증 전까지 unvalidated.
+    """
+    embedder = get_embedder(embedding_model_name)
+
     by_policy: dict[str, list[dict]] = defaultdict(list)
     for u in utterances:
         by_policy[u["policy_id"]].append(u)
 
-    max_cosine_by_uid: dict[str, float] = {}
-    grounding_threshold_by_policy: dict[str, float] = {}
+    lex_max_cosine_by_uid: dict[str, float] = {}
+    lex_threshold_by_policy: dict[str, float] = {}
+    lex_diagnostics_by_policy: dict[str, dict] = {}
+    sem_match_by_uid: dict[str, dict] = {}
+    sem_threshold_by_policy: dict[str, float] = {}
+    sem_diagnostics_by_policy: dict[str, dict] = {}
+
     for policy_id, policy_utts in by_policy.items():
         kg = policy_kgs[policy_id]
-        cosines = compute_max_cosine(policy_utts, kg)
-        max_cosine_by_uid.update(cosines)
-        phase_by_uid = {u["utterance_id"]: u["phase"] for u in policy_utts}
-        in_scope_vals = sorted(
-            v for uid, v in cosines.items() if phase_by_uid[uid] in GROUNDING_FABRICATION_PHASES
-        )
-        median = in_scope_vals[len(in_scope_vals) // 2] if in_scope_vals else 0.0
-        grounding_threshold_by_policy[policy_id] = median
+        in_scope_utts = [u for u in policy_utts if u["phase"] in GROUNDING_FABRICATION_PHASES]
+
+        # --- lexical(TF-IDF) baseline: grounded 판정에는 쓰지 않고 참조/비교용으로만 병기 ---
+        lex_cosines = compute_max_cosine(policy_utts, kg)
+        lex_max_cosine_by_uid.update(lex_cosines)
+        lex_in_scope_vals = [lex_cosines[u["utterance_id"]] for u in in_scope_utts]
+
+        lex_null_vals = list(compute_null_max_cosine(in_scope_utts, kg, seed=SHUFFLE_SEED).values())
+        lex_tau = compute_null_threshold(lex_null_vals, NULL_PERCENTILE_DEFAULT)
+        lex_null_fpr = _null_false_positive_rate(lex_null_vals, lex_tau)
+        _assert_null_fpr_sanity(policy_id, "lexical", lex_null_fpr)
+
+        lex_real_summary = _distribution_summary(lex_in_scope_vals)
+        lex_null_summary = _distribution_summary(lex_null_vals)
+
+        lex_threshold_by_policy[policy_id] = lex_tau
+        lex_diagnostics_by_policy[policy_id] = {
+            "threshold_used": lex_tau,
+            "threshold_source": f"within_policy_decoy_null_percentile_p{NULL_PERCENTILE_DEFAULT}",
+            "real_distribution": lex_real_summary,
+            "null_distribution": lex_null_summary,
+            "separation_gap_median_real_minus_null": _separation_gap(lex_real_summary, lex_null_summary),
+            "null_false_positive_rate_at_tau": lex_null_fpr,
+            "threshold_sweep": _threshold_sweep(lex_in_scope_vals),
+        }
+
+        # --- semantic support: 본 지표(grounded_ratio 정의) ---
+        sem_per_utt, sims = compute_semantic_matches(in_scope_utts, kg.norm_units, embedder)
+        sem_match_by_uid.update(sem_per_utt)
+        sem_in_scope_vals = [sem_per_utt[u["utterance_id"]]["sem_max_cosine"] for u in in_scope_utts]
+
+        sem_null_vals = compute_semantic_coherent_null(sims, seed=SHUFFLE_SEED)
+        sem_tau = compute_null_threshold(sem_null_vals, NULL_PERCENTILE_DEFAULT)
+        sem_null_fpr = _null_false_positive_rate(sem_null_vals, sem_tau)
+        _assert_null_fpr_sanity(policy_id, "semantic", sem_null_fpr)
+
+        sem_real_summary = _distribution_summary(sem_in_scope_vals)
+        sem_null_summary = _distribution_summary(sem_null_vals)
+
+        sem_threshold_by_policy[policy_id] = sem_tau
+        sem_diagnostics_by_policy[policy_id] = {
+            "threshold_used": sem_tau,
+            "threshold_source": f"semantic_coherent_null_percentile_p{NULL_PERCENTILE_DEFAULT}",
+            "embedding_model": embedding_model_name,
+            "real_distribution": sem_real_summary,
+            "null_distribution": sem_null_summary,
+            "separation_gap_median_real_minus_null": _separation_gap(sem_real_summary, sem_null_summary),
+            "null_false_positive_rate_at_tau": sem_null_fpr,
+            "threshold_sweep": _threshold_sweep(sem_in_scope_vals),
+        }
 
     by_set: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for u in utterances:
@@ -307,7 +600,8 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
     for (policy_id, model_id), utts in by_set.items():
         kg = policy_kgs[policy_id]
         corpus_index = build_corpus_numeric_index(kg)
-        threshold = grounding_threshold_by_policy[policy_id]
+        sem_threshold = sem_threshold_by_policy[policy_id]
+        lex_threshold = lex_threshold_by_policy[policy_id]
 
         n_no_institutional_position = 0
         n_applicable = 0
@@ -316,23 +610,30 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
         n_fab_unsupported = 0
         n_fab_derived_estimate = 0
         n_grounded = 0
+        n_lex_grounded = 0
         n_phase_out_of_scope = 0
 
         for u in utts:
             viol = check_deontic_violation(u, kg)  # phase 무관 — role 기반이라 그대로 유지
-            max_cosine = max_cosine_by_uid[u["utterance_id"]]
+            lex_max_cosine = lex_max_cosine_by_uid[u["utterance_id"]]
             in_scope = u["phase"] in GROUNDING_FABRICATION_PHASES
 
             if in_scope:
                 fab = check_fabrication(u, corpus_index)
-                grounded = max_cosine >= threshold
+                sem_info = sem_match_by_uid[u["utterance_id"]]
+                sem_max_cosine = sem_info["sem_max_cosine"]
+                grounded = sem_max_cosine > sem_threshold  # 본 지표: semantic 기준
+                lex_grounded = lex_max_cosine > lex_threshold  # baseline 진단용
                 grounding_status = "applicable"
             else:
                 fab = {
                     "n_applicable": False, "fabricated": None, "unsupported_tokens": [],
                     "derived_estimate_tokens": [], "has_unsupported": None, "has_derived_estimate": None,
                 }
+                sem_info = {"sem_max_cosine": None, "top1_norm_ref": None, "top1_norm_text": None, "top1_norm_kind": None}
+                sem_max_cosine = None
                 grounded = None
+                lex_grounded = None
                 grounding_status = PHASE_OUT_OF_SCOPE_FOR_GROUNDING
                 n_phase_out_of_scope += 1
 
@@ -350,6 +651,8 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
                     n_fab_derived_estimate += 1
             if grounded:
                 n_grounded += 1
+            if lex_grounded:
+                n_lex_grounded += 1
 
             per_utterance_labels[u["utterance_id"]] = {
                 "utterance_id": u["utterance_id"],
@@ -363,7 +666,12 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
                 "violation_reason": viol["reason"],
                 "grounding_status": grounding_status,
                 "grounded": grounded,
-                "max_cosine": max_cosine,
+                "sem_max_cosine": sem_max_cosine,
+                "top1_norm_ref": sem_info["top1_norm_ref"],
+                "top1_norm_text": sem_info["top1_norm_text"],
+                "top1_norm_kind": sem_info["top1_norm_kind"],
+                "lex_grounded": lex_grounded,
+                "lex_max_cosine": lex_max_cosine,
                 "fabrication_applicable": fab["n_applicable"],
                 "fabricated": fab["has_unsupported"],
                 "unsupported_tokens": fab["unsupported_tokens"],
@@ -373,6 +681,8 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
 
         n_in_scope = len(utts) - n_phase_out_of_scope
         set_name = f"{policy_id}_{model_id}"
+        sem_diag = sem_diagnostics_by_policy[policy_id]
+        lex_diag = lex_diagnostics_by_policy[policy_id]
         set_results[set_name] = {
             "policy_id": policy_id,
             "model_id": model_id,
@@ -385,13 +695,41 @@ def compute_set_metrics(utterances: list[dict], policy_kgs: dict[str, PolicyKG])
                 "rate": (n_violation / n_applicable) if n_applicable else None,
             },
             "grounded_ratio": {
+                "basis": "semantic",
                 "n": n_in_scope,
                 "n_grounded": n_grounded,
                 "rate": (n_grounded / n_in_scope) if n_in_scope else None,
-                "threshold_used": threshold,
-                "threshold_note": f"policy 내 {GROUNDING_FABRICATION_PHASES} phase 발화 max_cosine의 중앙값(데이터 기반, unvalidated)",
+                "threshold_used": sem_diag["threshold_used"],
+                "threshold_source": sem_diag["threshold_source"],
+                "embedding_model": sem_diag["embedding_model"],
+                "threshold_note": "본 지표는 semantic support다: 발화가 이 policy KG의 개별 규범 unit "
+                                   "(norm_units) 중 하나에 로컬 sentence-transformers 임베딩 기준으로 의미상 "
+                                   "뒷받침되는가. τ는 coherent null(같은 policy의 '무관한' 규범 unit — 발화의 "
+                                   f"top-{SEMANTIC_NULL_TOPK_EXCLUDE} 근접 후보 제외 후 무작위 샘플, word-salad 아님) "
+                                   f"cosine 분포 상위 {NULL_PERCENTILE_DEFAULT}백분위. unvalidated(§8 gold 대조 전).",
                 "scope_note": "Outputs/Outcomes/Impact는 phase_out_of_scope_for_grounding으로 분모 제외 "
                               "(원문과 대조할 근거가 없는 미래 예측 phase — 근거 검증은 M4 cross-phase coherence로 위임)",
+                "real_distribution": sem_diag["real_distribution"],
+                "null_distribution": sem_diag["null_distribution"],
+                "separation_gap_median_real_minus_null": sem_diag["separation_gap_median_real_minus_null"],
+                "null_false_positive_rate_at_tau": sem_diag["null_false_positive_rate_at_tau"],
+                "null_false_positive_rate_note": "이 값은 percentile 정의상 항상 ≈(1-null_percentile)에 수렴한다 — "
+                                                  "임계값 계산 코드가 올바르게 동작했는지 확인하는 정확성 체크일 뿐, "
+                                                  "grounded 판정 자체의 실제 정확도 검증이 아니다(그건 §8 gold precision/recall의 역할).",
+                "threshold_sweep": sem_diag["threshold_sweep"],
+                "lexical_baseline": {
+                    "n_grounded": n_lex_grounded,
+                    "rate": (n_lex_grounded / n_in_scope) if n_in_scope else None,
+                    "threshold_used": lex_diag["threshold_used"],
+                    "threshold_source": lex_diag["threshold_source"],
+                    "real_distribution": lex_diag["real_distribution"],
+                    "null_distribution": lex_diag["null_distribution"],
+                    "separation_gap_median_real_minus_null": lex_diag["separation_gap_median_real_minus_null"],
+                    "null_false_positive_rate_at_tau": lex_diag["null_false_positive_rate_at_tau"],
+                    "threshold_sweep": lex_diag["threshold_sweep"],
+                    "note": "lexical(TF-IDF), within-policy decoy null 기준 — 참조/비교용 baseline이며 "
+                            "grounded 판정에는 쓰지 않는다(본 지표는 위 semantic).",
+                },
             },
             "fabrication_rate": {
                 "n_applicable": n_fab_applicable,
